@@ -3,21 +3,20 @@ import React from "react"
 // Components
 import { Layout } from "../layouts/layout"
 import { PageHead } from "../layouts/pageHead"
+import { Form } from "../components/molecules/contact/form"
 // Styles
 // import styles from '../styles/Home.module.scss'
 
-export const About = () => {
+export const Contact = () => {
   // *************** JSX *************** //
   return(
     <Layout>
       <PageHead
-        title="About"
+        title="Contact"
       />
-      <div>
-        <p>About</p>
-      </div>
+      <Form />
     </Layout>
   )
 }
 
-export default About
+export default Contact

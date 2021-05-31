@@ -1,26 +1,25 @@
 // Modules
-
+import React from "react"
 // Components
 import { Layout } from "../layouts/layout"
 import { PageHead } from "../layouts/pageHead"
+import { HomeTop } from "../components/molecules/home/homeTop"
 // Styles
-// import styles from '../styles/Home.module.css'
+import styles from '../styles/Home.module.scss'
 
-export const Home = () => {
+export const Home: React.VFC = () => {
   // *************** JSX *************** //
   return(
-    <Layout>
+    <Layout className="">
       <PageHead
-        title="asakatsu Blog"
+        title=""
       />
-      <div>
-        <p>ddd</p>
-      </div>
+      <HomeTop />
     </Layout>
 
     // import Head from 'next/head'
 // import Image from 'next/image'
-// import styles from '../styles/Home.module.css'
+// import styles from '../styles/Home.module.scss'
 //
 // export default function Home() {
 //   return (

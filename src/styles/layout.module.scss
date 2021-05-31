@@ -1,10 +1,25 @@
-
+/* *************** Import *************** */
+@use "foundations/import" as f;
 
 /* *************** Styles *************** */
-header {
+.header {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
 
+  &_nav {
+    display: flex;
+    justify-content: space-around;
+  }
 }
 
-footer {
-  background: black;
+.footer {
+  padding: 1rem;
+  background: f.$black;
+  color: f.$white;
+
+  .navList {
+    display: flex;
+    align-items: center;
+  }
 }

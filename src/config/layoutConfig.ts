@@ -1,4 +1,3 @@
-
 // Header Navigation
 export const headerNav = [
   {
@@ -6,6 +5,9 @@ export const headerNav = [
   },
   {
     title: 'Blog', link: '/',
+  },
+  {
+    title: 'Contact', link: '/contact',
   }
 ]
 
@@ -16,5 +18,8 @@ export const footerNav = [
   },
   {
     title: 'Blog', link: '/',
+  },
+  {
+    title: 'Contact', link: '/contact',
   }
 ]

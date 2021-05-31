@@ -3,22 +3,21 @@ import React, {
   ReactNode
 } from "react"
 import Link from "next/link"
+// Components
+import { ShareList } from "../components/molecules/layouts/shareList"
 // Config
 import { footerNav } from "../config/layoutConfig"
 // Styles
-// import styles from '../styles/layout.module.scss'
-
-// *************** Type *************** //
-
+import styles from '../styles/layout.module.scss'
 
 export const Footer = () => {
   // *************** JSX *************** //
   return (
     <footer
-      // className={styles.header}
+      className={styles.footer}
     >
       <nav>
-        <ul>
+        <ul className={styles.navList}>
           { footerNav.map((nav: any, i: number) => (
             <li
               key={i}
@@ -32,6 +31,7 @@ export const Footer = () => {
           ))}
         </ul>
       </nav>
+      <ShareList />
     </footer>
   )
 }

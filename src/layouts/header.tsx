@@ -1,24 +1,20 @@
 // Modules
-import React, {
-  ReactNode
-} from "react"
+import React from "react"
 import Link from "next/link"
+// Components
+import { Title } from "../components/atoms/title"
 // Config
 import { headerNav } from "../config/layoutConfig"
 // Styles
-// import styles from '../styles/layout.module.scss'
+import styles from '../styles/layout.module.scss'
 
-// *************** Type *************** //
-
-
-export const Header = () => {
+export const Header: React.VFC = () => {
   // *************** JSX *************** //
   return (
-    <header
-      // className={styles.header}
-    >
+    <header className={styles.header}>
+      <Title />
       <nav>
-        <ul>
+        <ul className={styles.header_nav}>
           { headerNav.map((nav: any, i: number) => (
             <li
               key={i}

@@ -1,3 +1,11 @@
+/* *************** Import *************** */
+@use "foundations/import" as f;
+
+/* *************** Layouts *************** */
+.main {
+  padding: 0 1rem;
+}
+
 /* *************** Common *************** */
 html,
 body {

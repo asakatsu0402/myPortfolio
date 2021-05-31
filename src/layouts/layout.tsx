@@ -9,14 +9,18 @@ import { Footer } from "./footer"
 // *************** Type *************** //
 type Props = {
   children?: ReactNode
+  className?: string
 }
 
-export const Layout = ({ children }: Props) => {
+export const Layout = ({
+  children,
+  className
+}: Props) => {
   // *************** JSX *************** //
   return (
     <div>
       <Header />
-      <main>
+      <main className={`main ${className}`}>
         { children }
       </main>
       <Footer />
