@@ -1,3 +1,4 @@
+/* *************** Common *************** */
 html,
 body {
   padding: 0;
@@ -13,4 +14,9 @@ a {
 
 * {
   box-sizing: border-box;
+}
+
+/* li */
+li {
+  list-style: none;
 }
