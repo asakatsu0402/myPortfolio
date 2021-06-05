@@ -24,3 +24,17 @@ export const formList = [
     tag: 'textarea'
   }
 ]
+
+// Usage
+export const contactList = [
+  {
+    label: 'E-mail',
+    text: '04asaka02@gmail.com',
+    link: 'mailto:04asaka02@gmail.com'
+  },
+  {
+    label: 'Twitter',
+    text: '@asakatsuyolo',
+    link: 'https://twitter.com/asakatsuyolo'
+  }
+]

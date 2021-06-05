@@ -1,5 +1,8 @@
 /* *************** Import *************** */
 @use "foundations/import" as f;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 /* *************** Layouts *************** */
 .main {

@@ -11,7 +11,7 @@ type Props = {
   text?: any
 }
 
-export const ExternalLink: React.VFC<Props> = (
+export const ContactLink: React.VFC<Props> = (
   props: Props
 ) => {
   // *************** JSX *************** //
@@ -19,8 +19,6 @@ export const ExternalLink: React.VFC<Props> = (
     <a
       className={props.className}
       href={props.link}
-      target="_blank"
-      rel="noreferrer"
     >
       { props.children ? props.children : props.text }
     </a>

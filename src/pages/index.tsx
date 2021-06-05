@@ -3,9 +3,9 @@ import React from "react"
 // Components
 import { Layout } from "../layouts/layout"
 import { PageHead } from "../layouts/pageHead"
-import { HomeTop } from "../components/molecules/home/homeTop"
+import { Top } from "../components/molecules/common/top"
 // Styles
-import styles from '../styles/Home.module.scss'
+// import styles from '../styles/Home.module.scss'
 
 export const Home: React.VFC = () => {
   // *************** JSX *************** //
@@ -14,7 +14,7 @@ export const Home: React.VFC = () => {
       <PageHead
         title=""
       />
-      <HomeTop />
+      <Top />
     </Layout>
 
     // import Head from 'next/head'

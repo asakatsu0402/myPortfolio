@@ -14,7 +14,9 @@ export const Footer = () => {
   // *************** JSX *************** //
   return (
     <footer
-      className={styles.footer}
+      className={`${styles.footer}
+        p-5 bg-black text-white
+      `}
     >
       <nav>
         <ul className={styles.navList}>

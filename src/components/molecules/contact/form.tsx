@@ -5,7 +5,7 @@ import { Label } from "../../atoms/label"
 import { Textarea } from "../../atoms/textarea"
 import { Input } from "../../atoms/input"
 // Config
-import { formList } from "../../../config/formConfig"
+import { formList } from "../../../config/contactConfig"
 // Styles
 // import styles from '../../../styles/Home.module.scss'
 
@@ -18,6 +18,7 @@ export const Form = () => {
           key={i}
         >
           <Label
+            className="cursor-pointer"
             htmlFor={form.name}
             text={form.label}
           />

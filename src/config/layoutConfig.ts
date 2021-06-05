@@ -7,6 +7,9 @@ export const headerNav = [
     title: 'Blog', link: '/',
   },
   {
+    title: 'Works', link: '/works',
+  },
+  {
     title: 'Contact', link: '/contact',
   }
 ]
@@ -18,6 +21,9 @@ export const footerNav = [
   },
   {
     title: 'Blog', link: '/',
+  },
+  {
+    title: 'Works', link: '/works',
   },
   {
     title: 'Contact', link: '/contact',
