@@ -1,13 +1,13 @@
 // Modules
 import React from "react"
 // Config
-import { policyText } from "../../../config/aboutConfig"
+import { iamText } from "../../../config/aboutConfig"
 
-export const Policy: React.VFC = () => {
+export const Iam: React.VFC = () => {
   // *************** JSX *************** //
   return (
     <div className="w-3/5">
-      <p>{policyText.ja}</p>
+      <p>{iamText.ja}</p>
     </div>
   )
 }

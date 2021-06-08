@@ -18,9 +18,13 @@ export const Layout = ({
 }: Props) => {
   // *************** JSX *************** //
   return (
-    <div>
+    <div className="flex flex-col h-full">
       <Header />
-      <main className={`main ${className}`}>
+      <main
+        className={`main ${className}
+          flex flex-col flex-grow min-h-0 h-full
+        `}
+      >
         { children }
       </main>
       <Footer />

@@ -11,10 +11,18 @@ import styles from '../styles/layout.module.scss'
 export const Header: React.VFC = () => {
   // *************** JSX *************** //
   return (
-    <header className={styles.header}>
+    <header
+      className={`${styles.header}
+        flex justify-between items-center h-16 p-4
+      `}
+    >
       <Title />
       <nav>
-        <ul className={styles.header_nav}>
+        <ul
+          className={`${styles.header_nav}
+            flex 
+          `}
+        >
           { headerNav.map((nav: any, i: number) => (
             <li
               key={i}

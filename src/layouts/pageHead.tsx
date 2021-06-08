@@ -13,7 +13,7 @@ export const PageHead = (
   // *************** JSX *************** //
   <Head>
     <title>
-      { props.title && `${props.title} | `} asakatsu Blog
+      { props.title && `${props.title} | `} asakatsu
     </title>
     <meta
       name="description"

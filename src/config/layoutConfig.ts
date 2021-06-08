@@ -1,10 +1,16 @@
+// FontAwesome
+import {
+  faGithub,
+  faTwitter
+} from "@fortawesome/free-brands-svg-icons"
+
 // Header Navigation
 export const headerNav = [
   {
     title: 'About', link: '/about',
   },
   {
-    title: 'Blog', link: '/',
+    title: 'Blog', link: '/blog',
   },
   {
     title: 'Works', link: '/works',
@@ -15,17 +21,17 @@ export const headerNav = [
 ]
 
 // Footer Navigation
-export const footerNav = [
+export const footerShare = [
   {
-    title: 'About', link: '/about',
+    icon: faGithub, link: 'https://github.com/asakatsu0402',
   },
   {
-    title: 'Blog', link: '/',
+    icon: faTwitter, link: 'https://twitter.com/asakatsuyolo',
   },
-  {
-    title: 'Works', link: '/works',
-  },
-  {
-    title: 'Contact', link: '/contact',
-  }
+  // {
+  //   title: 'Works', link: '/works',
+  // },
+  // {
+  //   title: 'Contact', link: '/contact',
+  // }
 ]

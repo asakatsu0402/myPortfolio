@@ -2,16 +2,6 @@
 @use "foundations/import" as f;
 
 /* *************** Styles *************** */
-.header {
-  display: flex;
-  justify-content: space-between;
-  padding: 1rem;
-
-  &_nav {
-    display: flex;
-    justify-content: space-around;
-  }
-}
 
 .footer {
 

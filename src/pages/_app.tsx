@@ -1,7 +1,10 @@
 // Styles
 import '../styles/globals.scss'
+// FontAwesome
+import "@fortawesome/fontawesome-svg-core/styles.css"
 
-function MyApp({ Component, pageProps }) {
+const MyApp = ({ Component, pageProps }) => {
+  // *************** JSX *************** //
   return <Component {...pageProps} />
 }
 
