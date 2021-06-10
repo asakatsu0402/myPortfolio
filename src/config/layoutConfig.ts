@@ -32,6 +32,6 @@ export const footerShare = [
   //   title: 'Works', link: '/works',
   // },
   // {
-  //   title: 'Contact', link: '/contact',
+  //   title: 'Index', link: '/contact',
   // }
 ]
