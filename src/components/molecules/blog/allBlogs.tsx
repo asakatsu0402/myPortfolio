@@ -13,6 +13,7 @@ export const AllBlogs: React.VFC<Props> = (
 ) => {
   // *************** Const *************** //
   const { list } = props
+  console.log (props)
 
   // *************** JSX *************** //
   return (
@@ -39,6 +40,7 @@ export const AllBlogs: React.VFC<Props> = (
                 <h2 className="font-bold text-2xl">
                   {list.title}
                 </h2>
+                <p>{ list.categories.name }</p>
                 <ul>
                   { list.tag.map((tag: any, j: number) => (
                     <li

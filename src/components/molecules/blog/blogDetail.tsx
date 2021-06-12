@@ -14,12 +14,13 @@ export const BlogDetail: React.VFC<Props> = (
     updatedAt,
     title,
     tag,
-    thumbnail
+    thumbnail,
+    categories
   } = props.data
 
   // *************** JSX *************** //
   return (
-    <div>
+    <article>
       <div className="w-1/2">
         <img
           src={thumbnail.url}
@@ -29,6 +30,7 @@ export const BlogDetail: React.VFC<Props> = (
       <h2 className="font-bold text-4xl">
         {title}
       </h2>
+      <p>{categories.name}</p>
       <ul>
         { tag.map((t: any, i: number) => (
           <li
@@ -39,6 +41,6 @@ export const BlogDetail: React.VFC<Props> = (
         ))}
       </ul>
       <p>{updatedAt}</p>
-    </div>
+    </article>
   )
 }

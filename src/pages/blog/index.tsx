@@ -26,9 +26,14 @@ export const Blog: NextPage<Props> = (
       <PageHead
         title="Blog"
       />
-      <AllBlogs
-        list={props.contents}
-      />
+      <main>
+        <AllBlogs
+          list={props.contents}
+        />
+      </main>
+      <aside>
+
+      </aside>
     </Layout>
   )
 }

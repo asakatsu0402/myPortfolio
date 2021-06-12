@@ -1,5 +1,7 @@
 // Modules
-import React from "react"
+import React, {
+  useState
+} from "react"
 // Components
 import { Layout } from "../../layouts/layout"
 import { PageHead } from "../../layouts/pageHead"
@@ -10,6 +12,9 @@ import { ContactWay } from "../../components/molecules/contact/contactWay"
 // import styles from '../styles/Home.module.scss'
 
 export const Index = () => {
+  // *************** Const *************** //
+  const [error, setError] = useState<any>({})
+  console.log (error)
   // *************** JSX *************** //
   return(
     <Layout>
@@ -19,7 +24,10 @@ export const Index = () => {
       <Section
         title="Form"
       >
-        <Form />
+        <Form
+          error={error}
+          setError={setError}
+        />
       </Section>
       <Section
         title="Contact"

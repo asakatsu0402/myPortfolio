@@ -20,13 +20,13 @@ export const Layout = ({
   return (
     <div className="flex flex-col h-full">
       <Header />
-      <main
-        className={`main ${className}
-          flex flex-col flex-grow min-h-0 h-full
+      <div
+        className={`${className}
+          flex min-h-0 h-full
         `}
       >
         { children }
-      </main>
+      </div>
       <Footer />
     </div>
   )

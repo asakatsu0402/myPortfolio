@@ -45,14 +45,18 @@ export const DetailBlog: NextPage<Props> = (
       <PageHead
         title={`Blog - ${title}`}
       />
-      <BreadList
-        title={title}
-      />
+      <article>
+        <BreadList
+          title={title}
+        />
 
-      <BlogDetail
-        data={props}
-      />
+        <BlogDetail
+          data={props}
+        />
+      </article>
+      <aside>
 
+      </aside>
     </Layout>
   )
 }
