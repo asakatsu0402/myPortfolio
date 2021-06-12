@@ -2,6 +2,7 @@
 import React from "react"
 // Components
 import { Label } from "../../atoms/label"
+import { Select } from "../../atoms/select"
 import { Textarea } from "../../atoms/textarea"
 import { Input } from "../../atoms/input"
 // Config
@@ -23,9 +24,14 @@ export const Form = () => {
             text={form.label}
           />
           { form.tag === 'select' ? (
-            <select name="" id="">
-
-            </select>
+            <Select
+              name={form.name}
+              label={form.label}
+              initialLabel={form.initialLabel}
+              options={form.options}
+              optionValue="value"
+              optionLabel="label"
+            />
           ) : form.tag === 'textarea' ? (
             <Textarea
               name={form.name}

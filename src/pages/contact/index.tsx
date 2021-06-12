@@ -14,7 +14,7 @@ export const Index = () => {
   return(
     <Layout>
       <PageHead
-        title="Index"
+        title="Contact"
       />
       <Section
         title="Form"
@@ -22,7 +22,7 @@ export const Index = () => {
         <Form />
       </Section>
       <Section
-        title="Index"
+        title="Contact"
       >
         <ContactWay />
       </Section>

@@ -19,6 +19,30 @@ export const formList = [
     type: 'email'
   },
   {
+    name: 'category',
+    label: 'お問い合わせカテゴリー',
+    initialLabel: 'カテゴリーを選択してください。',
+    tag: 'select',
+    options: [
+      {
+        label: '仕事依頼について',
+        value: '仕事依頼について'
+      },
+      {
+        label: '協業について',
+        value: '協業について'
+      },
+      {
+        label: 'ブログについて',
+        value: 'ブログについて'
+      },
+      {
+        label: 'その他',
+        value: 'その他'
+      }
+    ]
+  },
+  {
     name: 'content',
     label: 'お問い合わせ内容',
     tag: 'textarea'
