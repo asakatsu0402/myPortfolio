@@ -13,7 +13,6 @@ export const AllBlogs: React.VFC<Props> = (
 ) => {
   // *************** Const *************** //
   const { list } = props
-  console.log (props)
 
   // *************** JSX *************** //
   return (
