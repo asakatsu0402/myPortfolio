@@ -8,6 +8,7 @@ import { Section } from "../../components/molecules/common/section"
 import { Skill } from "../../components/molecules/about/skill"
 import { Policy } from "../../components/molecules/about/policy"
 import { Iam } from "../../components/molecules/about/iam"
+import { Career } from "../../components/molecules/about/career"
 // Styles
 // import styles from '../styles/Home.module.scss'
 
@@ -16,24 +17,31 @@ export const Index = () => {
   return(
     <Layout>
       <PageHead
-        title="Index"
+        title="About"
       />
-      <Top />
-      <Section
-        title="Skill"
-      >
-        <Skill />
-      </Section>
-      <Section
-        title="Promise"
-      >
-        <Policy />
-      </Section>
-      <Section
-        title="I am a ..."
-      >
-        <Iam />
-      </Section>
+      <main>
+        <Top />
+        <Section
+          title="Skill"
+        >
+          <Skill />
+        </Section>
+        <Section
+          title="Promise"
+        >
+          <Policy />
+        </Section>
+        <Section
+          title="I am a ..."
+        >
+          <Iam />
+        </Section>
+        <Section
+          title="Career"
+        >
+          <Career />
+        </Section>
+      </main>
     </Layout>
   )
 }

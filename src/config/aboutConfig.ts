@@ -1,16 +1,36 @@
 export const skillList = [
   {
+    label: 'TypeScript',
+  },
+  {
     label: 'React.js',
+    flameWork: [
+
+    ],
+    library: [
+      {
+        title: 'React Query'
+      },
+      {
+        title: 'CASL'
+      },
+      {
+        title: 'React Hook Form'
+      },
+      {
+        title: 'React Select'
+      }
+    ]
+  },
+  {
+    label: 'Sass',
   },
   {
     label: 'firebase',
   },
   {
-    label: 'TypeScript',
+    label: 'SendGrid',
   },
-  {
-    label: 'Sass',
-  }
 ]
 
 // Policy
@@ -26,3 +46,18 @@ export const iamText = {
     '”戦うフロントエンド”\n' +
     '私を説明するにあたって、これほど的を得たキャッチコピーは他にありません'
 }
+
+// Career
+export const careerList = [
+  {
+    title: '株式会社LLL',
+    link: 'https://lll-inc.co.jp/',
+    start: '2020/04',
+    end: '2020/06'
+  },
+  {
+    title: '株式会社WEEL',
+    link: 'https://quaerere.app/',
+    start: '2020/08'
+  }
+]

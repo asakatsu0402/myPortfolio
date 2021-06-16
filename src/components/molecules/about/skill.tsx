@@ -1,7 +1,5 @@
 // Modules
 import React from "react"
-// Components
-
 // Config
 import { skillList } from "../../../config/aboutConfig"
 
@@ -15,6 +13,15 @@ export const Skill: React.VFC = () => {
           className=""
         >
           <p>{skill.label}</p>
+          <ul>
+            { skill.library && skill.library.map((library: any, j: number) => (
+              <li
+                key={j}
+              >
+                <p>{library.title}</p>
+              </li>
+            ))}
+          </ul>
         </li>
       ))}
     </ul>

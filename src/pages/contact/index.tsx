@@ -21,19 +21,21 @@ export const Index = () => {
       <PageHead
         title="Contact"
       />
-      <Section
-        title="Form"
-      >
-        <Form
-          error={error}
-          setError={setError}
-        />
-      </Section>
-      <Section
-        title="Contact"
-      >
-        <ContactWay />
-      </Section>
+      <main>
+        <Section
+          title="Form"
+        >
+          <Form
+            error={error}
+            setError={setError}
+          />
+        </Section>
+        <Section
+          title="Contact"
+        >
+          <ContactWay />
+        </Section>
+      </main>
     </Layout>
   )
 }
