@@ -2,7 +2,7 @@
 import React from "react"
 import Image from "next/image"
 // Images
-// import topImage from "./topImage.png"
+// import topImage from "../../../Images/topImage.png"
 // Styles
 import styles from '../../../styles/Home.module.scss'
 

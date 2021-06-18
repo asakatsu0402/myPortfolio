@@ -3,6 +3,7 @@ import React, {
   ReactNode
 } from "react"
 // Components
+import { DarkModeButton } from "../components/molecules/common/darkModeButton"
 import { Header } from "./header"
 import { Footer } from "./footer"
 
@@ -19,6 +20,7 @@ export const Layout = ({
   // *************** JSX *************** //
   return (
     <div className="flex flex-col h-full">
+      <DarkModeButton />
       <Header />
       <div
         className={`${className}
