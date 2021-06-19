@@ -1,24 +1,27 @@
 // Modules
 import React from "react"
 import Image from "next/image"
-// Images
-// import topImage from "../../../Images/topImage.png"
-// Styles
-import styles from '../../../styles/Home.module.scss'
 
 export const Top = () => {
   // *************** JSX *************** //
   return (
-    <div className={styles.homeTop}>
-      <h1 className="font-bold text-5xl">
+    <div className="mx-auto">
+      <div className="relative">
+        <Image
+          className="object-contain"
+          src="/topImage.png"
+          alt="test"
+          width="1500"
+          height="1000"
+        />
+      </div>
+      <h1
+        className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2
+          font-bold text-5xl text-red-800
+        "
+      >
         KATSUYA ASAKURA
       </h1>
-      {/*<Image*/}
-      {/*  src={topImage}*/}
-      {/*  alt="test"*/}
-      {/*  width="300"*/}
-      {/*  height="333"*/}
-      {/*/>*/}
     </div>
   )
 }

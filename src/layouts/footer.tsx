@@ -11,7 +11,7 @@ export const Footer = () => {
   return (
     <footer
       className={`${styles.footer}
-        flex justify-between p-4
+        flex justify-between items-center h-16 p-4
       `}
     >
       <ShareList />

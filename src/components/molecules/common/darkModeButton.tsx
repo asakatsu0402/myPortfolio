@@ -5,7 +5,7 @@ import React, {
 } from "react"
 import { useTheme } from "next-themes"
 // Components
-import { Button } from "../../atoms/Button"
+import { Button } from "../../atoms/button"
 // FontAwesome
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faMoon, faSun } from "@fortawesome/free-solid-svg-icons"
@@ -24,7 +24,7 @@ export const DarkModeButton: React.VFC = () => {
   // *************** JSX *************** //
   return (
     <Button
-      className="py-2 px-4 rounded-full bg-red-800
+      className="py-2 px-3 rounded-full bg-red-800
 
       "
       function={() => setTheme(theme === 'dark' ? 'light' : 'dark')}

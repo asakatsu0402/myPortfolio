@@ -5,7 +5,7 @@ import { Label } from "../../atoms/label"
 import { Select } from "../../atoms/select"
 import { Textarea } from "../../atoms/textarea"
 import { Input } from "../../atoms/input"
-import { Button } from "../../atoms/Button"
+import { Button } from "../../atoms/button"
 // Config
 import { formList } from "../../../config/contactConfig"
 // Functions

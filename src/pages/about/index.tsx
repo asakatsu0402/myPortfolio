@@ -9,10 +9,8 @@ import { Skill } from "../../components/molecules/about/skill"
 import { Policy } from "../../components/molecules/about/policy"
 import { Iam } from "../../components/molecules/about/iam"
 import { Career } from "../../components/molecules/about/career"
-// Styles
-// import styles from '../styles/Home.module.scss'
 
-export const Index = () => {
+export const About = () => {
   // *************** JSX *************** //
   return(
     <Layout>
@@ -20,7 +18,6 @@ export const Index = () => {
         title="About"
       />
       <main>
-        <Top />
         <Section
           title="Skill"
         >
@@ -46,4 +43,4 @@ export const Index = () => {
   )
 }
 
-export default Index
+export default About

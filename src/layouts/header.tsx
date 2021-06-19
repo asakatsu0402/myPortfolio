@@ -1,9 +1,8 @@
 // Modules
 import React from "react"
-import Link from "next/link"
 import { useRouter } from "next/router"
 // Components
-import { Title } from "../components/atoms/title"
+import { PageLink } from "../components/atoms/pageLink"
 // Config
 import { headerNav } from "../config/layoutConfig"
 // Styles
@@ -22,7 +21,11 @@ export const Header: React.VFC = () => {
         flex justify-between items-center h-16 p-4
       `}
     >
-      <Title />
+      <PageLink
+        className={ path === '/' ? 'text-red-800 font-bold' : '' }
+        href="/"
+        text="asakatsu"
+      />
       <nav>
         <ul
           className={`${styles.header_nav}
@@ -30,17 +33,15 @@ export const Header: React.VFC = () => {
           `}
         >
           { headerNav.map((nav: any, i: number) => (
-            <li
-              key={i}
-              className={ isPage === nav.link.split('/')[1]
-                ? 'text-red-800 font-bold' : ''
-              }
-            >
-              <Link
+            <li key={i}>
+              <PageLink
+                className={ isPage === nav.link.split('/')[1]
+                  ? 'text-red-800 font-bold' : ''
+                }
                 href={nav.link}
               >
                 { nav.title }
-              </Link>
+              </PageLink>
             </li>
           ))}
         </ul>

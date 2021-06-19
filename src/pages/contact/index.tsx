@@ -11,7 +11,7 @@ import { ContactWay } from "../../components/molecules/contact/contactWay"
 // Styles
 // import styles from '../styles/Home.module.scss'
 
-export const Index = () => {
+export const Contact = () => {
   // *************** Const *************** //
   const [error, setError] = useState<any>({})
   console.log (error)
@@ -40,4 +40,4 @@ export const Index = () => {
   )
 }
 
-export default Index
+export default Contact
