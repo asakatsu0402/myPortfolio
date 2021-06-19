@@ -1,5 +1,8 @@
 // Modules
-import React, { useEffect, useState } from "react"
+import React, {
+  useEffect,
+  useState
+} from "react"
 import { useTheme } from "next-themes"
 // Components
 import { Button } from "../../atoms/Button"
@@ -7,27 +10,21 @@ import { Button } from "../../atoms/Button"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faMoon, faSun } from "@fortawesome/free-solid-svg-icons"
 
-// *************** Type *************** //
-type Props = {
-
-}
-
-export const DarkModeButton: React.VFC<Props> = (
-  props: Props
-) => {
+export const DarkModeButton: React.VFC = () => {
   // *************** Const *************** //
   const { theme, setTheme } = useTheme()
   const [rendered, setRendered] = useState<boolean>(false)
 
   // *************** Const *************** //
-  useEffect(() =>
-    setRendered(true), []
+  useEffect(
+    () => setRendered(true),
+    []
   )
 
   // *************** JSX *************** //
   return (
     <Button
-      className="fixed right-5 bottom-5 p-2 bg-red-800
+      className="py-2 px-4 rounded-full bg-red-800
 
       "
       function={() => setTheme(theme === 'dark' ? 'light' : 'dark')}

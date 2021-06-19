@@ -4,16 +4,18 @@ import React from "react"
 import { ShareList } from "../components/molecules/layouts/shareList"
 // Styles
 import styles from '../styles/layout.module.scss'
+import { DarkModeButton } from "../components/molecules/common/darkModeButton"
 
 export const Footer = () => {
   // *************** JSX *************** //
   return (
     <footer
       className={`${styles.footer}
-        h-16 p-4
+        flex justify-between p-4
       `}
     >
       <ShareList />
+      <DarkModeButton />
     </footer>
   )
 }

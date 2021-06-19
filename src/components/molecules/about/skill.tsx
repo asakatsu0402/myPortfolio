@@ -18,7 +18,9 @@ export const Skill: React.VFC = () => {
               <li
                 key={j}
               >
-                <p>{library.title}</p>
+                <p>
+                  {library.title}
+                </p>
               </li>
             ))}
           </ul>

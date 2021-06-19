@@ -3,7 +3,6 @@ import React, {
   ReactNode
 } from "react"
 // Components
-import { DarkModeButton } from "../components/molecules/common/darkModeButton"
 import { Header } from "./header"
 import { Footer } from "./footer"
 
@@ -19,12 +18,11 @@ export const Layout = ({
 }: Props) => {
   // *************** JSX *************** //
   return (
-    <div className="flex flex-col h-full">
-      <DarkModeButton />
+    <div className="flex flex-col justify-between h-full">
       <Header />
       <div
         className={`${className}
-          flex min-h-0 h-full
+          flex flex-grow overflow-y-scroll min-h-0 h-full w-full
         `}
       >
         { children }

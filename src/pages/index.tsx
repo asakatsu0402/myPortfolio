@@ -10,7 +10,7 @@ import { Top } from "../components/molecules/common/top"
 export const Home: React.VFC = () => {
   // *************** JSX *************** //
   return(
-    <Layout className="">
+    <Layout>
       <PageHead
         title=""
       />

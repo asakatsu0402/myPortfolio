@@ -7,7 +7,9 @@ export const Iam: React.VFC = () => {
   // *************** JSX *************** //
   return (
     <div className="w-3/5">
-      <p>{iamText.ja}</p>
+      <p className="first-letter:text-4xl">
+        {iamText.ja}
+      </p>
     </div>
   )
 }
