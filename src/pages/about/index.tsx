@@ -24,16 +24,19 @@ export const About = () => {
           <Skill />
         </Section>
         <Section
+          className="flex-row-reverse mt-52"
           title="Promise"
         >
           <Policy />
         </Section>
         <Section
+          className="mt-52"
           title="I am a ..."
         >
           <Iam />
         </Section>
         <Section
+          className="flex-row-reverse mt-52"
           title="Career"
         >
           <Career />

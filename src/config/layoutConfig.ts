@@ -1,6 +1,6 @@
 // FontAwesome
 import {
-  faGithub, faInstagram,
+  faGithub, faInstagram, faPinterest,
   faTwitter
 } from "@fortawesome/free-brands-svg-icons"
 
@@ -33,5 +33,9 @@ export const footerShare = [
   {
     icon: faInstagram,
     link: 'https://www.instagram.com/asakatsu_draw_camera/',
+  },
+  {
+    icon: faPinterest,
+    link: 'https://www.pinterest.jp/04asaka020502/_created/',
   }
 ]

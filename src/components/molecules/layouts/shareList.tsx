@@ -9,7 +9,7 @@ import { footerShare } from "../../../config/layoutConfig"
 export const ShareList = () => {
   // *************** JSX *************** //
   return (
-    <ul className="flex justify-between w-20">
+    <ul className="flex justify-between w-28">
       { footerShare.map((share: any, i: number) => (
         <li key={i}>
           <ExternalLink
