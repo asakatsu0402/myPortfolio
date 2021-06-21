@@ -1,31 +1,51 @@
 // Modules
 import React from "react"
 // Config
-import { skillList } from "../../../config/aboutConfig"
+import {
+  languages,
+  frameworks,
+  libraries,
+  tools
+} from "../../../config/aboutConfig"
 
 export const Skill: React.VFC = () => {
   // *************** JSX *************** //
   return (
-    <ul className="flex">
-      { skillList.map((skill: any, i: number) => (
-        <li
-          key={i}
-          className=""
-        >
-          <p>{skill.label}</p>
-          <ul>
-            { skill.library && skill.library.map((library: any, j: number) => (
-              <li
-                key={j}
-              >
-                <p>
-                  {library.title}
-                </p>
-              </li>
-            ))}
-          </ul>
-        </li>
-      ))}
-    </ul>
+    <div className="flex">
+      <ul>
+        { languages.map((language: any, i: number) => (
+         <li key={i}>
+           <p>{language.label}</p>
+         </li>
+        ))}
+      </ul>
+      <ul>
+        { frameworks.map((frame: any, j: number) => (
+          <li
+            key={j}
+            className=""
+          >
+            <p>{frame.label}</p>
+          </li>
+        ))}
+      </ul>
+      <ul>
+        { libraries.map((library: any, k: number) => (
+          <li
+            key={k}
+            className=""
+          >
+            <p>{library.label}</p>
+          </li>
+        ))}
+      </ul>
+      <ul>
+        { tools.map((tool: any, l: number) => (
+          <li key={l}>
+            <p>{tool.label}</p>
+          </li>
+        ))}
+      </ul>
+    </div>
   )
 }

@@ -1,36 +1,80 @@
-export const skillList = [
+// Language
+export const languages = [
+  {
+    label: 'JavaScript',
+  },
   {
     label: 'TypeScript',
   },
   {
-    label: 'React.js',
-    flameWork: [
-
-    ],
-    library: [
-      {
-        title: 'React Query'
-      },
-      {
-        title: 'CASL'
-      },
-      {
-        title: 'React Hook Form'
-      },
-      {
-        title: 'React Select'
-      }
-    ]
+    label: 'SQL',
   },
   {
     label: 'Sass',
+  }
+]
+
+// FrameWorks
+export const frameworks = [
+  {
+    label: 'Next.js'
   },
   {
-    label: 'firebase',
+    label: 'Express'
+  },
+  {
+    label: 'Nest.js'
+  }
+]
+
+// Library
+export const libraries = [
+  {
+    label: 'React.js'
+  },
+  {
+    label: 'React Query'
+  },
+  {
+    label: 'CASL'
+  },
+  {
+    label: 'React Hook Form'
+  },
+  {
+    label: 'React Select'
+  },
+  {
+    label: 'Recoil'
+  },
+  {
+    label: 'Tailwind CSS'
+  }
+]
+
+// Tool
+export const tools = [
+  {
+    label: 'Node.js',
+  },
+  {
+    label: 'Firebase',
+  },
+  {
+    label: 'microCMS',
   },
   {
     label: 'SendGrid',
   },
+  {
+    label: 'Google Sheets API',
+  },
+  {
+    label: 'Google Docs API',
+  },
+  {
+    label: 'GCP',
+  }
 ]
 
 // Policy

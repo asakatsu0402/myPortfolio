@@ -1,6 +1,9 @@
 // Modules
 import React from "react"
 import Link from "next/link"
+// FontAwesome
+import { faHistory } from "@fortawesome/free-solid-svg-icons"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 
 // *************** Type *************** //
 type Props = {
@@ -50,7 +53,12 @@ export const AllBlogs: React.VFC<Props> = (
                     </li>
                   ))}
                 </ul>
-                <p>{list.updatedAt}</p>
+                <p>
+                  <FontAwesomeIcon
+                    icon={faHistory}
+                  />
+                  {list.updatedAt}
+                </p>
               </div>
             </div>
           </Link>

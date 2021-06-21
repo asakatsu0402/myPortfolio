@@ -1,5 +1,12 @@
 // Modules
 import React from "react"
+// Components
+import { TableContents } from "./tableContents"
+// Functions
+import { CommonFunctions } from "../../../functions/commonFunctions"
+// FontAwesome
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { faHistory } from "@fortawesome/free-solid-svg-icons"
 
 // *************** Type *************** //
 type Props = {
@@ -15,8 +22,13 @@ export const BlogDetail: React.VFC<Props> = (
     title,
     tag,
     thumbnail,
-    categories
+    categories,
+    body
   } = props.data
+  const { commons } = CommonFunctions()
+
+  // *************** Functions *************** //
+  const list = commons.createContents(body)
 
   // *************** JSX *************** //
   return (
@@ -40,7 +52,22 @@ export const BlogDetail: React.VFC<Props> = (
           </li>
         ))}
       </ul>
-      <p>{updatedAt}</p>
+      <p>
+        <FontAwesomeIcon
+          icon={faHistory}
+        />
+        {updatedAt}
+      </p>
+
+      <TableContents
+        data={list}
+      />
+
+      <div
+        dangerouslySetInnerHTML={
+          { __html: `${body}` }
+        }
+      />
     </article>
   )
 }

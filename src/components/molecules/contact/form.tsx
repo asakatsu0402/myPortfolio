@@ -28,9 +28,10 @@ export const Form = (
   // *************** JSX *************** //
   return (
     <div>
-      <ul>
+      <ul className="p-2">
         { formList.map((form: any, i: number) => (
           <li
+            className="first:m-0 mt-5"
             key={i}
           >
             <Label
@@ -49,10 +50,12 @@ export const Form = (
               />
             ) : form.tag === 'textarea' ? (
               <Textarea
+                className="px-1 py-0.5"
                 name={form.name}
               />
             ) : (
               <Input
+                className="px-1 py-0.5"
                 name={form.name}
                 type={form.type}
                 function={(e: React.ChangeEvent<HTMLInputElement>) => {

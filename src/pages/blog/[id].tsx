@@ -1,5 +1,5 @@
 // Modules
-import React from "react"
+import React  from "react"
 import { NextPage } from "next"
 // Components
 import { Layout } from "../../layouts/layout"
@@ -45,18 +45,17 @@ export const DetailBlog: NextPage<Props> = (
       <PageHead
         title={`Blog - ${title}`}
       />
-      <article>
-        <BreadList
-          title={title}
-        />
+        <article>
+          <BreadList
+            title={title}
+          />
+          <BlogDetail
+            data={props}
+          />
+        </article>
+        <aside>
 
-        <BlogDetail
-          data={props}
-        />
-      </article>
-      <aside>
-
-      </aside>
+        </aside>
     </Layout>
   )
 }
