@@ -7,6 +7,7 @@ import { CommonFunctions } from "../../../functions/commonFunctions"
 // FontAwesome
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faHistory } from "@fortawesome/free-solid-svg-icons"
+import { ArticleShare } from "./articleShare"
 
 // *************** Type *************** //
 type Props = {
@@ -39,35 +40,46 @@ export const BlogDetail: React.VFC<Props> = (
           alt=""
         />
       </div>
-      <h2 className="font-bold text-4xl">
-        {title}
-      </h2>
-      <p>{categories.name}</p>
-      <ul>
-        { tag.map((t: any, i: number) => (
-          <li
-            key={i}
-          >
-            <p>{t}</p>
-          </li>
-        ))}
-      </ul>
-      <p>
-        <FontAwesomeIcon
-          icon={faHistory}
+
+      <div className="flex">
+
+        <ArticleShare
+          // url={}
+          title={title}
         />
-        {updatedAt}
-      </p>
 
-      <TableContents
-        data={list}
-      />
+        <div>
+          <h2 className="font-bold text-4xl">
+            {title}
+          </h2>
+          <p>{categories.name}</p>
+          <ul>
+            { tag.map((t: any, i: number) => (
+              <li
+                key={i}
+              >
+                <p>{t}</p>
+              </li>
+            ))}
+          </ul>
+          <time>
+            <FontAwesomeIcon
+              icon={faHistory}
+            />
+            {updatedAt}
+          </time>
 
-      <div
-        dangerouslySetInnerHTML={
-          { __html: `${body}` }
-        }
-      />
+          <TableContents
+            data={list}
+          />
+
+          <div
+            dangerouslySetInnerHTML={
+              { __html: `${body}` }
+            }
+          />
+        </div>
+      </div>
     </article>
   )
 }

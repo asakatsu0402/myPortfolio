@@ -7,7 +7,9 @@ import {
   FacebookShareButton,
   FacebookIcon,
   HatenaShareButton,
-  HatenaIcon, LineShareButton, LineIcon
+  HatenaIcon,
+  LineShareButton,
+  LineIcon
 } from "react-share"
 
 // *************** Type *************** //
@@ -20,14 +22,14 @@ export const ArticleShare: React.VFC<Props> = (
 ) => {
   // *************** JSX *************** //
   return (
-    <ul className="flex mt-5">
+    <ul className="sticky top-5 h-full">
       <li>
         <TwitterShareButton
           url=""
           title={props.title}
         >
           <TwitterIcon
-            size={40}
+            size={35}
             round
           />
         </TwitterShareButton>
@@ -38,7 +40,7 @@ export const ArticleShare: React.VFC<Props> = (
           title={props.title}
         >
           <FacebookIcon
-            size={40}
+            size={35}
             round
           />
         </FacebookShareButton>
@@ -49,7 +51,7 @@ export const ArticleShare: React.VFC<Props> = (
           title={props.title}
         >
           <HatenaIcon
-            size={40}
+            size={35}
             round
           />
         </HatenaShareButton>
@@ -60,7 +62,7 @@ export const ArticleShare: React.VFC<Props> = (
           title={props.title}
         >
           <LineIcon
-            size={40}
+            size={35}
             round
           />
         </LineShareButton>
