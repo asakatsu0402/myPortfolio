@@ -5,6 +5,7 @@ import { NextPage } from "next"
 import { Layout } from "../../layouts/layout"
 import { PageHead } from "../../layouts/pageHead"
 import { BreadList } from "../../components/molecules/blog/breadList"
+import { ArticleShare } from "../../components/molecules/blog/articleShare"
 import { BlogDetail } from "../../components/molecules/blog/blogDetail"
 // Functions
 import {
@@ -36,6 +37,7 @@ export const getStaticProps = async ({ params }) => {
 export const DetailBlog: NextPage<Props> = (
   props: Props
 ) => {
+  
   // *************** Const *************** //
   const { title } = props
 
@@ -51,6 +53,10 @@ export const DetailBlog: NextPage<Props> = (
           />
           <BlogDetail
             data={props}
+          />
+          <ArticleShare
+            // url={}
+            title={title}
           />
         </article>
         <aside>
