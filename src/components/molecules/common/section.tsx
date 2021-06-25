@@ -17,7 +17,8 @@ export const Section: React.VFC<Props> = (
   return (
     <section
       className={`${props.className}
-        flex justify-between w-2/3 m-auto
+        w-2/3 m-auto 
+        md:flex md:justify-between md:w-4/5
       `}
     >
       <h2 className="font-bold text-3xl">

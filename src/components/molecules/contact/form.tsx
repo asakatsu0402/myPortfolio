@@ -55,7 +55,9 @@ export const Form = (
               />
             ) : (
               <Input
-                className="px-1 py-0.5"
+                className="px-1 py-0.5 border-solid border-2 border-transparent transition ease-in duration-300
+                  focus:border-red-800
+                "
                 name={form.name}
                 type={form.type}
                 function={(e: React.ChangeEvent<HTMLInputElement>) => {

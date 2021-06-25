@@ -40,6 +40,11 @@ button {
    }
 }
 
+/* Input */
+input, select, textarea {
+  outline: none
+}
+
 /* *************** Class *************** */
 .disabled {
   cursor: not-allowed;
