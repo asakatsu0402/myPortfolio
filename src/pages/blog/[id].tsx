@@ -3,7 +3,6 @@ import React  from "react"
 import { NextPage } from "next"
 // Components
 import { Layout } from "../../layouts/layout"
-import { PageHead } from "../../layouts/pageHead"
 import { BreadList } from "../../components/molecules/blog/breadList"
 import { BlogDetail } from "../../components/molecules/blog/blogDetail"
 import { ArticleSearch } from "../../components/molecules/blog/articleSearch"
@@ -43,22 +42,21 @@ export const DetailBlog: NextPage<Props> = (
 
   // *************** JSX *************** //
   return(
-    <Layout>
-      <PageHead
-        title={`Blog - ${title}`}
-      />
-        <article>
-          <BreadList
-            title={title}
-          />
-          <BlogDetail
-            data={props}
-          />
-        </article>
-        <aside>
-          <ArticleSearch />
+    <Layout
+      title={`Blog - ${title}`}
+    >
+      <article>
+        <BreadList
+          title={title}
+        />
+        <BlogDetail
+          data={props}
+        />
+      </article>
+      <aside>
+        <ArticleSearch />
 
-        </aside>
+      </aside>
     </Layout>
   )
 }

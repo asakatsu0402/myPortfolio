@@ -17,10 +17,7 @@ export const Contact = () => {
   console.log (error)
   // *************** JSX *************** //
   return(
-    <Layout>
-      <PageHead
-        title="Contact"
-      />
+    <Layout title="Contact">
       <main>
         <Section
           title="Form"

@@ -3,6 +3,7 @@ import React, {
   ReactNode
 } from "react"
 // Components
+import { PageHead } from "./pageHead"
 import { Header } from "./header"
 import { Footer } from "./footer"
 
@@ -10,15 +11,20 @@ import { Footer } from "./footer"
 type Props = {
   children?: ReactNode
   className?: string
+  title: string
 }
 
 export const Layout = ({
   children,
-  className
+  className,
+  title
 }: Props) => {
   // *************** JSX *************** //
   return (
     <div className="flex flex-col justify-between h-full">
+      <PageHead
+        title={title}
+      />
       <Header />
       <div
         className={`${className}

@@ -3,7 +3,6 @@ import React from "react"
 // Components
 import { Layout } from "../../layouts/layout"
 import { Top } from "../../components/molecules/common/top"
-import { PageHead } from "../../layouts/pageHead"
 import { Section } from "../../components/molecules/common/section"
 import { Skill } from "../../components/molecules/about/skill"
 import { Policy } from "../../components/molecules/about/policy"
@@ -13,10 +12,7 @@ import { Career } from "../../components/molecules/about/career"
 export const About = () => {
   // *************** JSX *************** //
   return(
-    <Layout>
-      <PageHead
-        title="About"
-      />
+    <Layout title="About">
       <main>
         <Section
           title="Skill"

@@ -1,34 +1,92 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# 海森プロジェクト
 
-## Getting Started
+外国人が簡単に就労VISA申請できるアプリケーション
 
-First, run the development server:
+## ファイル構成
 
-```bash
-npm run dev
-# or
-yarn dev
+```text
+app/
+ ├─ backend
+ │   └─ ...
+ ├─ frontend
+ │   └─ ...
+     ├─ src/          /***** コーディング *****/
+     │   ├─ images/          /***** 画像 *****/
+     │   │    └─ ...
+     │   ├─ layouts/          /***** レイアウトコンポーネント (Header, Footer, Mainなど) *****/
+     │   │    └─ ...
+     │   ├─ components/          /***** ページ別コンポーネント (Header, Footer, Mainなど) *****/
+     │   │    ├─ atoms          /***** 単一コンポーネント（タグなど） *****/
+     │   │    │   └─ ...  
+     │   │    └─ morecules/          /***** まとまりコンポーネント（セクション, フォームなど、ページ別で管理） *****/
+     │   │        └─ ...
+     │   ├─ config/          /***** 配列や設定など （ハードコーディング系） *****/
+     │   │    ├─ firebaseConfig.ts
+     │   │    └─ ...
+     │   ├─ functions/          /***** 関数 （APIなど） *****/
+     │   │    └─ ...
+     │   ├─ pages/          /***** ページ （申請書, マスター管理, ステータス） *****/
+     │   │    └─ ...
+     │   ├─ stylesheets/          /***** スタイル （申請書, マスター管理, ステータス） *****/
+     │   │    └─ ...
+     │   └─ ...
+     └─ ...
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## プロジェクトルール
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+* ### `pullするときはdevelopリモートリポジトリから`
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+```
+$ git pull origin develop
+```
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+* ### `ブランチの切り方は下記のように`
 
-## Learn More
+```
+$ git checkout -b feature/[日付]/[名前]/[ブランチ名] origin/develop
+```
 
-To learn more about Next.js, take a look at the following resources:
+* ### `CSSは記述順に沿って書く` [参考サイト](https://qiita.com/mgn/items/6154ccd2e23b2e65c769#comments)
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```
+/* CSS Writing order:
+ * display
+ * list-style
+ * position
+ * float
+ * clear
+ * width
+ * height
+ * margin
+ * padding
+ * border
+ * background
+ * color
+ * font
+ * text-decoration
+ * text-align
+ * vertical-align
+ * white-space
+ * other text
+ * content
+ */
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+## 始め方
 
-## Deploy on Vercel
+### `yarn start`
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Runs the app in the development mode.<br />
+Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+The page will reload if you make edits.<br />
+You will also see any lint errors in the console.
+
+### `FontAwesomeProを使用可能にする`
+* bashにて下記SHELLコードを叩く
+  [導入方法](https://doc.clickup.com/d/h/3en54-1314/9c1d3d000882f5b)
+
+```
+$ export NPM_TOKEN="E4668237-B355-4A7D-9494-9E283B18955B"
+```
