@@ -1,5 +1,6 @@
 // Modules
 import React from "react"
+import Image from "next/image"
 // Components
 import { TableContents } from "./tableContents"
 // Functions
@@ -34,13 +35,15 @@ export const BlogDetail: React.VFC<Props> = (
   // *************** JSX *************** //
   return (
     <article>
-      <div className="w-1/2">
-        <img
+      { thumbnail && (
+        <Image
+          className="object-contain"
           src={thumbnail.url}
-          alt=""
+          alt={title}
+          width="1000"
+          height="500"
         />
-      </div>
-
+      )}
       <div className="flex">
 
         <ArticleShare

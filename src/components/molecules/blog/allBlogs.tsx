@@ -1,6 +1,7 @@
 // Modules
 import React from "react"
 import Link from "next/link"
+import Image from "next/image"
 // FontAwesome
 import { faHistory } from "@fortawesome/free-solid-svg-icons"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
@@ -30,14 +31,13 @@ export const AllBlogs: React.VFC<Props> = (
             as={`/blog/${list.id}`}
           >
             <div className="flex">
-              { list.thumbnail && (
-                <div className="w-1/3">
-                  <img
-                    src={list.thumbnail.url}
-                    alt=""
-                  />
-                </div>
-              )}
+              <Image
+                className="object-contain"
+                src={ list.thumbnail ? list.thumbnail.url : "/no_image.png" }
+                alt={ list.thumbnail ? list.title : "No Image" }
+                width="500"
+                height="250"
+              />
               <div>
                 <h2 className="font-bold text-2xl">
                   {list.title}
