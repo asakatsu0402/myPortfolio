@@ -1,6 +1,6 @@
-# 海森プロジェクト
+# プロジェクト
 
-外国人が簡単に就労VISA申請できるアプリケーション
+My Portfolio Site
 
 ## ファイル構成
 
@@ -31,46 +31,6 @@ app/
      │   │    └─ ...
      │   └─ ...
      └─ ...
-```
-
-## プロジェクトルール
-
-* ### `pullするときはdevelopリモートリポジトリから`
-
-```
-$ git pull origin develop
-```
-
-* ### `ブランチの切り方は下記のように`
-
-```
-$ git checkout -b feature/[日付]/[名前]/[ブランチ名] origin/develop
-```
-
-* ### `CSSは記述順に沿って書く` [参考サイト](https://qiita.com/mgn/items/6154ccd2e23b2e65c769#comments)
-
-```
-/* CSS Writing order:
- * display
- * list-style
- * position
- * float
- * clear
- * width
- * height
- * margin
- * padding
- * border
- * background
- * color
- * font
- * text-decoration
- * text-align
- * vertical-align
- * white-space
- * other text
- * content
- */
 ```
 
 ## 始め方
