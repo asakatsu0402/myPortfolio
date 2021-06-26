@@ -45,7 +45,6 @@ export const BlogDetail: React.VFC<Props> = (
         />
       )}
       <div className="flex">
-
         <ArticleShare
           // url={}
           title={title}

@@ -42,17 +42,9 @@ export const AllBlogs: React.VFC<Props> = (
                 <h2 className="font-bold text-2xl">
                   {list.title}
                 </h2>
-                <p>{ list.categories.name }</p>
-                <ul>
-                  { list.tag.map((tag: any, j: number) => (
-                    <li
-                      key={j}
-                      className="inline-block p-1 rounded bg-red-800"
-                    >
-                      <p>{tag}</p>
-                    </li>
-                  ))}
-                </ul>
+                <p className="inline-block p-1 rounded bg-red-800">
+                  { list.categories.title }
+                </p>
                 <p>
                   <FontAwesomeIcon
                     icon={faHistory}

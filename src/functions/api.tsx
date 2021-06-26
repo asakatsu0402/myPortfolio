@@ -39,12 +39,15 @@ export const getBlogBy = id => (
     'X-API-KEY': process.env.API_KEY
   }})
 )
+
 /**
- * GET ALL Blog
+ * GET ALL Categories
  */
 export const getCategories = () => (
-  axios.get(process.env.All_Categories_Url, { headers: {
+  axios.get(process.env.All_Categories_Url,
+    { headers: {
       'Content-type': 'application/json',
       'X-API-KEY': process.env.API_KEY
-    }})
+    }}
+  )
 )

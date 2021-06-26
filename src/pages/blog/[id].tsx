@@ -5,16 +5,21 @@ import { NextPage } from "next"
 import { Layout } from "../../layouts/layout"
 import { BreadList } from "../../components/molecules/blog/breadList"
 import { BlogDetail } from "../../components/molecules/blog/blogDetail"
+import { AsideSection } from "../../components/molecules/blog/asideSection"
 import { ArticleSearch } from "../../components/molecules/blog/articleSearch"
+import { AllCategories } from "../../components/molecules/blog/allCategories"
 // Functions
 import {
   getBlogBy,
-  getBlogs
+  getBlogs,
+  getCategories
 } from "../../functions/api"
 
 // *************** Type *************** //
 type Props = {
   title: string
+  categories: Array<any>
+  categoriesCount: number
 }
 
 // *************** Get API *************** //
@@ -29,14 +34,19 @@ export const getStaticPaths = async () => {
 
 export const getStaticProps = async ({ params }) => {
   const { id } = params
-  const { data } = await getBlogBy(id)
-  return { props: { ...data }}
+  const { data: blog } = await getBlogBy(id)
+  const { data: categories } = await getCategories()
+  return { props: {
+      ...blog,
+      categories: categories.contents,
+      categoriesCount: categories.totalCount
+    }
+  }
 }
 
 export const DetailBlog: NextPage<Props> = (
   props: Props
 ) => {
-
   // *************** Const *************** //
   const { title } = props
 
@@ -55,7 +65,14 @@ export const DetailBlog: NextPage<Props> = (
       </article>
       <aside>
         <ArticleSearch />
-
+        <AsideSection title="カテゴリー">
+          <AllCategories
+            categories={props.categories}
+          />
+        </AsideSection>
+        <AsideSection title="人気の記事">
+          <p></p>
+        </AsideSection>
       </aside>
     </Layout>
   )

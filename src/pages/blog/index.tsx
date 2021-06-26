@@ -6,10 +6,12 @@ import { Layout } from "../../layouts/layout"
 import { AllBlogs } from "../../components/molecules/blog/allBlogs"
 import { PageNation } from "../../components/molecules/blog/pageNation"
 import { AsideSection } from "../../components/molecules/blog/asideSection"
+import { AllCategories } from "../../components/molecules/blog/allCategories"
 // Functions
 import {
+  getBlogs,
   getBlogPage,
-  getBlogs
+  getCategories
 } from "../../functions/api"
 import { blogFunctions } from "../../functions/blogFunctions"
 
@@ -22,17 +24,20 @@ const { blog } = blogFunctions()
 }
 
 export const getStaticProps = async (number: number) => {
-  const { data } = await getBlogPage(number)
+  const { data: blogs } = await getBlogPage(number)
+  const { data: categories } = await getCategories()
   return { props: {
-    contents: data.contents,
-    totalCount: data.totalCount
+    contents: blogs.contents,
+    totalCount: blogs.totalCount,
+    categories: categories.contents
   }}
 }
 
 // *************** Type *************** //
 type Props = {
   contents?: Array<any>
-  totalCount: number
+  totalCount: number,
+  categories?: any
 }
 
 export const Blog: NextPage<Props> = (
@@ -53,7 +58,9 @@ export const Blog: NextPage<Props> = (
         <AsideSection
           title="カテゴリー"
         >
-          <p>fdf</p>
+          <AllCategories
+            categories={props.categories}
+          />
         </AsideSection>
         <AsideSection
           title="人気の記事"
