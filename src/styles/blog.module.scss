@@ -7,27 +7,54 @@
 
   // 大見出し
   h1 {
+    margin: 2rem 0;
     padding: 1rem;
     border-radius: .3rem;
     background: f.$crimson;
     font-size: 1.5rem;
   }
-
   // 中見出し
   h2 {
+    margin: 2rem 0;
     padding: .8rem;
-    border-bottom: solid 3px f.$crimson;
+    border-bottom: solid 2px f.$crimson;
     font-size: 1.2rem;
+  }
+
+  // リンク
+  a {
+    color: f.$linkBlue;
+    text-decoration: underline;
+  }
+
+  // 画像
+  img {
+    margin: 2rem 0;
+    box-shadow: 0 0 10px f.$black;
   }
 
   // コード
   pre {
+    margin: 1rem 0;
     padding: .5rem;
     border-radius: .3rem;
     background: f.$code;
 
     code {
       color: f.$white;
+    }
+  }
+
+  // ナンバーリスト
+  ol {
+     > li {
+       list-style: decimal;
+     }
+  }
+  // リスト
+  ul {
+    > li {
+      list-style: circle;
     }
   }
 }
