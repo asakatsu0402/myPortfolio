@@ -1,6 +1,6 @@
 // Modules
 import React from "react"
-import AnchorLink from 'react-anchor-link-smooth-scroll'
+import { Link as Scroll } from 'react-scroll'
 
 // *************** Type *************** //
 type Props = {
@@ -12,14 +12,18 @@ export const TableContents: React.VFC<Props> = (
 ) => {
   // *************** JSX *************** //
   return (
-    <ul>
+    <ul className="mt-5 p-5 rounded-md bg-red-600">
       { props.data.map((list: any, i: number) => (
         <li
           key={i}
+          className="py-1 border-b-2"
         >
-          <AnchorLink href={`#${list.id}`}>
+          <Scroll
+            className="before:content-['-'] before:block"
+            to={list.id}
+          >
             {list.text}
-          </AnchorLink>
+          </Scroll>
         </li>
       ))}
     </ul>

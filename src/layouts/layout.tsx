@@ -11,7 +11,7 @@ import { Footer } from "./footer"
 type Props = {
   children?: ReactNode
   className?: string
-  title: string
+  title?: string
 }
 
 export const Layout = ({

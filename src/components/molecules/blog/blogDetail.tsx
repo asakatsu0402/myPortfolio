@@ -9,6 +9,8 @@ import { CommonFunctions } from "../../../functions/commonFunctions"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faHistory } from "@fortawesome/free-solid-svg-icons"
 import { ArticleShare } from "./articleShare"
+// Styles
+import styles from '../../../styles/blog.module.scss'
 
 // *************** Type *************** //
 type Props = {
@@ -76,6 +78,7 @@ export const BlogDetail: React.VFC<Props> = (
           />
 
           <div
+            className={styles.blogContent}
             dangerouslySetInnerHTML={
               { __html: `${body}` }
             }

@@ -1,0 +1,33 @@
+/* *************** Import *************** */
+@use "foundations/import" as f;
+
+/* *************** Class *************** */
+
+.blogContent {
+
+  // 大見出し
+  h1 {
+    padding: 1rem;
+    border-radius: .3rem;
+    background: f.$crimson;
+    font-size: 1.5rem;
+  }
+
+  // 中見出し
+  h2 {
+    padding: .8rem;
+    border-bottom: solid 3px f.$crimson;
+    font-size: 1.2rem;
+  }
+
+  // コード
+  pre {
+    padding: .5rem;
+    border-radius: .3rem;
+    background: f.$code;
+
+    code {
+      color: f.$white;
+    }
+  }
+}
