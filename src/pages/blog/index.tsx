@@ -5,6 +5,7 @@ import { NextPage } from "next"
 import { Layout } from "../../layouts/layout"
 import { AllBlogs } from "../../components/molecules/blog/allBlogs"
 import { PageNation } from "../../components/molecules/blog/pageNation"
+import { ArticleSearch } from "../../components/molecules/blog/articleSearch"
 import { AsideSection } from "../../components/molecules/blog/asideSection"
 import { AllCategories } from "../../components/molecules/blog/allCategories"
 // Functions
@@ -55,6 +56,7 @@ export const Blog: NextPage<Props> = (
         />
       </main>
       <aside className="w-2/4 ml-12">
+        <ArticleSearch />
         <AsideSection
           title="カテゴリー"
         >

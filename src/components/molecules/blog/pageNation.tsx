@@ -24,7 +24,7 @@ export const PageNation: React.VFC<Props> = (
       .map((number: any, i: number) => (
         <li key={i}>
           <PageLink
-            className="inline-block py-2 px-4 rounded-lg bg-red-800"
+            className="inline-block py-2 px-4 rounded-lg bg-crimson"
             href={`/blog/page/${number}`}
             text={number}
           />

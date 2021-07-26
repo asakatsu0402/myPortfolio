@@ -1,5 +1,8 @@
 // Modules
+import { createContext } from "react"
 import cheerio from 'cheerio'
+// Interfaces
+import { searchValue } from "../interfaces/moleculeInterfaces"
 
 export const CommonFunctions = () => {
 
@@ -51,10 +54,17 @@ export const CommonFunctions = () => {
           [name]: ''
         }))
       }
-    },
+    }
   }
 
   return {
     commons
   }
 }
+/**
+ * 記事検索
+ */
+export const SearchContext = createContext<searchValue>({
+  search: '',
+  setSearch: () => undefined
+})

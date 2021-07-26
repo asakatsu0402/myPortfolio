@@ -66,11 +66,15 @@ export const BlogDetail: React.VFC<Props> = (
               </li>
             ))}
           </ul>
-          <time>
+          <time className="flex items-center">
             <FontAwesomeIcon
               icon={faHistory}
             />
-            {updatedAt}
+            <p className="flex items-center ml-1">
+              {new Date(updatedAt).getFullYear()}/
+              {new Date(updatedAt).getMonth()}/
+              {new Date(updatedAt).getDate()}
+            </p>
           </time>
 
           <TableContents

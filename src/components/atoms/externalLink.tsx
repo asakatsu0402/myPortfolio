@@ -1,28 +1,23 @@
 // Modules
-import React, {
-  ReactNode
-} from "react"
+import React from "react"
+// Interfaces
+import { external } from "../../interfaces/atomInterfaces"
 
-// *************** Type *************** //
-type Props = {
-  className?: string
-  link: string
-  children?: ReactNode
-  text?: any
-}
-
-export const ExternalLink: React.VFC<Props> = (
-  props: Props
-) => {
+export const ExternalLink: React.VFC<external> = ({
+  className,
+  link,
+  children,
+  text
+}: external) => {
   // *************** JSX *************** //
   return (
     <a
-      className={props.className}
-      href={props.link}
+      className={className}
+      href={link}
       target="_blank"
       rel="noreferrer"
     >
-      { props.children ? props.children : props.text }
+      { children ? children : text }
     </a>
   )
 }

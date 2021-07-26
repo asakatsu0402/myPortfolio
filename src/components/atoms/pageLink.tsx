@@ -1,29 +1,19 @@
 // Modules
-import React, {
-  ReactChild
-} from "react"
+import React from "react"
 import Link from "next/link"
-import { log } from "util"
+// Interfaces
+import { link } from "../../interfaces/atomInterfaces"
 
-// *************** Type *************** //
-type Props = {
-  className?: any
-  href: string
-  text?: any
-  children?: ReactChild
-}
-
-export const PageLink: React.VFC<Props> = (
-  props: Props
-) => (
+export const PageLink: React.VFC<link> = ({
+  className,
+  href,
+  text,
+  children
+}: link) => (
   // *************** JSX *************** //
-  <Link href={props.href}>
-    <a className={props.className}>
-      { props.children ? (
-        props.children
-      ) : (
-        props.text
-      )}
+  <Link href={href}>
+    <a className={className}>
+      { children ? children : text }
     </a>
   </Link>
 )

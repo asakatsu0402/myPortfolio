@@ -1,45 +1,42 @@
 // Modules
 import React from "react"
+// Interfaces
+import { select } from "../../interfaces/atomInterfaces"
 
-// *************** Type *************** //
-type Props = {
-  className?: string
-  name: string
-  label: string
-  initialLabel?: string
-  options: Array<any>
-  optionLabel: string
-  optionValue: string
-  placeholder?: any
-  disabled?: boolean
-  function?: any
-}
-
-export const Select: React.VFC<Props> = (
-  props: Props
-) => (
+export const Select: React.VFC<select> = ({
+  className,
+  name,
+  placeholder,
+  disabled,
+  functions,
+  label,
+  initialLabel,
+  options,
+  optionValue,
+  optionLabel
+}: select) => (
   // *************** JSX *************** //
   <select
-    className={props.className}
-    id={props.name}
-    name={props.name}
-    placeholder={props.placeholder}
-    disabled={!!props.disabled}
-    onChange={props.function}
+    className={className}
+    id={name}
+    name={name}
+    placeholder={placeholder}
+    disabled={!!disabled}
+    onChange={functions}
   >
-    <optgroup label={props.label}>
+    <optgroup label={label}>
       <option
         value=""
         hidden
       >
-        {props.initialLabel}
+        {initialLabel}
       </option>
-      { props.options.map((option: any, i: number) => (
+      { options.map((option: any, i: number) => (
         <option
           key={i}
-          value={option[props.optionValue]}
+          value={option[optionValue]}
         >
-          {option[props.optionLabel]}
+          {option[optionLabel]}
         </option>
       ))}
     </optgroup>

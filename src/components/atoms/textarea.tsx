@@ -1,25 +1,22 @@
 // Modules
 import React from "react"
+// Interfaces
+import { textarea } from "../../interfaces/atomInterfaces"
 
-// *************** Type *************** //
-type Props = {
-  className?: string
-  name: string
-  placeholder?: any
-  disabled?: boolean
-  function?: any
-}
-
-export const Textarea: React.VFC<Props> = (
-  props: Props
-) => (
+export const Textarea: React.VFC<textarea> = ({
+  className,
+  name,
+  placeholder,
+  disabled,
+  functions
+}: textarea) => (
   // *************** JSX *************** //
   <textarea
-    className={props.className}
-    id={props.name}
-    name={props.name}
-    placeholder={props.placeholder}
-    disabled={!!props.disabled}
-    onChange={props.function}
+    className={className}
+    id={name}
+    name={name}
+    placeholder={placeholder}
+    disabled={!!disabled}
+    onChange={functions}
   />
 )

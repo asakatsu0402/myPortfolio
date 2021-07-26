@@ -1,26 +1,21 @@
 // Modules
-import React, {
-  ReactNode
-} from "react"
+import React from "react"
+// Interfaces
+import { button } from "../../interfaces/atomInterfaces"
 
-// *************** Type *************** //
-type Props = {
-  className?: string
-  text?: any
-  children?: ReactNode
-  disabled?: boolean
-  function?: any
-}
-
-export const Button: React.VFC<Props> = (
-  props: Props
-) => (
+export const Button: React.VFC<button> = ({
+  className,
+  disabled,
+  functions,
+  children,
+  text
+}: button) => (
   // *************** JSX *************** //
   <button
-    className={props.className}
-    disabled={!!props.disabled}
-    onClick={props.function}
+    className={className}
+    disabled={!!disabled}
+    onClick={functions}
   >
-    { props.children ? props.children : props.text }
+    { children ? children : text }
   </button>
 )

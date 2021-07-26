@@ -24,10 +24,10 @@ export const DarkModeButton: React.VFC = () => {
   // *************** JSX *************** //
   return (
     <Button
-      className="py-2 px-3 rounded-full bg-red-800
+      className="py-2 px-3 rounded-full bg-crimson
 
       "
-      function={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
+      functions={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
     >
       { rendered && theme === 'dark' ? (
         <FontAwesomeIcon

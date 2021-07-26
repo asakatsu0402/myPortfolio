@@ -56,7 +56,7 @@ export const Form = (
             ) : (
               <Input
                 className="px-1 py-0.5 border-solid border-2 border-transparent transition ease-in duration-300
-                  focus:border-red-800
+                  focus:border-crimson
                 "
                 name={form.name}
                 type={form.type}
@@ -73,7 +73,7 @@ export const Form = (
               />
             )}
             { props.error[form.name] && (
-              <p className="text-red-600 font-bold text-sm">
+              <p className="text-crimson font-bold text-sm">
                 {props.error[form.name]}
               </p>
             )}

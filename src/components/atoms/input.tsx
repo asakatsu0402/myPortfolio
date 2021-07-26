@@ -1,27 +1,28 @@
 // Modules
 import React from "react"
+// Interfaces
+import { input } from "../../interfaces/atomInterfaces"
 
-// *************** Type *************** //
-type Props = {
-  className?: string
-  name: string
-  type: string
-  placeholder?: any
-  disabled?: boolean
-  function?: any
-}
-
-export const Input: React.VFC<Props> = (
-  props: Props
-) => (
+export const Input: React.VFC<input> = ({
+  className,
+  name,
+  type,
+  placeholder,
+  value,
+  disabled,
+  functions,
+  onKeyDown
+}: input) => (
   // *************** JSX *************** //
   <input
-    className={props.className}
-    id={props.name}
-    name={props.name}
-    type={props.type}
-    placeholder={props.placeholder}
-    disabled={!!props.disabled}
-    onChange={props.function}
+    className={className}
+    id={name}
+    name={name}
+    type={type}
+    placeholder={placeholder}
+    value={value}
+    disabled={!!disabled}
+    onChange={functions}
+    onKeyDown={onKeyDown && onKeyDown}
   />
 )

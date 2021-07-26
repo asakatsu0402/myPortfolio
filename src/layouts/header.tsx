@@ -22,7 +22,7 @@ export const Header: React.VFC = () => {
       `}
     >
       <PageLink
-        className={ path === '/' ? 'text-red-800 font-bold' : '' }
+        className={ path === '/' ? 'text-crimson font-bold' : '' }
         href="/"
         text="asakatsu"
       />
@@ -36,7 +36,7 @@ export const Header: React.VFC = () => {
             <li key={i}>
               <PageLink
                 className={ isPage === nav.link.split('/')[1]
-                  ? 'text-red-800 font-bold' : ''
+                  ? 'text-crimson font-bold' : ''
                 }
                 href={nav.link}
               >

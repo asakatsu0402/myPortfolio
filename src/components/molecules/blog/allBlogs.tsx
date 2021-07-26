@@ -42,15 +42,19 @@ export const AllBlogs: React.VFC<Props> = (
                 <h2 className="font-bold text-2xl">
                   {list.title}
                 </h2>
-                <p className="inline-block p-1 rounded bg-red-800">
+                <p className="inline-block p-1 rounded bg-crimson">
                   { list.categories.title }
                 </p>
-                <p>
+                <div className="flex items-center">
                   <FontAwesomeIcon
                     icon={faHistory}
                   />
-                  {list.updatedAt}
-                </p>
+                  <p className="ml-1">
+                    {new Date(list.updatedAt).getFullYear()}/
+                    {new Date(list.updatedAt).getMonth()}/
+                    {new Date(list.updatedAt).getDate()}
+                  </p>
+                </div>
               </div>
             </div>
           </Link>

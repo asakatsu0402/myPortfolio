@@ -27,7 +27,7 @@ export const Career: React.VFC<Props> = (
             {list.start} ~ { list.end && list.end }
           </p>
           <ExternalLink
-            className="text-red-800 font-bold"
+            className="text-crimson font-bold"
             link={list.link}
             text={list.title}
           />

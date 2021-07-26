@@ -1,24 +1,19 @@
 // Modules
-import React, {
-  ReactNode
-} from "react"
+import React from "react"
+// Interfaces
+import { label } from "../../interfaces/atomInterfaces"
 
-// *************** Type *************** //
-type Props = {
-  className?: string
-  htmlFor: string
-  text?: any
-  children?: ReactNode
-}
-
-export const Label: React.VFC<Props> = (
-  props: Props
-) => (
+export const Label: React.VFC<label> = ({
+  className,
+  htmlFor,
+  children,
+  text
+}: label) => (
   // *************** JSX *************** //
   <label
-    className={props.className}
-    htmlFor={props.htmlFor}
+    className={className}
+    htmlFor={htmlFor}
   >
-    { props.children ? props.children : props.text }
+    { children ? children : text }
   </label>
 )

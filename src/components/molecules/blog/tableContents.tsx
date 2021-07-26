@@ -12,7 +12,7 @@ export const TableContents: React.VFC<Props> = (
 ) => {
   // *************** JSX *************** //
   return (
-    <ul className="mt-5 p-5 rounded-md bg-red-600">
+    <ul className="mt-5 p-5 rounded-md bg-crimson">
       { props.data.map((list: any, i: number) => (
         <li
           key={i}

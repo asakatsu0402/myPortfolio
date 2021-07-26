@@ -12,7 +12,7 @@ export const WorksList: React.VFC = () => {
       { worksList.map((work: any, i: number) => (
         <li
           key={i}
-          className="bg-red-700 bg-opacity-90 text-center"
+          className="bg-crimson bg-opacity-90 text-center"
         >
           <ExternalLink
             className="block p-5"
