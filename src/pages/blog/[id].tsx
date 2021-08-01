@@ -3,6 +3,7 @@ import type { GetStaticProps, NextPage } from 'next'
 import React from 'react'
 
 // Components
+import { Layout } from '../../layouts/layout'
 import { AllCategories } from '../../components/molecules/blog/allCategories'
 import { ArticleSearch } from '../../components/molecules/blog/articleSearch'
 import { AsideSection } from '../../components/molecules/blog/asideSection'
@@ -12,23 +13,33 @@ import { BreadCrumbs } from '../../components/molecules/blog/breadCrumbs'
 import { getBlogBy, getBlogs, getCategories } from '../../functions/api'
 import { processingDom } from '../../functions/blogFunctions'
 // Interfaces
-import { blogDetail } from '../../interfaces/molecules/blogInterfaces'
-import { Layout } from '../../layouts/layout'
+import {
+  blogContent,
+  detailStatic
+} from '../../interfaces/molecules/blogInterfaces'
+import { blogDataType } from '../../interfaces/initInterfaces'
 
 // *************** Get API *************** //
 export const getStaticPaths = async () => {
-  const { data } = await getBlogs()
-  const paths = data.contents.map((path) => `/blog/${path.id}`)
+  const blogs: blogDataType = await getBlogs()
+  const paths = blogs.blogList.map((path) => `/blog/${path.id}`)
   return {
     paths,
     fallback: true
   }
 }
 
-export const getStaticProps: GetStaticProps<blogDetail> = async ({ params }) => {
+export const getStaticProps: GetStaticProps = async ({
+  params,
+  preview,
+  previewData
+}) => {
   const { id } = params
-  const { data: blog } = await getBlogBy(id)
-  const { data: categories } = await getCategories()
+  const { data: blog }: blogContent = await getBlogBy(id)
+
+  if (!id) throw Error('記事が見当たりません。')
+
+  const categories = await getCategories()
   const { body, toc } = await processingDom(blog.body)
   blog.body = body
 
@@ -36,13 +47,13 @@ export const getStaticProps: GetStaticProps<blogDetail> = async ({ params }) => 
     props: {
       ...blog,
       toc,
-      categories: categories.contents,
+      categories: categories.categories,
       categoriesCount: categories.totalCount
     }
   }
 }
 
-export const DetailBlog: NextPage<blogDetail> = (props: blogDetail) => {
+export const DetailBlog: NextPage<blogContent> = (props: blogContent) => {
   // *************** Const *************** //
   const { title } = props
 
@@ -55,9 +66,9 @@ export const DetailBlog: NextPage<blogDetail> = (props: blogDetail) => {
       </article>
       <aside>
         <ArticleSearch />
-        <AsideSection title="カテゴリー">
-          <AllCategories categories={props.categories} />
-        </AsideSection>
+        {/*<AsideSection title="カテゴリー">*/}
+        {/*  <AllCategories categories={props.categories} />*/}
+        {/*</AsideSection>*/}
         <AsideSection title="人気の記事">
           <p></p>
         </AsideSection>

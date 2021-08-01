@@ -1,18 +1,18 @@
 // Modules
-import React from "react"
-import Image from "next/image"
+import React from 'react'
+import Image from 'next/image'
 // Components
-import { Toc } from "./toc"
-import { ArticleShare } from "./articleShare"
+import { Toc } from './toc'
+import { ArticleShare } from './articleShare'
 // Interfaces
-import { blogDetail } from "../../../interfaces/molecules/blogInterfaces"
+import { blogContent } from '../../../interfaces/molecules/blogInterfaces'
 // FontAwesome
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { faHistory } from "@fortawesome/free-solid-svg-icons"
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faHistory } from '@fortawesome/free-solid-svg-icons'
 // Styles
 import styles from '../../../styles/blog.module.scss'
 
-export const BlogDetail: React.VFC<blogDetail> = ({
+export const BlogDetail: React.VFC<blogContent> = ({
   updatedAt,
   title,
   tag,
@@ -21,11 +21,11 @@ export const BlogDetail: React.VFC<blogDetail> = ({
   body,
   toc_visible,
   toc
-}: blogDetail) => {
+}: blogContent) => {
   // *************** JSX *************** //
   return (
     <article>
-      { thumbnail && (
+      {thumbnail && (
         <Image
           className="object-contain"
           src={thumbnail.url}
@@ -41,37 +41,28 @@ export const BlogDetail: React.VFC<blogDetail> = ({
         />
 
         <div>
-          <h2 className="font-bold text-4xl">
-            {title}
-          </h2>
+          <h2 className="font-bold text-4xl">{title}</h2>
           <p>{categories.name}</p>
           <ul>
-            { tag.map((t: any, i: number) => (
-              <li
-                key={i}
-              >
+            {tag.map((t: any, i: number) => (
+              <li key={i}>
                 <p>{t}</p>
               </li>
             ))}
           </ul>
           <time className="flex items-center">
-            <FontAwesomeIcon
-              icon={faHistory}
-            />
+            <FontAwesomeIcon icon={faHistory} />
             <p className="flex items-center ml-1">
               {new Date(updatedAt).getFullYear()}/
-              {new Date(updatedAt).getMonth()}/
-              {new Date(updatedAt).getDate()}
+              {new Date(updatedAt).getMonth()}/{new Date(updatedAt).getDate()}
             </p>
           </time>
 
-          { toc_visible && <Toc toc={toc} /> }
+          {toc_visible && <Toc toc={toc} />}
 
           <div
             className={styles.blogContent}
-            dangerouslySetInnerHTML={
-              { __html: `${body}` }
-            }
+            dangerouslySetInnerHTML={{ __html: `${body}` }}
           />
         </div>
       </div>

@@ -1,5 +1,6 @@
 // Modules
 import React from 'react'
+import { ParsedUrlQuery } from 'querystring'
 
 // 記事検索
 export type searchValue = {
@@ -28,14 +29,22 @@ export type toc = {
 }
 
 // ブログ詳細ページ
-export type blogDetail = {
-  categoriesCount: number
-  updatedAt: any
-  title: string
-  tag: any
-  thumbnail: any
-  categories: category
-  body: any
-  toc_visible: boolean
-  toc: toc['toc']
+export type detailStatic = {
+  params: ParsedUrlQuery
+  preview: boolean | undefined
+  previewData: string | undefined
+}
+
+export type blogContent = {
+  data: {
+    categoriesCount: number
+    updatedAt: any
+    title: string
+    tag: any
+    thumbnail: any
+    categories: category
+    body: any
+    toc_visible: boolean
+    toc: toc['toc']
+  }
 }

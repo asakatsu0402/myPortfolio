@@ -26,24 +26,24 @@ export const CommonFunctions = () => {
       if (value === '') {
         setErrorMessage((errorMessage: any) => ({
           ...errorMessage,
-          [name]: `${label}を入力してください。`,
+          [name]: `${label}を入力してください。`
         }))
       } else if (!value.match(regex)) {
         setErrorMessage((errorMessage: any) => ({
           ...errorMessage,
-          [name]: errorText,
+          [name]: errorText
         }))
       } else {
         setErrorMessage((errorMessage: any) => ({
           ...errorMessage,
-          [name]: '',
+          [name]: ''
         }))
       }
-    },
+    }
   }
 
   return {
-    commons,
+    commons
   }
 }
 /**
@@ -51,5 +51,5 @@ export const CommonFunctions = () => {
  */
 export const SearchContext = createContext<searchValue>({
   search: '',
-  setSearch: () => undefined,
+  setSearch: () => undefined
 })

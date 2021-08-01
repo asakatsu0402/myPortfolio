@@ -3,5 +3,11 @@
   "tabWidth": 2,
   "semi": false,
   "singleQuote": true,
-  "printWidth": 100
+  "printWidth": 80,
+  "arrowParens": "always",
+  "bracketSpacing": true,
+  "endOfLine": "lf",
+  "proseWrap": "preserve",
+  "quoteProps": "as-needed",
+  "useTabs": false
 }

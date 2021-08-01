@@ -1,6 +1,5 @@
 // Modules
 import { NextPage } from 'next'
-
 // Components
 import { AllBlogs } from '../../components/molecules/blog/allBlogs'
 import { AllCategories } from '../../components/molecules/blog/allCategories'
@@ -31,13 +30,13 @@ type Props = {
 // }
 
 export const getStaticProps = async (number: number) => {
-  const { data: blogs } = await getBlogPage(number)
-  const { data: categories } = await getCategories()
+  const blogs = await getBlogPage(number)
+  const categories = await getCategories()
   return {
     props: {
-      contents: blogs.contents,
+      contents: blogs.blogList,
       totalCount: blogs.totalCount,
-      categories: categories.contents
+      categories: categories.categories
     }
   }
 }
