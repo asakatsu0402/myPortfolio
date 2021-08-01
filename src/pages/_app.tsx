@@ -1,13 +1,15 @@
 // Modules
 import {
   useRef,
-  useState
+  useState,
+  useEffect
 } from "react"
 import {
   QueryClient,
   QueryClientProvider
 } from "react-query"
 import { AppProps } from "next/app"
+import { useRouter } from "next/router"
 // Functions
 import { SearchContext } from "../functions/commonFunctions"
 // Styles
@@ -26,6 +28,16 @@ const MyApp = ({
     queryClientRef.current = new QueryClient()
   }
   const [search, setSearch] = useState<string>('')
+  const router = useRouter()
+
+  useEffect(() => {
+    const urlQuery: any = router.query
+    if (urlQuery && urlQuery.keyword) {
+      setSearch(urlQuery.keyword)
+    } else {
+      setSearch('')
+    }
+  }, [router])
 
   // *************** JSX *************** //
   return (

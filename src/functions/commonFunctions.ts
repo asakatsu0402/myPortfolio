@@ -1,26 +1,11 @@
 // Modules
-import { createContext } from "react"
-import cheerio from 'cheerio'
+import { createContext } from 'react'
+
 // Interfaces
-import { searchValue } from "../interfaces/moleculeInterfaces"
+import { searchValue } from '../interfaces/molecules/blogInterfaces'
 
 export const CommonFunctions = () => {
-
   const commons = {
-    /**
-     * 目次を作成する
-     * @param body
-     * @param setState
-     */
-    createContents: (body: any) => {
-      const $ = cheerio.load(body)
-      const headings = $('h1, h2, h3, h4').toArray()
-      return headings.map((head: any) => ({
-        text: head.children[0].data,
-        id: head.attribs.id,
-        name: head.name
-      }))
-    },
     /**
      * 入力内容にバリデーションをかける
      * @param name
@@ -41,24 +26,24 @@ export const CommonFunctions = () => {
       if (value === '') {
         setErrorMessage((errorMessage: any) => ({
           ...errorMessage,
-          [name]: `${label}を入力してください。`
+          [name]: `${label}を入力してください。`,
         }))
       } else if (!value.match(regex)) {
         setErrorMessage((errorMessage: any) => ({
           ...errorMessage,
-          [name]: errorText
+          [name]: errorText,
         }))
       } else {
         setErrorMessage((errorMessage: any) => ({
           ...errorMessage,
-          [name]: ''
+          [name]: '',
         }))
       }
-    }
+    },
   }
 
   return {
-    commons
+    commons,
   }
 }
 /**
@@ -66,5 +51,5 @@ export const CommonFunctions = () => {
  */
 export const SearchContext = createContext<searchValue>({
   search: '',
-  setSearch: () => undefined
+  setSearch: () => undefined,
 })

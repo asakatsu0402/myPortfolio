@@ -8,11 +8,14 @@ import { worksList } from "../../../config/worksConfig"
 export const WorksList: React.VFC = () => {
   // *************** JSX *************** //
   return (
-    <ul>
+    <ul className="w-full">
       { worksList.map((work: any, i: number) => (
         <li
           key={i}
-          className="bg-crimson bg-opacity-90 text-center"
+          className="
+            mt-20 bg-crimson bg-opacity-90 text-center
+            first:mt-0
+          "
         >
           <ExternalLink
             className="block p-5"

@@ -1,12 +1,12 @@
 // Modules
 import React from "react"
 // Components
-import { Layout } from "../layouts/layout"
-import { PageHead } from "../layouts/pageHead"
-import { WorksList } from "../components/molecules/works/worksList"
+import { Layout } from "../../layouts/layout"
+import { PageHead } from "../../layouts/pageHead"
+import { WorksList } from "../../components/molecules/works/worksList"
 // Styles
 
-export const Works = () => {
+export const Index = () => {
   // *************** JSX *************** //
   return(
     <Layout>
@@ -18,4 +18,4 @@ export const Works = () => {
   )
 }
 
-export default Works
+export default Index

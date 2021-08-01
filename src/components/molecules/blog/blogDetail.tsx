@@ -2,38 +2,26 @@
 import React from "react"
 import Image from "next/image"
 // Components
-import { TableContents } from "./tableContents"
-// Functions
-import { CommonFunctions } from "../../../functions/commonFunctions"
+import { Toc } from "./toc"
+import { ArticleShare } from "./articleShare"
+// Interfaces
+import { blogDetail } from "../../../interfaces/molecules/blogInterfaces"
 // FontAwesome
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faHistory } from "@fortawesome/free-solid-svg-icons"
-import { ArticleShare } from "./articleShare"
 // Styles
 import styles from '../../../styles/blog.module.scss'
 
-// *************** Type *************** //
-type Props = {
-  data?: any
-}
-
-export const BlogDetail: React.VFC<Props> = (
-  props: Props
-) => {
-  // *************** Const *************** //
-  const {
-    updatedAt,
-    title,
-    tag,
-    thumbnail,
-    categories,
-    body
-  } = props.data
-  const { commons } = CommonFunctions()
-
-  // *************** Functions *************** //
-  const list = commons.createContents(body)
-
+export const BlogDetail: React.VFC<blogDetail> = ({
+  updatedAt,
+  title,
+  tag,
+  thumbnail,
+  categories,
+  body,
+  toc_visible,
+  toc
+}: blogDetail) => {
   // *************** JSX *************** //
   return (
     <article>
@@ -77,9 +65,7 @@ export const BlogDetail: React.VFC<Props> = (
             </p>
           </time>
 
-          <TableContents
-            data={list}
-          />
+          { toc_visible && <Toc toc={toc} /> }
 
           <div
             className={styles.blogContent}

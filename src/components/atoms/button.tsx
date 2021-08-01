@@ -1,7 +1,8 @@
 // Modules
-import React from "react"
+import React from 'react'
+
 // Interfaces
-import { button } from "../../interfaces/atomInterfaces"
+import { button } from '../../interfaces/atomInterfaces'
 
 export const Button: React.VFC<button> = ({
   className,
@@ -11,11 +12,7 @@ export const Button: React.VFC<button> = ({
   text
 }: button) => (
   // *************** JSX *************** //
-  <button
-    className={className}
-    disabled={!!disabled}
-    onClick={functions}
-  >
-    { children ? children : text }
+  <button className={className} disabled={!!disabled} onClick={functions}>
+    {children ? children : text}
   </button>
 )

@@ -8,7 +8,7 @@ type Props = {
   title?: string
 }
 
-export const BreadList: React.VFC<Props> = (
+export const BreadCrumbs: React.VFC<Props> = (
   props: Props
 ) => {
   // *************** Const *************** //
