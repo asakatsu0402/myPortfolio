@@ -1,30 +1,24 @@
 // Modules
-import React, {
-  ReactNode
-} from "react"
+import React from 'react'
+// Interfaces
+import { SectionType } from '../../../interfaces/molecules/molecules'
 
-// *************** Type *************** //
-type Props = {
-  className?: any
-  title
-  children?: ReactNode
-}
-
-export const Section: React.VFC<Props> = (
-  props: Props
-) => {
+export const Section: React.VFC<SectionType> = ({
+  className,
+  title,
+  children
+}: SectionType) => {
   // *************** JSX *************** //
   return (
     <section
-      className={`${props.className}
+      className={`
+        ${className}
         w-2/3 m-auto 
         md:flex md:justify-between md:w-4/5
       `}
     >
-      <h2 className="font-bold text-3xl">
-        {props.title}
-      </h2>
-      {props.children}
+      <h2 className="font-bold text-3xl">{title}</h2>
+      {children}
     </section>
   )
 }

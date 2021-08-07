@@ -44,7 +44,7 @@ export const getStaticProps = async (number: number) => {
 export const Blog: NextPage<Props> = (props: Props) => {
   // *************** JSX *************** //
   return (
-    <Layout title="Blog">
+    <Layout title="Blog" flex={true}>
       <main className="flex-auto">
         <AllBlogs list={props.contents} />
         <PageNation total={props.totalCount} />

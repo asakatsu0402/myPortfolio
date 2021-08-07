@@ -1,0 +1,68 @@
+/* *************** Import *************** */
+@use "foundations/import" as f;
+
+/* *************** Flex *************** */
+/* justify-between */
+.flexBetweenSet {
+  @include f.flexSet(space-between, center);
+}
+
+/* justify-around */
+.flexAroundSet {
+  @include f.flexSet(space-around, start);
+}
+
+/* *************** Button *************** */
+/* Black */
+.blackButton {
+  @include f.buttonSet(
+    f.$black,
+    f.$white,
+    f.$crimson,
+    f.$white
+  );
+}
+
+/* Crimson */
+.crimsonButton {
+  @include f.buttonSet(
+    f.$crimson,
+    f.$white,
+    f.$black,
+    f.$white
+  );
+}
+
+/* White */
+.whiteButton {
+  @include f.buttonSet(
+    f.$white,
+    f.$black,
+    f.$crimson,
+    f.$white
+  );
+}
+
+/* *************** Text *************** */
+.crimsonText {
+  transition-duration: .3s;
+
+  &:hover {
+    color: f.$crimson;
+  }
+}
+
+/* *************** Not First-child *************** */
+/* Top */
+.exceptTopMargin:not(:first-child) {
+  margin-top: 1rem;
+}
+
+.exceptTopSection:not(:first-child) {
+  margin-top: 15rem;
+}
+
+/* Left */
+.exceptLeftMargin:not(:first-child) {
+  margin-left: 1rem;
+}

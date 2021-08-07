@@ -1,7 +1,7 @@
 // Modules
-import React from "react"
+import React from 'react'
 // Interfaces
-import { input } from "../../interfaces/atomInterfaces"
+import { input } from '../../interfaces/atomInterfaces'
 
 export const Input: React.VFC<input> = ({
   className,

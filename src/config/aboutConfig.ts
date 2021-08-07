@@ -1,16 +1,16 @@
 // Language
 export const languages = [
   {
-    label: 'JavaScript',
+    label: 'JavaScript'
   },
   {
-    label: 'TypeScript',
+    label: 'TypeScript'
   },
   {
-    label: 'SQL',
+    label: 'SQL'
   },
   {
-    label: 'Sass',
+    label: 'Sass'
   }
 ]
 
@@ -48,32 +48,38 @@ export const libraries = [
     label: 'Recoil'
   },
   {
-    label: 'Tailwind CSS'
+    label: 'TailwindCSS'
   }
 ]
 
 // Tool
 export const tools = [
   {
-    label: 'Node.js',
+    label: 'Node.js'
   },
   {
-    label: 'Firebase',
+    label: 'Firebase'
   },
   {
-    label: 'microCMS',
+    label: 'microCMS'
   },
   {
-    label: 'SendGrid',
+    label: 'SendGrid'
   },
   {
-    label: 'Google Sheets API',
+    label: 'Google Drive API'
   },
   {
-    label: 'Google Docs API',
+    label: 'Google Sheets API'
   },
   {
-    label: 'GCP',
+    label: 'Google Docs API'
+  },
+  {
+    label: 'GCP'
+  },
+  {
+    label: 'Stripe'
   }
 ]
 
@@ -84,7 +90,8 @@ export const policyText = {
 
 // Iam
 export const iamText = {
-  ja: '私は Webデザイナーです。日本ではデザインとマークアップを分けて考えることが多く、作業の分業化が活発です。しかし、本来ならその二つは決して切り離してはいけません。情報設計と運用を無視したデザインや、美しさと使いやすさを無視したソースコードはあってはならないからです。\n' +
+  ja:
+    '私は WEBエンジニアです。プログラミング含めデザインを考えることが多く、手の届きにくいご希望にも答えることができます。しかし、本来ならその二つは決して切り離してはいけません。情報設計と運用を無視したデザインや、美しさと使いやすさを無視したソースコードはあってはならないからです。\n' +
     'ふたつがひとつで初めて Webデザインと考えてます。\n' +
     'ソースコードこそがデザインだと考え、フロントエンド側からデザインを常に改良することを考えています。\n' +
     '”戦うフロントエンド”\n' +

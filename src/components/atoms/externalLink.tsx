@@ -1,18 +1,23 @@
 // Modules
 import React from 'react'
-
 // Interfaces
-import { external } from '../../interfaces/atomInterfaces'
+import { External } from '../../interfaces/atomInterfaces'
 
-export const ExternalLink: React.VFC<external> = ({
+export const ExternalLink: React.VFC<External> = ({
   className,
   link,
   children,
-  text
-}: external) => {
+  text,
+  target
+}: External) => {
   // *************** JSX *************** //
   return (
-    <a className={className} href={link} target="_blank" rel="noreferrer">
+    <a
+      className={className}
+      href={link}
+      target={target ? '_blank' : '_self'}
+      rel={'noreferrer'}
+    >
       {children ? children : text}
     </a>
   )

@@ -1,5 +1,5 @@
 // Modules
-import { ReactNode } from "react"
+import { ReactNode } from 'react'
 
 // *************** Interfaces *************** //
 // Label
@@ -28,11 +28,12 @@ export type link = {
 }
 
 // External Link
-export type external = {
+export type External = {
   className?: string
   link: string
   children?: ReactNode
   text?: any
+  target: boolean
 }
 
 // Select

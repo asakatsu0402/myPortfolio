@@ -1,8 +1,8 @@
 // Modules
-import React from "react"
-import Link from "next/link"
+import React from 'react'
+import Link from 'next/link'
 // Interfaces
-import { link } from "../../interfaces/atomInterfaces"
+import { link } from '../../interfaces/atomInterfaces'
 
 export const PageLink: React.VFC<link> = ({
   className,
@@ -12,8 +12,6 @@ export const PageLink: React.VFC<link> = ({
 }: link) => (
   // *************** JSX *************** //
   <Link href={href}>
-    <a className={className}>
-      { children ? children : text }
-    </a>
+    <a className={className}>{children ? children : text}</a>
   </Link>
 )

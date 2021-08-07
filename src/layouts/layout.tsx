@@ -1,37 +1,25 @@
 // Modules
-import React, {
-  ReactNode
-} from "react"
+import React from 'react'
 // Components
-import { PageHead } from "./pageHead"
-import { Header } from "./header"
-import { Footer } from "./footer"
+import { PageHead } from './pageHead'
+import { Header } from './header'
+import { Footer } from './footer'
+// Interfaces
+import { LayoutType } from '../interfaces/molecules/molecules'
 
-// *************** Type *************** //
-type Props = {
-  children?: ReactNode
-  className?: string
-  title?: string
-}
-
-export const Layout = ({
-  children,
-  className,
-  title
-}: Props) => {
+export const Layout = ({ children, className, title, flex }: LayoutType) => {
   // *************** JSX *************** //
   return (
     <div className="flex flex-col justify-between h-full">
-      <PageHead
-        title={title}
-      />
+      <PageHead title={title} />
       <Header />
       <div
-        className={`${className}
-          flex flex-grow overflow-y-scroll min-h-0 h-full w-full
+        className={`
+          overflow-y-scroll ${className}
+          ${flex ? 'flex flex-grow min-h-0 h-full w-full' : ''}
         `}
       >
-        { children }
+        {children}
       </div>
       <Footer />
     </div>

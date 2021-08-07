@@ -1,0 +1,114 @@
+/* *************** Mixin *************** */
+// Maxサイズ
+@mixin max-screen($break-point) {
+  @media screen and (max-width: $break-point) {
+    @content;
+  }
+}
+
+// Minサイズ
+@mixin min-screen($break-point) {
+  @media screen and (min-width: $break-point) {
+    @content;
+  }
+}
+
+// Middleサイズ
+@mixin screen($break-point-min, $break-point-max) {
+  @media screen and (min-width: $break-point-min) and (max-width: $break-point-max) {
+    @content;
+  }
+}
+
+/*************** Create Class ***************/
+/* Flex */
+@mixin flexSet($justify, $items) {
+  display: flex;
+  align-items: $items;
+  justify-content: $justify;
+}
+
+/* Button */
+@mixin buttonSet(
+  $background,
+  $color,
+  $hoverBackground,
+  $hoverColor
+) {
+  background-color: $background;
+  color: $color;
+  transition: .3s;
+  cursor: pointer;
+
+  &:hover {
+    background: $hoverBackground;
+    color: $hoverColor;
+  }
+}
+
+// Toggle Switch
+@mixin toggleSwitch($offColor, $onColor, $subColor) {
+  .toggleSwitch {
+    color: $subColor;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+
+    // チェックボックス
+    > input {
+      display: none;
+
+      &:checked {
+
+        & + span {
+          background: $onColor;
+
+          &::before {
+            padding-left: 15%;
+            content: "ON";
+          }
+
+          &::after {
+            left: 2.5rem;
+            border: solid 3px $onColor;
+          }
+        }
+      }
+    }
+
+    > span {
+      display: inline-block;
+      position: relative;
+      border-radius: 2rem;
+      background: $offColor;
+      cursor: pointer;
+      transition: 0.3s;
+
+      // スイッチ内ラベル
+      &::before {
+        display: block;
+        padding-left: 32px;
+        color: $subColor;
+        font-weight: bold;
+        font-size: 10px;
+        line-height: 1.5rem;
+        content: "OFF";
+      }
+
+      // 丸ボタン
+      &::after {
+        display: inline-block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 1.2rem;
+        height: 1.2rem;
+        border: solid 3px $offColor;
+        border-radius: 50%;
+        background: $subColor;
+        content: "";
+        transition: 0.3s;
+      }
+    }
+  }
+}

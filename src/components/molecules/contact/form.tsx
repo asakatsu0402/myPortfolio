@@ -1,17 +1,15 @@
 // Modules
-import React from "react"
+import React from 'react'
 // Components
-import { Label } from "../../atoms/label"
-import { Select } from "../../atoms/select"
-import { Textarea } from "../../atoms/textarea"
-import { Input } from "../../atoms/input"
-import { Button } from "../../atoms/button"
-// Config
-import { formList } from "../../../config/contactConfig"
+import { Label } from '../../atoms/label'
+import { Select } from '../../atoms/select'
+import { Textarea } from '../../atoms/textarea'
+import { Input } from '../../atoms/input'
+import { Button } from '../../atoms/button'
 // Functions
-import { CommonFunctions } from "../../../functions/commonFunctions"
-// Styles
-// import styles from '../../../styles/Home.module.scss'
+import { CommonFunctions } from '../../../functions/commonFunctions'
+// Config
+import { formList } from '../../../config/contactConfig'
 
 // *************** Type *************** //
 type Props = {
@@ -19,9 +17,7 @@ type Props = {
   setError: any
 }
 
-export const Form = (
-  props: Props
-) => {
+export const Form = (props: Props) => {
   // *************** Const *************** //
   const { commons } = CommonFunctions()
 
@@ -29,17 +25,14 @@ export const Form = (
   return (
     <div>
       <ul className="p-2">
-        { formList.map((form: any, i: number) => (
-          <li
-            className="first:m-0 mt-5"
-            key={i}
-          >
+        {formList.map((form: any, i: number) => (
+          <li className="first:m-0 mt-5" key={i}>
             <Label
               className="cursor-pointer"
               htmlFor={form.name}
               text={form.label}
             />
-            { form.tag === 'select' ? (
+            {form.tag === 'select' ? (
               <Select
                 name={form.name}
                 label={form.label}
@@ -49,10 +42,7 @@ export const Form = (
                 optionLabel="label"
               />
             ) : form.tag === 'textarea' ? (
-              <Textarea
-                className="px-1 py-0.5"
-                name={form.name}
-              />
+              <Textarea className="px-1 py-0.5" name={form.name} />
             ) : (
               <Input
                 className="px-1 py-0.5 border-solid border-2 border-transparent transition ease-in duration-300
@@ -60,7 +50,7 @@ export const Form = (
                 "
                 name={form.name}
                 type={form.type}
-                function={(e: React.ChangeEvent<HTMLInputElement>) => {
+                functions={(e: React.ChangeEvent<HTMLInputElement>) => {
                   commons.checkValidation(
                     e.target.name,
                     form.label,
@@ -72,7 +62,7 @@ export const Form = (
                 }}
               />
             )}
-            { props.error[form.name] && (
+            {props.error[form.name] && (
               <p className="text-crimson font-bold text-sm">
                 {props.error[form.name]}
               </p>
@@ -81,12 +71,16 @@ export const Form = (
         ))}
       </ul>
       <Button
-        className={`py-1 px-3 bg-black text-white
-          hover:bg-transparent hover:text-black hover:border-black
-          ${!!Object.values(props.error).filter((error: any) => error).length && 'disabled'}
+        className={`blackButton py-1 px-3
+          ${
+            !!Object.values(props.error).filter((error: any) => error).length &&
+            'disabled'
+          }
         `}
         text="送信"
-        disabled={!!Object.values(props.error).filter((error: any) => error).length}
+        disabled={
+          !!Object.values(props.error).filter((error: any) => error).length
+        }
       />
     </div>
   )

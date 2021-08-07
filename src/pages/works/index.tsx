@@ -1,18 +1,16 @@
 // Modules
-import React from "react"
+import React from 'react'
 // Components
-import { Layout } from "../../layouts/layout"
-import { PageHead } from "../../layouts/pageHead"
-import { WorksList } from "../../components/molecules/works/worksList"
+import { Layout } from '../../layouts/layout'
+import { PageHead } from '../../layouts/pageHead'
+import { WorksList } from '../../components/molecules/works/worksList'
 // Styles
 
 export const Index = () => {
   // *************** JSX *************** //
-  return(
+  return (
     <Layout>
-      <PageHead
-        title="Works"
-      />
+      <PageHead title="Works" />
       <WorksList />
     </Layout>
   )

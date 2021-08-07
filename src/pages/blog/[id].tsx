@@ -13,10 +13,7 @@ import { BreadCrumbs } from '../../components/molecules/blog/breadCrumbs'
 import { getBlogBy, getBlogs, getCategories } from '../../functions/api'
 import { processingDom } from '../../functions/blogFunctions'
 // Interfaces
-import {
-  blogContent,
-  detailStatic
-} from '../../interfaces/molecules/blogInterfaces'
+import { blogContent } from '../../interfaces/molecules/blogInterfaces'
 import { blogDataType } from '../../interfaces/initInterfaces'
 
 // *************** Get API *************** //
@@ -59,7 +56,7 @@ export const DetailBlog: NextPage<blogContent> = (props: blogContent) => {
 
   // *************** JSX *************** //
   return (
-    <Layout title={`Blog - ${title}`}>
+    <Layout title={`Blog - ${title}`} flex={true}>
       <article>
         <BreadCrumbs title={title} />
         <BlogDetail {...props} />

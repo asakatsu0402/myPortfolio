@@ -1,27 +1,17 @@
 // Modules
-import {
-  useRef,
-  useState,
-  useEffect
-} from "react"
-import {
-  QueryClient,
-  QueryClientProvider
-} from "react-query"
-import { AppProps } from "next/app"
-import { useRouter } from "next/router"
+import { useRef, useState, useEffect } from 'react'
+import { QueryClient, QueryClientProvider } from 'react-query'
+import { AppProps } from 'next/app'
+import { useRouter } from 'next/router'
+import { ThemeProvider } from 'next-themes'
 // Functions
-import { SearchContext } from "../functions/commonFunctions"
+import { SearchContext } from '../functions/commonFunctions'
 // Styles
 import '../styles/globals.scss'
-import { ThemeProvider } from "next-themes"
-// FontAwesome
-import "@fortawesome/fontawesome-svg-core/styles.css"
+import '../styles/classStyles.scss'
+import '@fortawesome/fontawesome-svg-core/styles.css'
 
-const MyApp = ({
-  Component,
-  pageProps
-}: AppProps) => {
+const MyApp = ({ Component, pageProps }: AppProps) => {
   // *************** Const *************** //
   const queryClientRef: any = useRef()
   if (!queryClientRef.current) {
