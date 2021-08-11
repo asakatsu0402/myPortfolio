@@ -5,6 +5,7 @@ import { Label } from '../../atoms/label'
 import { Select } from '../../atoms/select'
 import { Textarea } from '../../atoms/textarea'
 import { Input } from '../../atoms/input'
+import { Underline } from '../../atoms/underLine'
 import { Button } from '../../atoms/button'
 // Functions
 import { CommonFunctions } from '../../../functions/commonFunctions'
@@ -26,7 +27,7 @@ export const Form = (props: Props) => {
     <div>
       <ul className="p-2">
         {formList.map((form: any, i: number) => (
-          <li className="first:m-0 mt-5" key={i}>
+          <li className="lineInputGroup first:m-0 mt-5" key={i}>
             <Label
               className="cursor-pointer"
               htmlFor={form.name}
@@ -34,6 +35,7 @@ export const Form = (props: Props) => {
             />
             {form.tag === 'select' ? (
               <Select
+                className="lineInput"
                 name={form.name}
                 label={form.label}
                 initialLabel={form.initialLabel}
@@ -42,12 +44,10 @@ export const Form = (props: Props) => {
                 optionLabel="label"
               />
             ) : form.tag === 'textarea' ? (
-              <Textarea className="px-1 py-0.5" name={form.name} />
+              <Textarea className="lineInput px-1 py-0.5" name={form.name} />
             ) : (
               <Input
-                className="px-1 py-0.5 border-solid border-2 border-transparent transition ease-in duration-300
-                  focus:border-crimson
-                "
+                className="lineInput px-1 py-0.5"
                 name={form.name}
                 type={form.type}
                 functions={(e: React.ChangeEvent<HTMLInputElement>) => {
@@ -62,6 +62,7 @@ export const Form = (props: Props) => {
                 }}
               />
             )}
+            <Underline />
             {props.error[form.name] && (
               <p className="text-crimson font-bold text-sm">
                 {props.error[form.name]}

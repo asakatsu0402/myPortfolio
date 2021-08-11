@@ -1,15 +1,13 @@
 // Modules
-import React, {
-  useCallback,
-  useContext
-} from "react"
-import { useRouter } from "next/router"
+import React, { useCallback, useContext } from 'react'
+import { useRouter } from 'next/router'
 // Components
-import { Label } from "../../atoms/label"
-import { Input } from "../../atoms/input"
-import { Button } from "../../atoms/button"
+import { Label } from '../../atoms/label'
+import { Input } from '../../atoms/input'
+import { Underline } from '../../atoms/underLine'
+import { Button } from '../../atoms/button'
 // Functions
-import { SearchContext } from "../../../functions/commonFunctions"
+import { SearchContext } from '../../../functions/commonFunctions'
 
 export const ArticleSearch: React.VFC = () => {
   // *************** Const *************** //
@@ -26,7 +24,7 @@ export const ArticleSearch: React.VFC = () => {
 
   const handleDownSearch = useCallback(
     (e: React.KeyboardEvent<HTMLInputElement>) => {
-      if (e.key === "Enter") void router.push(`/blog/search/?keyword=${search}`)
+      if (e.key === 'Enter') void router.push(`/blog/search/?keyword=${search}`)
     },
     [search, router]
   )
@@ -37,22 +35,22 @@ export const ArticleSearch: React.VFC = () => {
 
   // *************** JSX *************** //
   return (
-    <div>
-      <Label
-        className="font-bold"
-        htmlFor="search"
-        text="記事検索"
-      />
-      <Input
-        className="p-2"
-        name="search"
-        type="text"
-        placeholder="Search…"
-        value={search}
-        functions={handleSearch}
-        onKeyDown={handleDownSearch}
-      />
+    <div className="flexBetweenSet">
+      <div className="lineInputGroup">
+        <Label className="font-bold" htmlFor="search" text="記事検索" />
+        <Input
+          className="lineInput p-1"
+          name="search"
+          type="text"
+          placeholder="Search…"
+          value={search}
+          functions={handleSearch}
+          onKeyDown={handleDownSearch}
+        />
+        <Underline />
+      </div>
       <Button
+        className="blackButton p-1"
         text="Search"
         functions={searchStart}
       />

@@ -12,6 +12,40 @@
   @include f.flexSet(space-around, start);
 }
 
+/* *************** Input *************** */
+.lineInputGroup {
+
+  .lineInput:focus + .underline::before,
+  .lineInput:focus + .underline::after {
+    width: 50%;
+  }
+
+  > .underline {
+    position: relative;
+    border-top: 1px solid f.$platinum;
+
+    &:before,
+    &:after {
+      position: absolute;
+      bottom: 0;
+      width: 0;
+      height: 1px;
+      background-color: f.$crimson;
+      transition: all 0.5s;
+      -webkit-transition: all 0.5s;
+      content: '';
+    }
+
+    &:before {
+      left: 50%;
+    }
+
+    &:after {
+      right: 50%;
+    }
+  }
+}
+
 /* *************** Button *************** */
 /* Black */
 .blackButton {

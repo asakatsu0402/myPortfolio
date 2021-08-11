@@ -1,7 +1,7 @@
 // Modules
-import React from "react"
+import React from 'react'
 // Interfaces
-import { label } from "../../interfaces/atomInterfaces"
+import { label } from '../../interfaces/atomInterfaces'
 
 export const Label: React.VFC<label> = ({
   className,
@@ -10,10 +10,7 @@ export const Label: React.VFC<label> = ({
   text
 }: label) => (
   // *************** JSX *************** //
-  <label
-    className={className}
-    htmlFor={htmlFor}
-  >
-    { children ? children : text }
+  <label className={className} htmlFor={htmlFor}>
+    {children ? children : text}
   </label>
 )

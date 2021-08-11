@@ -10,6 +10,11 @@ export type label = {
   children?: ReactNode
 }
 
+// Underline
+export type UnderLineType = {
+  className?: string
+}
+
 // Button
 export type button = {
   className?: string
