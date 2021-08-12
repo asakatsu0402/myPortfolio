@@ -1,6 +1,7 @@
 // Modules
 import React from "react"
-// Share Buttons
+// Components
+import { ExternalLink } from "../../atoms/externalLink"
 import {
   TwitterShareButton,
   TwitterIcon,
@@ -11,22 +12,29 @@ import {
   LineShareButton,
   LineIcon
 } from "react-share"
+// Interfaces
+import { ShareType } from "../../../interfaces/molecules/blogInterfaces"
+// Config
+import { baseUrl } from "../../../config/commonConfig"
 
-// *************** Type *************** //
-type Props = {
-  title?: string
-}
-
-export const ArticleShare: React.VFC<Props> = (
-  props: Props
-) => {
+export const Share: React.VFC<ShareType> = ({
+  id,
+  title
+}: ShareType) => {
   // *************** JSX *************** //
+  const twitterLink = `https://twitter.com/intent/tweet?text=${title}&url=${baseUrl}/${id}/&hashtags=microcms`;
   return (
     <ul className="sticky top-5 h-full">
       <li>
+        {/* <ExternalLink
+          link={twitterLink}
+          target={true}
+        >
+          <p>twitter</p>
+        </ExternalLink> */}
         <TwitterShareButton
-          url=""
-          title={props.title}
+          url={twitterLink}
+          title={title}
         >
           <TwitterIcon
             size={35}
@@ -37,7 +45,7 @@ export const ArticleShare: React.VFC<Props> = (
       <li>
         <FacebookShareButton
           url=""
-          title={props.title}
+          title={title}
         >
           <FacebookIcon
             size={35}
@@ -48,7 +56,7 @@ export const ArticleShare: React.VFC<Props> = (
       <li>
         <HatenaShareButton
           url=""
-          title={props.title}
+          title={title}
         >
           <HatenaIcon
             size={35}
@@ -59,7 +67,7 @@ export const ArticleShare: React.VFC<Props> = (
       <li>
         <LineShareButton
           url=""
-          title={props.title}
+          title={title}
         >
           <LineIcon
             size={35}

@@ -35,16 +35,23 @@ export type detailStatic = {
   previewData: string | undefined
 }
 
-export type blogContent = {
-  data: {
-    categoriesCount: number
-    updatedAt: any
-    title: string
-    tag: any
-    thumbnail: any
-    categories: category
-    body: any
-    toc_visible: boolean
-    toc: toc['toc']
-  }
+// ブログ詳細コンポーネント
+export type BlogDetailType = {
+  id: string
+  categoriesCount: number
+  createdAt: string
+  updatedAt: string
+  title: string
+  tag: Array<any>
+  thumbnail: any
+  categories: category
+  body: string
+  toc_visible: boolean
+  toc: toc['toc']
+}
+
+// ブログ記事シェア
+export type ShareType = {
+  id?: string
+  title?: string
 }

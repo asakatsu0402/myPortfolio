@@ -12,3 +12,7 @@ export const globalAxios = axios.create({
     'X-API-KEY': API_KEY
   }
 })
+
+// base Url
+export const baseUrl = process.env.NODE_ENV === 'production'
+? process.env.Base_Url : 'https://localhost:3000'

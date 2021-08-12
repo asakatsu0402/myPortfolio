@@ -3,16 +3,17 @@ import React from 'react'
 import Image from 'next/image'
 // Components
 import { Toc } from './toc'
-import { ArticleShare } from './articleShare'
+import { Share } from './share'
 // Interfaces
-import { blogContent } from '../../../interfaces/molecules/blogInterfaces'
+import { BlogDetailType } from '../../../interfaces/molecules/blogInterfaces'
 // FontAwesome
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faHistory } from '@fortawesome/free-solid-svg-icons'
 // Styles
 import styles from '../../../styles/blog.module.scss'
 
-export const BlogDetail: React.VFC<blogContent> = ({
+export const BlogDetail: React.VFC<BlogDetailType> = ({
+  id,
   updatedAt,
   title,
   tag,
@@ -21,11 +22,11 @@ export const BlogDetail: React.VFC<blogContent> = ({
   body,
   toc_visible,
   toc
-}: blogContent) => {
+}: BlogDetailType) => {
   // *************** JSX *************** //
   return (
     <article>
-      {thumbnail && (
+      { thumbnail && (
         <Image
           className="object-contain"
           src={thumbnail.url}
@@ -35,8 +36,8 @@ export const BlogDetail: React.VFC<blogContent> = ({
         />
       )}
       <div className="flex">
-        <ArticleShare
-          // url={}
+        <Share
+          id={id}
           title={title}
         />
 

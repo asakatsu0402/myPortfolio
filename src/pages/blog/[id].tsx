@@ -13,7 +13,6 @@ import { BreadCrumbs } from '../../components/molecules/blog/breadCrumbs'
 import { getBlogBy, getBlogs, getCategories } from '../../functions/api'
 import { processingDom } from '../../functions/blogFunctions'
 // Interfaces
-import { blogContent } from '../../interfaces/molecules/blogInterfaces'
 import { blogDataType } from '../../interfaces/initInterfaces'
 
 // *************** Get API *************** //
@@ -32,7 +31,7 @@ export const getStaticProps: GetStaticProps = async ({
   previewData
 }) => {
   const { id } = params
-  const { data: blog }: blogContent = await getBlogBy(id)
+  const { data: blog }: any = await getBlogBy(id)
 
   if (!id) throw Error('記事が見当たりません。')
 
@@ -50,9 +49,10 @@ export const getStaticProps: GetStaticProps = async ({
   }
 }
 
-export const DetailBlog: NextPage<blogContent> = (props: blogContent) => {
+export const DetailBlog: NextPage<any> = (props: any) => {
   // *************** Const *************** //
   const { title } = props
+  console.log(props)
 
   // *************** JSX *************** //
   return (
