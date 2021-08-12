@@ -1,10 +1,5 @@
 // *************** Import *************** //
-// 色
-@forward "color";
-// 関数など
-@forward "mixin";
-
-//// 各サイズ定数
-//@forward "variable";
-//// アニメーション
-//@forward "Animation";
+@forward "color"; // 色
+@forward "mixin"; // 関数など
+//@forward "variable"; // 各サイズ定数x
+// @forward "Animation"; // アニメーション

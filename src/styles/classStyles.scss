@@ -1,6 +1,21 @@
 /* *************** Import *************** */
 @use "foundations/import" as f;
 
+/* *************** Async *************** */
+.success {
+  background-color: f.$green;
+}
+
+.error {
+  background-color: f.$red;
+  cursor: not-allowed;
+}
+
+.disabled {
+  background-color: f.$silver;
+  cursor: not-allowed;
+}
+
 /* *************** Flex *************** */
 /* justify-between */
 .flexBetweenSet {
