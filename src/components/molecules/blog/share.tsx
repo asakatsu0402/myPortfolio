@@ -1,80 +1,56 @@
 // Modules
-import React from "react"
-// Components
-import { ExternalLink } from "../../atoms/externalLink"
+import React from 'react'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {
-  TwitterShareButton,
-  TwitterIcon,
-  FacebookShareButton,
-  FacebookIcon,
-  HatenaShareButton,
-  HatenaIcon,
-  LineShareButton,
-  LineIcon
-} from "react-share"
+  faFacebook,
+  faLine,
+  faTwitter
+} from '@fortawesome/free-brands-svg-icons'
+// Components
+import { ExternalLink } from '../../atoms/externalLink'
 // Interfaces
-import { ShareType } from "../../../interfaces/molecules/blogInterfaces"
+import { ShareType } from '../../../interfaces/molecules/blogInterfaces'
 // Config
-import { baseUrl } from "../../../config/commonConfig"
+import { baseUrl } from '../../../config/commonConfig'
 
-export const Share: React.VFC<ShareType> = ({
-  id,
-  title
-}: ShareType) => {
+export const Share: React.VFC<ShareType> = ({ id, title }: ShareType) => {
   // *************** JSX *************** //
-  const twitterLink = `https://twitter.com/intent/tweet?text=${title}&url=${baseUrl}/${id}/&hashtags=microcms`;
+  const shareList = [
+    {
+      className: 'twitterButton',
+      icon: faTwitter,
+      link: `https://twitter.com/intent/tweet?text=${title}&url=${baseUrl}/${id}/&hashtags=microcms`
+    },
+    {
+      className: 'facebookButton',
+      icon: faFacebook,
+      link: `https://www.facebook.com/sharer.php?u=${baseUrl}/${id}/`
+    },
+    {
+      className: 'hatenaButton',
+      icon: faTwitter,
+      link: `https://b.hatena.ne.jp/entry/${baseUrl}/${id}/`
+    },
+    {
+      className: 'lineButton',
+      icon: faLine,
+      link: `https://b.hatena.ne.jp/entry/${baseUrl}/${id}/`
+    }
+  ]
+
   return (
     <ul className="sticky top-5 h-full">
-      <li>
-        {/* <ExternalLink
-          link={twitterLink}
-          target={true}
-        >
-          <p>twitter</p>
-        </ExternalLink> */}
-        <TwitterShareButton
-          url={twitterLink}
-          title={title}
-        >
-          <TwitterIcon
-            size={35}
-            round
-          />
-        </TwitterShareButton>
-      </li>
-      <li>
-        <FacebookShareButton
-          url=""
-          title={title}
-        >
-          <FacebookIcon
-            size={35}
-            round
-          />
-        </FacebookShareButton>
-      </li>
-      <li>
-        <HatenaShareButton
-          url=""
-          title={title}
-        >
-          <HatenaIcon
-            size={35}
-            round
-          />
-        </HatenaShareButton>
-      </li>
-      <li>
-        <LineShareButton
-          url=""
-          title={title}
-        >
-          <LineIcon
-            size={35}
-            round
-          />
-        </LineShareButton>
-      </li>
+      {shareList.map((list: any, i: number) => (
+        <li key={i}>
+          <ExternalLink
+            className={`inline-block px-2 py-1 ${list.className}`}
+            link={list.link}
+            target={true}
+          >
+            <FontAwesomeIcon icon={list.icon} />
+          </ExternalLink>
+        </li>
+      ))}
     </ul>
   )
 }

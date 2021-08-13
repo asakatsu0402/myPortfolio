@@ -1,6 +1,7 @@
 // Modules
 import { NextPage } from 'next'
 // Components
+import { Breadcrumbs } from '../../components/molecules/blog/breadCrumbs'
 import { AllBlogs } from '../../components/molecules/blog/allBlogs'
 import { AllCategories } from '../../components/molecules/blog/allCategories'
 import { ArticleSearch } from '../../components/molecules/blog/articleSearch'
@@ -46,6 +47,7 @@ export const Blog: NextPage<Props> = (props: Props) => {
   return (
     <Layout title="Blog" flex={true}>
       <main className="flex-auto">
+        <Breadcrumbs />
         <AllBlogs list={props.contents} />
         <PageNation total={props.totalCount} />
       </main>

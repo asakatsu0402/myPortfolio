@@ -1,14 +1,14 @@
 // Modules
 import React from 'react'
 import Image from 'next/image'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faHistory } from '@fortawesome/free-solid-svg-icons'
 // Components
 import { Toc } from './toc'
 import { Share } from './share'
+import { Breadcrumbs } from './breadCrumbs'
 // Interfaces
 import { BlogDetailType } from '../../../interfaces/molecules/blogInterfaces'
-// FontAwesome
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faHistory } from '@fortawesome/free-solid-svg-icons'
 // Styles
 import styles from '../../../styles/blog.module.scss'
 
@@ -26,7 +26,7 @@ export const BlogDetail: React.VFC<BlogDetailType> = ({
   // *************** JSX *************** //
   return (
     <article>
-      { thumbnail && (
+      {thumbnail && (
         <Image
           className="object-contain"
           src={thumbnail.url}
@@ -35,12 +35,9 @@ export const BlogDetail: React.VFC<BlogDetailType> = ({
           height="500"
         />
       )}
-      <div className="flex">
-        <Share
-          id={id}
-          title={title}
-        />
-
+      <Breadcrumbs title={title} id={id} />
+      <div className="flex mt-10">
+        <Share id={id} title={title} />
         <div>
           <h2 className="font-bold text-4xl">{title}</h2>
           <p>{categories.name}</p>
@@ -51,9 +48,9 @@ export const BlogDetail: React.VFC<BlogDetailType> = ({
               </li>
             ))}
           </ul>
-          <time className="flex items-center">
+          <time className="flexSet">
             <FontAwesomeIcon icon={faHistory} />
-            <p className="flex items-center ml-1">
+            <p className="flexSet ml-1">
               {new Date(updatedAt).getFullYear()}/
               {new Date(updatedAt).getMonth()}/{new Date(updatedAt).getDate()}
             </p>

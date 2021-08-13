@@ -1,45 +1,30 @@
 // Modules
-import React from "react"
-import { useRouter } from "next/router"
-import Link from "next/link"
+import React from 'react'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faCaretRight } from '@fortawesome/free-solid-svg-icons'
+// Components
+import { PageLink } from '../../atoms/pageLink'
+// Interfaces
+import { BreadcrumbsType } from '../../../interfaces/molecules/blogInterfaces'
 
-// *************** Type *************** //
-type Props = {
-  title?: string
-}
-
-export const BreadCrumbs: React.VFC<Props> = (
-  props: Props
-) => {
-  // *************** Const *************** //
-  const router = useRouter()
-  const path = router.asPath
-  const isPage = /\/blog\/.+$/.test(path)
-
+export const Breadcrumbs: React.VFC<BreadcrumbsType> = ({
+  title,
+  id
+}: BreadcrumbsType) => {
   // *************** JSX *************** //
   return (
-    <ul className="flex">
+    <ul className="flexSet">
       <li>
-        <Link
-          href='/blog'
-        >
-          asakatsu Blog
-        </Link>
+        <PageLink className="linkText" href="/blog" text="記事一覧" />
       </li>
-      { isPage && (
-        <li>
-          {/*<Link*/}
-          {/*  href={`/category/[id]`}*/}
-          {/*>*/}
-
-          {/*</Link>*/}
+      {title && id && (
+        <li className="flexSet">
+          <p className="linkText mx-2">
+            <FontAwesomeIcon icon={faCaretRight} />
+          </p>
+          <PageLink className="linkText" href={`/blog/${id}`} text={title} />
         </li>
       )}
-      <li>
-        <p>
-          {props.title}
-        </p>
-      </li>
     </ul>
   )
 }

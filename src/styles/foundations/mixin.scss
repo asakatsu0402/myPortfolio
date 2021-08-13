@@ -46,6 +46,23 @@
   }
 }
 
+/* ShareButton */
+@mixin shareButtonSet(
+  $color,
+  $hoverBackground,
+  $hoverColor
+) {
+  color: $color;
+  transition: .3s;
+  cursor: pointer;
+
+  &:hover {
+    border-radius: 50%;
+    background: $hoverBackground;
+    color: $hoverColor;
+  }
+}
+
 // Toggle Switch
 @mixin toggleSwitch($offColor, $onColor, $subColor) {
   .toggleSwitch {

@@ -17,6 +17,14 @@
   h2 {
     margin: 2rem 0;
     padding: .8rem;
+    border-radius: .3rem;
+    background: f.$lightCrimson;
+    font-size: 1.2rem;
+  }
+  // 小見出し
+  h3 {
+    margin: 2rem 0;
+    padding: .8rem;
     border-bottom: solid 2px f.$crimson;
     font-size: 1.2rem;
   }

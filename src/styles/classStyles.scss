@@ -17,6 +17,11 @@
 }
 
 /* *************** Flex *************** */
+/* flex */
+.flexSet {
+  display: flex;
+  align-items: center;
+}
 /* justify-between */
 .flexBetweenSet {
   @include f.flexSet(space-between, center);
@@ -92,6 +97,39 @@
   );
 }
 
+/* Twitter */
+.twitterButton {
+  @include f.shareButtonSet(
+    f.$twitter,
+    f.$crimson,
+    f.$white
+  );
+}
+/* Facebook */
+.facebookButton {
+  @include f.shareButtonSet(
+    f.$facebook,
+    f.$crimson,
+    f.$white
+  );
+}
+/* Hatena */
+.hatenaButton {
+  @include f.shareButtonSet(
+    f.$hatena,
+    f.$crimson,
+    f.$white
+  );
+}
+/* LINE */
+.lineButton {
+  @include f.shareButtonSet(
+    f.$line,
+    f.$crimson,
+    f.$white
+  );
+}
+
 /* *************** Text *************** */
 .crimsonText {
   transition-duration: .3s;
@@ -99,6 +137,9 @@
   &:hover {
     color: f.$crimson;
   }
+}
+.linkText {
+  color: f.$linkBlue;
 }
 
 /* *************** Not First-child *************** */
@@ -109,6 +150,10 @@
 
 .exceptTopSection:not(:first-child) {
   margin-top: 15rem;
+}
+
+.exceptTopBlog:not(:first-child) {
+  margin-top: 2rem;
 }
 
 /* Left */

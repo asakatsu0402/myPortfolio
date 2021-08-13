@@ -20,7 +20,10 @@ export const AllBlogs: React.VFC<Props> = (props: Props) => {
   return (
     <ul>
       {list.map((list: any, i: number) => (
-        <li key={i} className={`${props.className} cursor-pointer`}>
+        <li
+          key={i}
+          className={`exceptTopBlog ${props.className} cursor-pointer`}
+        >
           <Link href="/blog/[id]" as={`/blog/${list.id}`}>
             <div className="flex">
               <Image

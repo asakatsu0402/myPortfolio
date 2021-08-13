@@ -1,14 +1,12 @@
 // Modules
 import type { GetStaticProps, NextPage } from 'next'
 import React from 'react'
-
 // Components
 import { Layout } from '../../layouts/layout'
 import { AllCategories } from '../../components/molecules/blog/allCategories'
 import { ArticleSearch } from '../../components/molecules/blog/articleSearch'
 import { AsideSection } from '../../components/molecules/blog/asideSection'
 import { BlogDetail } from '../../components/molecules/blog/blogDetail'
-import { BreadCrumbs } from '../../components/molecules/blog/breadCrumbs'
 // Functions
 import { getBlogBy, getBlogs, getCategories } from '../../functions/api'
 import { processingDom } from '../../functions/blogFunctions'
@@ -52,13 +50,11 @@ export const getStaticProps: GetStaticProps = async ({
 export const DetailBlog: NextPage<any> = (props: any) => {
   // *************** Const *************** //
   const { title } = props
-  console.log(props)
 
   // *************** JSX *************** //
   return (
     <Layout title={`Blog - ${title}`} flex={true}>
       <article>
-        <BreadCrumbs title={title} />
         <BlogDetail {...props} />
       </article>
       <aside>
