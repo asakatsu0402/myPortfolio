@@ -32,6 +32,15 @@
   @include f.flexSet(space-around, start);
 }
 
+/* *************** Absolute *************** */
+.absoluteCenter {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+
 /* *************** Input *************** */
 .lineInputGroup {
 

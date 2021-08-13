@@ -1,6 +1,7 @@
 // Modules
-import React from "react"
-import Image from "next/image"
+import React from 'react'
+import Image from 'next/image'
+import Typewriter from 'typewriter-effect'
 
 export const Top = () => {
   // *************** JSX *************** //
@@ -15,12 +16,14 @@ export const Top = () => {
           height="1000"
         />
       </div>
-      <h1
-        className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2
-          font-bold text-5xl text-crimson
-        "
-      >
-        KATSUYA ASAKURA
+      <h1 className="text-crimson absoluteCenter text-6xl">
+        <Typewriter
+          options={{
+            strings: ['Hi! Everyone!', "I'm KATSUYA ASAKURA."],
+            autoStart: true,
+            loop: true
+          }}
+        />
       </h1>
     </div>
   )

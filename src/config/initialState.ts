@@ -5,9 +5,9 @@ import {
   pageBlogType
 } from '../interfaces/initInterfaces'
 import {
-  blogContent,
-  category,
-  toc
+  CategoryType,
+  DetailPageType
+  // toc
 } from '../interfaces/molecules/blogInterfaces'
 
 /**
@@ -36,7 +36,7 @@ export const initCategoriesData: categoryDataType = {
 /**
  * カテゴリー
  */
-export const initCategory: category = {
+export const initCategory: CategoryType = {
   name: '',
   createdAt: '',
   id: '',
@@ -56,7 +56,7 @@ export const initToc = [
   }
 ]
 
-export const initBlog: blogContent = {
+export const initBlog: DetailPageType = {
   categoriesCount: 0,
   updatedAt: '',
   title: '',

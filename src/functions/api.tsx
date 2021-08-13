@@ -14,7 +14,6 @@ import {
   categoryDataType,
   pageBlogType
 } from '../interfaces/initInterfaces'
-import { blogContent } from '../interfaces/molecules/blogInterfaces'
 
 // *************** Functions *************** //
 /**
@@ -68,7 +67,7 @@ export const getCategories = async () => {
  * @param id
  */
 export const getBlogBy = async (id: any) => {
-  const blogData: blogContent = initBlog
+  const blogData: any = initBlog
   try {
     const res = await globalAxios.get(`${process.env.All_Blog_Url}/${id}`)
     blogData.data = res.data

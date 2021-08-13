@@ -9,7 +9,7 @@ export type searchValue = {
 }
 
 // 記事カテゴリー
-export type category = {
+export type CategoryType = {
   name: string
   createdAt: string
   id: string
@@ -41,6 +41,19 @@ export type detailStatic = {
   previewData: string | undefined
 }
 
+// ブログ詳細ページ
+export type DetailPageType = {
+  categoriesCount: any
+  updatedAt: string
+  title: string
+  tag: Array<any>
+  thumbnail: any
+  categories: any
+  body: string
+  toc_visible: boolean
+  toc: Array<any>
+}
+
 // ブログ詳細コンポーネント
 export type BlogDetailType = {
   id: string
@@ -50,7 +63,7 @@ export type BlogDetailType = {
   title: string
   tag: Array<any>
   thumbnail: any
-  categories: category
+  categories: CategoryType
   body: string
   toc_visible: boolean
   toc: toc['toc']
