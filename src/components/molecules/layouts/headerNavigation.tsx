@@ -8,23 +8,18 @@ import { headerNav } from '../../../config/layoutConfig'
 
 export const HeaderNavigation: React.VFC = () => {
   // *************** Const *************** //
-  const { asPath } = useRouter()
-  const isPage = asPath.split('/')[1]
+  const { pathname } = useRouter()
 
   // *************** JSX *************** //
   return (
-    <nav className="">
+    <nav>
       <ul className="flexBetweenSet">
         {headerNav.map((nav: any, i: number) => (
           <li key={i} className="exceptLeftMargin">
             <PageLink
               className={`
                 crimsonText
-                ${
-                  isPage === nav.link.split('/')[1]
-                    ? 'text-crimson font-bold'
-                    : ''
-                }
+                ${pathname === nav.link ? 'text-crimson' : ''}
               `}
               href={nav.link}
             >

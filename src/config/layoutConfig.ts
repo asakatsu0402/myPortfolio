@@ -39,7 +39,7 @@ export const footerShare = [
   },
   {
     icon: faInstagram,
-    link: 'https://www.instagram.com/asakatsu_draw_camera/'
+    link: 'https://www.instagram.com/asakatsu__camera/'
   },
   {
     icon: faPinterest,
