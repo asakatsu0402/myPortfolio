@@ -19,7 +19,7 @@ export const HeaderNavigation: React.VFC = () => {
             <PageLink
               className={`
                 crimsonText
-                ${pathname === nav.link ? 'text-crimson' : ''}
+                ${pathname === nav.link ? 'text-crimson' : 'nonActiveText'}
               `}
               href={nav.link}
             >

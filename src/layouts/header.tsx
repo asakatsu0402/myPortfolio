@@ -15,7 +15,7 @@ export const Header: React.VFC = () => {
       <PageLink
         className={`
           crimsonText
-          ${pathname === '/' ? 'text-crimson' : ''}
+          ${pathname === '/' ? 'text-crimson' : 'nonActiveText'}
         `}
         href="/"
         text="asakatsu"

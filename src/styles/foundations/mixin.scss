@@ -63,6 +63,17 @@
   }
 }
 
+/* SkillTag */
+@mixin skillTagSet(
+  $background,
+  $color
+) {
+  background: $background;
+  color: $color;
+  // border-radius: 1rem;
+  text-align: center;
+}
+
 // Toggle Switch
 @mixin toggleSwitch($offColor, $onColor, $subColor) {
   .toggleSwitch {

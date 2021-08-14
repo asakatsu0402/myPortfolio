@@ -10,14 +10,8 @@ export const Section: React.VFC<SectionType> = ({
 }: SectionType) => {
   // *************** JSX *************** //
   return (
-    <section
-      className={`
-        ${className}
-        w-2/3 m-auto 
-        md:flex md:justify-between md:w-4/5
-      `}
-    >
-      <h2 className="font-bold text-3xl">{title}</h2>
+    <section className={`exceptTopSection ${className}`}>
+      <h2 className="text-3xl">{title}</h2>
       {children}
     </section>
   )

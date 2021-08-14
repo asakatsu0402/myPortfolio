@@ -17,17 +17,31 @@
 }
 
 /* *************** Flex *************** */
+/* justify-between */
+.flexBetween {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* flex Reverse */
+.flexReverse {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row-reverse;
+}
+
 /* flex */
 .flexSet {
   display: flex;
   align-items: center;
 }
-/* justify-between */
+
+/* justify-between & items-center */
 .flexBetweenSet {
   @include f.flexSet(space-between, center);
 }
 
-/* justify-around */
+/* justify-around & items-center */
 .flexAroundSet {
   @include f.flexSet(space-around, start);
 }
@@ -139,6 +153,38 @@
   );
 }
 
+/* Language */
+.technologyTag {
+  @include f.skillTagSet(
+    f.$orange,
+    f.$white
+  );
+}
+
+/* Framework */
+.frameworkTag {
+  @include f.skillTagSet(
+    f.$green,
+    f.$white
+  );
+}
+
+/* Library */
+.libraryTag {
+  @include f.skillTagSet(
+    f.$blue,
+    f.$white
+  );
+}
+
+/* Tools */
+.toolTag {
+  @include f.skillTagSet(
+    f.$silver,
+    f.$white
+  );
+}
+
 /* *************** Text *************** */
 .crimsonText {
   transition-duration: .3s;
@@ -147,8 +193,13 @@
     color: f.$crimson;
   }
 }
+
 .linkText {
   color: f.$linkBlue;
+}
+
+.nonActiveText {
+  color: f.$silver;
 }
 
 /* *************** Not First-child *************** */

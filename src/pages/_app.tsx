@@ -12,9 +12,9 @@ import '../styles/globals.scss'
 import '../styles/classStyles.scss'
 import '@fortawesome/fontawesome-svg-core/styles.css'
 // nprogress
-Router.events.on('routeChangeStart', () => NProgress.start());
-Router.events.on('routeChangeComplete', () => NProgress.done());
-Router.events.on('routeChangeError', () => NProgress.done());
+Router.events.on('routeChangeStart', () => NProgress.start())
+Router.events.on('routeChangeComplete', () => NProgress.done())
+Router.events.on('routeChangeError', () => NProgress.done())
 
 const MyApp = ({ Component, pageProps }: AppProps) => {
   // *************** Const *************** //

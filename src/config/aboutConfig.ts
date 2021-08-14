@@ -17,6 +17,9 @@ export const languages = [
 // FrameWorks
 export const frameworks = [
   {
+    label: 'React.js'
+  },
+  {
     label: 'Next.js'
   },
   {
@@ -30,10 +33,10 @@ export const frameworks = [
 // Library
 export const libraries = [
   {
-    label: 'React.js'
+    label: 'React Query'
   },
   {
-    label: 'React Query'
+    label: 'React Table'
   },
   {
     label: 'CASL'
@@ -114,3 +117,7 @@ export const careerList = [
     start: '2020/08'
   }
 ]
+
+// Recruit
+export const recruitMessage =
+  'Recruiters, you can find my PDF download by clicking the button below.'

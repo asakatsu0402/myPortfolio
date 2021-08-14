@@ -1,15 +1,16 @@
 // Modules
 import React from 'react'
 // Interfaces
-import { External } from '../../interfaces/atomInterfaces'
+import { ExternalType } from '../../interfaces/atomInterfaces'
 
-export const ExternalLink: React.VFC<External> = ({
+export const ExternalLink: React.VFC<ExternalType> = ({
   className,
   link,
   children,
   text,
-  target
-}: External) => {
+  target,
+  downLoad
+}: ExternalType) => {
   // *************** JSX *************** //
   return (
     <a
@@ -17,6 +18,7 @@ export const ExternalLink: React.VFC<External> = ({
       href={link}
       target={target ? '_blank' : '_self'}
       rel={'noreferrer'}
+      download={downLoad ? true : false}
     >
       {children ? children : text}
     </a>

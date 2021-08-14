@@ -16,7 +16,7 @@ export type UnderLineType = {
 }
 
 // Button
-export type button = {
+export type ButtonType = {
   className?: string
   text?: any
   children?: ReactNode
@@ -33,12 +33,13 @@ export type link = {
 }
 
 // External Link
-export type External = {
+export type ExternalType = {
   className?: string
   link: string
   children?: ReactNode
   text?: any
-  target: boolean
+  target?: boolean
+  downLoad?: string
 }
 
 // Select
