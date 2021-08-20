@@ -23,6 +23,7 @@
     "@fortawesome/react-fontawesome": "^0.1.14",
     "autoprefixer": "^10.2.6",
     "axios": "^0.21.1",
+    "framer-motion": "^4.1.17",
     "microcms-richedit-processer": "^1.0.2",
     "next": "10.2.3",
     "next-themes": "^0.0.14",

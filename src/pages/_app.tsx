@@ -5,6 +5,7 @@ import { AppProps } from 'next/app'
 import Router, { useRouter } from 'next/router'
 import { ThemeProvider } from 'next-themes'
 import NProgress from 'nprogress'
+import { AnimatePresence } from 'framer-motion'
 // Functions
 import { SearchContext } from '../functions/commonFunctions'
 // Styles
@@ -16,30 +17,32 @@ Router.events.on('routeChangeStart', () => NProgress.start())
 Router.events.on('routeChangeComplete', () => NProgress.done())
 Router.events.on('routeChangeError', () => NProgress.done())
 
-const MyApp = ({ Component, pageProps }: AppProps) => {
+const MyApp = ({ Component, pageProps, router }: AppProps) => {
   // *************** Const *************** //
   const queryClientRef: any = useRef()
   if (!queryClientRef.current) {
     queryClientRef.current = new QueryClient()
   }
   const [search, setSearch] = useState<string>('')
-  const router = useRouter()
+  const use_router = useRouter()
 
   useEffect(() => {
-    const urlQuery: any = router.query
+    const urlQuery: any = use_router.query
     if (urlQuery && urlQuery.keyword) {
       setSearch(urlQuery.keyword)
     } else {
       setSearch('')
     }
-  }, [router])
+  }, [use_router])
 
   // *************** JSX *************** //
   return (
     <QueryClientProvider client={queryClientRef.current}>
       <ThemeProvider attribute="class">
         <SearchContext.Provider value={{ search, setSearch }}>
-          <Component {...pageProps} />
+          <AnimatePresence exitBeforeEnter initial={false}>
+            <Component {...pageProps} key={router.route} />
+          </AnimatePresence>
         </SearchContext.Provider>
       </ThemeProvider>
     </QueryClientProvider>
