@@ -1,5 +1,5 @@
 // Modules
-import React, { useState } from 'react'
+import { useState } from 'react'
 // Components
 import { Layout } from '../../layouts/layout'
 import { Form } from '../../components/molecules/contact/form'

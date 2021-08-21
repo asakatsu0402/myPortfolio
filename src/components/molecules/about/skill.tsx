@@ -1,5 +1,3 @@
-// Modules
-import React from 'react'
 // Config
 import {
   languages,

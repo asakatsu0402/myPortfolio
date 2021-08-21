@@ -1,7 +1,5 @@
-// Modules
-import React from "react"
 // Interfaces
-import { textarea } from "../../interfaces/atomInterfaces"
+import { textarea } from '../../interfaces/atomInterfaces'
 
 export const Textarea: React.VFC<textarea> = ({
   className,

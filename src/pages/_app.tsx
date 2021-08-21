@@ -1,9 +1,9 @@
 // Modules
 import { useRef, useState, useEffect } from 'react'
-import { QueryClient, QueryClientProvider } from 'react-query'
 import { AppProps } from 'next/app'
 import Router, { useRouter } from 'next/router'
 import { ThemeProvider } from 'next-themes'
+import { QueryClient, QueryClientProvider } from 'react-query'
 import NProgress from 'nprogress'
 import { AnimatePresence } from 'framer-motion'
 // Functions

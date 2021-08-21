@@ -1,4 +1,4 @@
-// Modules
+// Interfaces
 import type { NextPage } from 'next'
 
 const Error: NextPage = () => {

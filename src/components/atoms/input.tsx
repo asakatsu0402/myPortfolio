@@ -1,5 +1,3 @@
-// Modules
-import React from 'react'
 // Interfaces
 import { input } from '../../interfaces/atomInterfaces'
 

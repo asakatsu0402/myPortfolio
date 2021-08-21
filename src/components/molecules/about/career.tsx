@@ -1,5 +1,3 @@
-// Modules
-import React from 'react'
 // Components
 import { ExternalLink } from '../../atoms/externalLink'
 // Config
@@ -10,7 +8,7 @@ export const Career: React.VFC = () => {
   return (
     <ul>
       {careerList.map((list: any, i: number) => (
-        <li key={i} className="">
+        <li key={i}>
           <p>
             {list.start} ~ {list.end && list.end}
           </p>

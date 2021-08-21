@@ -1,7 +1,5 @@
-// Modules
-import React from "react"
 // Interfaces
-import { select } from "../../interfaces/atomInterfaces"
+import { select } from '../../interfaces/atomInterfaces'
 
 export const Select: React.VFC<select> = ({
   className,
@@ -25,17 +23,11 @@ export const Select: React.VFC<select> = ({
     onChange={functions}
   >
     <optgroup label={label}>
-      <option
-        value=""
-        hidden
-      >
+      <option value="" hidden>
         {initialLabel}
       </option>
-      { options.map((option: any, i: number) => (
-        <option
-          key={i}
-          value={option[optionValue]}
-        >
+      {options.map((option: any, i: number) => (
+        <option key={i} value={option[optionValue]}>
           {option[optionLabel]}
         </option>
       ))}

@@ -1,5 +1,3 @@
-// Modules
-import React from 'react'
 // Interfaces
 import { UnderLineType } from '../../interfaces/atomInterfaces'
 
