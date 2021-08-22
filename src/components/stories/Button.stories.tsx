@@ -8,5 +8,5 @@ export default {
   component: Button
 } as Meta
 
-export const Primary: Story = () => <Button />
+export const button: Story = () => <Button text="default" />
 // export const Secondary = () => <Button type="seconary" />
