@@ -1,14 +1,11 @@
 // Modules
-import {
-  NextApiRequest,
-  NextApiResponse
-} from "next"
+import { NextApiRequest, NextApiResponse } from 'next'
 // Functions
-import { isBlogsQuery } from "../../../functions/api"
+import { isBlogsQuery } from '../../../functions/api'
 
 export const getSearchBlogs = async (
   req: NextApiRequest,
-  res: NextApiResponse,
+  res: NextApiResponse
 ): Promise<void> => {
   // クエリのチェック
   if (!isBlogsQuery(req.body)) {
@@ -16,16 +13,16 @@ export const getSearchBlogs = async (
   }
 
   const key = {
-    headers: { 'X-API-KEY': process.env.API_KEY ?? '' },
+    headers: { 'X-API-KEY': process.env.API_KEY ?? '' }
   }
   const blogs = await fetch(
     `https://your-service.microcms.io/api/v1/blogs?q=${encodeURI(
-      req.body.keyword,
+      req.body.keyword
     )}`,
-    key,
+    key
   )
-  .then((res) => res.json())
-  .catch(() => null)
+    .then((res) => res.json())
+    .catch(() => null)
 
   return res.status(200).json(blogs)
 }

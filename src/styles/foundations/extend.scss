@@ -1,0 +1,20 @@
+/* *************** Import *************** */
+// @use "foundations/import" as f;
+
+/* Flex and align-items */
+%flexAlignSet {
+  display: flex;
+  align-items: center;
+}
+
+/* Flex and between-between */
+%flexBetweenSet {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* Flex and between-around */
+%flexAroundSet {
+  display: flex;
+  justify-content: space-around;
+}

@@ -19,21 +19,18 @@
 /* *************** Flex *************** */
 /* justify-between */
 .flexBetween {
-  display: flex;
-  justify-content: space-between;
+  @extend %flexBetweenSet;
 }
 
 /* flex Reverse */
 .flexReverse {
-  display: flex;
-  justify-content: space-between;
+  @extend %flexBetweenSet;
   flex-direction: row-reverse;
 }
 
 /* flex */
 .flexSet {
-  display: flex;
-  align-items: center;
+  @extend %flexAlignSet;
 }
 
 /* justify-between & items-center */
@@ -43,7 +40,7 @@
 
 /* justify-around & items-center */
 .flexAroundSet {
-  @include f.flexSet(space-around, start);
+  @include f.flexSet(space-around, flex-start);
 }
 
 /* *************** Absolute *************** */
