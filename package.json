@@ -8,7 +8,9 @@
     "start": "next start",
     "fix": "prettier --write './**/*.{js,jsx,ts,tsx}'",
     "lint": "next lint",
-    "lint:fix": "next lint --fix"
+    "lint:fix": "next lint --fix",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
   },
   "lint-staged": {
     "*.{ts,tsx}": [
@@ -36,6 +38,12 @@
     "typewriter-effect": "^2.18.0"
   },
   "devDependencies": {
+    "@babel/core": "^7.15.0",
+    "@storybook/addon-actions": "^6.3.7",
+    "@storybook/addon-essentials": "^6.3.7",
+    "@storybook/addon-links": "^6.3.7",
+    "@storybook/addon-postcss": "^2.0.0",
+    "@storybook/react": "^6.3.7",
     "@types/node": "^16.4.9",
     "@types/nprogress": "^0.2.0",
     "@types/react": "^17.0.8",
@@ -44,6 +52,7 @@
     "@typescript-eslint/eslint-plugin": "^4.28.5",
     "@typescript-eslint/parser": "^4.28.5",
     "autoprefixer": "^10.2.6",
+    "babel-loader": "^8.2.2",
     "eslint": "^7.32.0",
     "eslint-config-next": "^11.0.1",
     "eslint-config-prettier": "^8.3.0",
