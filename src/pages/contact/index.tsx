@@ -1,21 +1,16 @@
-// Modules
-import { useState } from 'react'
 // Components
 import { Layout } from '../../layouts/layout'
-import { Form } from '../../components/molecules/contact/form'
+import { FormWrap } from '../../components/molecules/contact/formWrap'
 import { Section } from '../../components/molecules/common/section'
 import { ContactWay } from '../../components/molecules/contact/contactWay'
 
 export const Contact = () => {
-  // *************** Const *************** //
-  const [error, setError] = useState<any>({})
-
   // *************** JSX *************** //
   return (
     <Layout title="Contact">
       <main>
         <Section title="Form">
-          <Form error={error} setError={setError} />
+          <FormWrap />
         </Section>
         <Section title="Contact">
           <ContactWay />

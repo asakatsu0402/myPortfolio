@@ -18,7 +18,7 @@ export const Top = () => {
       <h1 className="text-crimson absoluteCenter text-6xl">
         <Typewriter
           options={{
-            strings: ['Hi! Everyone!', "I'm KATSUYA ASAKURA."],
+            strings: ['Hi! Everyone!', "I'm KATSUYA ASAKURA"],
             autoStart: true,
             loop: true
           }}

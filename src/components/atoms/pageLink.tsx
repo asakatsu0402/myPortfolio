@@ -10,7 +10,7 @@ export const PageLink: React.VFC<link> = ({
   children
 }: link) => (
   // *************** JSX *************** //
-  <Link href={href}>
+  <Link href={href} passHref>
     <a className={className}>{children ? children : text}</a>
   </Link>
 )

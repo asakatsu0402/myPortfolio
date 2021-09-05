@@ -10,8 +10,6 @@ import {
 import { ExternalLink } from '../../atoms/externalLink'
 // Interfaces
 import { ShareType } from '../../../interfaces/molecules/blogInterfaces'
-// Config
-import { baseUrl } from '../../../config/commonConfig'
 
 export const Share: React.VFC<ShareType> = ({ id, title }: ShareType) => {
   // *************** JSX *************** //
@@ -19,22 +17,22 @@ export const Share: React.VFC<ShareType> = ({ id, title }: ShareType) => {
     {
       className: 'twitterButton',
       icon: faTwitter,
-      link: `https://twitter.com/intent/tweet?text=${title}&url=${baseUrl}/${id}/&hashtags=microcms`
+      link: `https://twitter.com/intent/tweet?text=${title}&url=${process.env.NEXT_PUBLIC_BASE_URL}/${id}/&hashtags=microcms`
     },
     {
       className: 'facebookButton',
       icon: faFacebook,
-      link: `https://www.facebook.com/sharer.php?u=${baseUrl}/${id}/`
+      link: `https://www.facebook.com/sharer.php?u=${process.env.NEXT_PUBLIC_BASE_URL}/${id}/`
     },
     {
       className: 'hatenaButton',
       icon: faTwitter,
-      link: `https://b.hatena.ne.jp/entry/${baseUrl}/${id}/`
+      link: `https://b.hatena.ne.jp/entry/${process.env.NEXT_PUBLIC_BASE_URL}/${id}/`
     },
     {
       className: 'lineButton',
       icon: faLine,
-      link: `https://b.hatena.ne.jp/entry/${baseUrl}/${id}/`
+      link: `https://b.hatena.ne.jp/entry/${process.env.NEXT_PUBLIC_BASE_URL}/${id}/`
     }
   ]
 

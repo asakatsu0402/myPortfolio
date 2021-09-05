@@ -22,6 +22,7 @@ export type ButtonType = {
   children?: ReactNode
   disabled?: boolean
   functions?: any
+  type?: any
 }
 
 // Link

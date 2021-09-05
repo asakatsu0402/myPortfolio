@@ -8,10 +8,16 @@ export const Button: React.VFC<ButtonType> = ({
   disabled,
   functions,
   children,
-  text
+  text,
+  type
 }: ButtonType) => (
   // *************** JSX *************** //
-  <button className={className} disabled={!!disabled} onClick={functions}>
+  <button
+    className={className}
+    disabled={!!disabled}
+    type={type}
+    onClick={functions}
+  >
     {children ? children : text}
   </button>
 )
