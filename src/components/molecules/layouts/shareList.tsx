@@ -1,5 +1,4 @@
 // Modules
-import React from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 // Components
 import { ExternalLink } from '../../atoms/externalLink'

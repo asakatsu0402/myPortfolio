@@ -1,5 +1,3 @@
-// Modules
-import React from 'react'
 // Components
 import { ExternalLink } from '../../atoms/externalLink'
 // Config

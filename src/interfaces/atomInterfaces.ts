@@ -58,10 +58,11 @@ export type select = {
 }
 
 // Textarea
-export type textarea = {
+export type TextareaType = {
   className?: string
   name: string
   placeholder?: any
+  value?: any
   disabled?: boolean
   functions?: any
 }

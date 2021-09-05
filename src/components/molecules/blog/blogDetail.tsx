@@ -6,7 +6,7 @@ import { faHistory } from '@fortawesome/free-solid-svg-icons'
 // Components
 import { Toc } from './toc'
 import { Share } from './share'
-import { Breadcrumbs } from './breadcrumbs'
+import { Breadcrumbs } from '../../../components/molecules/blog/breadCrumbs'
 // Interfaces
 import { BlogDetailType } from '../../../interfaces/molecules/blogInterfaces'
 // Styles

@@ -1,5 +1,5 @@
 // Modules
-import { VFC } from 'react'
+import { VFC, ChangeEvent, useState } from 'react'
 // Components
 import { Label } from '../../atoms/label'
 import { Select } from '../../atoms/select'
@@ -7,7 +7,7 @@ import { Textarea } from '../../atoms/textarea'
 import { Input } from '../../atoms/input'
 import { Underline } from '../../atoms/underLine'
 // Functions
-import { CommonFunctions } from '../../../functions/commonFunctions'
+import { handleChange } from '../../../functions/commonFunctions'
 // Config
 import { formList } from '../../../config/contactConfig'
 // Interfaces
@@ -18,8 +18,9 @@ export const FormList: VFC<FormListType> = ({
   setError
 }: FormListType) => {
   // *************** Const *************** //
-  const { commons } = CommonFunctions()
+  const [value, setValue] = useState<any>({})
 
+  console.log(value)
   // *************** JSX *************** //
   return (
     <ul className="p-2">
@@ -41,20 +42,41 @@ export const FormList: VFC<FormListType> = ({
               optionLabel="label"
             />
           ) : form.tag === 'textarea' ? (
-            <Textarea className="lineInput px-1 py-0.5" name={form.name} />
+            <Textarea
+              className="lineInput px-1 py-0.5"
+              name={form.name}
+              value={value[form.name] || ''}
+              functions={(e: ChangeEvent<HTMLInputElement>) => {
+                handleChange(
+                  form.required,
+                  e.target.name,
+                  form.label,
+                  form.regex,
+                  e.target.value,
+                  form.errorText,
+                  setError,
+                  false,
+                  setValue
+                )
+              }}
+            />
           ) : (
             <Input
               className="lineInput px-1 py-0.5"
-              name={form.name}
               type={form.type}
-              functions={(e: React.ChangeEvent<HTMLInputElement>) => {
-                commons.checkValidation(
+              name={form.name}
+              value={value[form.name] || ''}
+              functions={(e: ChangeEvent<HTMLInputElement>) => {
+                handleChange(
+                  form.required,
                   e.target.name,
                   form.label,
-                  '',
+                  form.regex,
                   e.target.value,
-                  '',
-                  setError
+                  form.errorText,
+                  setError,
+                  false,
+                  setValue
                 )
               }}
             />

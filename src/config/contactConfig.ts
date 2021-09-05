@@ -4,19 +4,29 @@ export const formList = [
     name: 'name',
     label: '名前',
     tag: 'input',
-    type: 'text'
+    type: 'text',
+    required: true,
+    regex: '',
+    errorText: ''
   },
   {
     name: 'tel',
     label: '電話番号',
     tag: 'input',
-    type: 'text'
+    type: 'text',
+    required: true,
+    regex: '',
+    errorText: ''
   },
   {
     name: 'email',
     label: 'メールアドレス',
     tag: 'input',
-    type: 'email'
+    type: 'email',
+    required: true,
+    regex:
+      /^[A-Za-z0-9]{1}[A-Za-z0-9_.-]*@{1}[A-Za-z0-9_.-]{1,}\.[A-Za-z0-9]{1,}$/,
+    errorText: '半角英数字@ ~ . ~ の形で入力してください。'
   },
   {
     name: 'category',
@@ -40,12 +50,19 @@ export const formList = [
         label: 'その他',
         value: 'その他'
       }
-    ]
+    ],
+    required: false,
+    regex: '',
+    errorText: ''
   },
   {
     name: 'content',
     label: 'お問い合わせ内容',
-    tag: 'textarea'
+    tag: 'textarea',
+    required: true,
+    // regex: /^[0-9]{1}$/,
+    regex: '',
+    errorText: '1文字以上で入力してください。'
   }
 ]
 
