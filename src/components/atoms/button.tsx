@@ -1,9 +1,8 @@
-// Modules
-import React from 'react'
-// Interfaces
-import { ButtonType } from '../../interfaces/atomInterfaces'
+// Types
+import type { VFC } from 'react'
+import type { ButtonType } from '../../interfaces/atomInterfaces'
 
-export const Button: React.VFC<ButtonType> = ({
+export const Button: VFC<ButtonType> = ({
   className,
   disabled,
   functions,

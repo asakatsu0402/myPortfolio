@@ -1,7 +1,8 @@
 // Interfaces
-import { input } from '../../interfaces/atomInterfaces'
+import type { VFC } from 'react'
+import type { InputType } from '../../interfaces/atomInterfaces'
 
-export const Input: React.VFC<input> = ({
+export const Input: VFC<InputType> = ({
   className,
   name,
   type,
@@ -10,7 +11,7 @@ export const Input: React.VFC<input> = ({
   disabled,
   functions,
   onKeyDown
-}: input) => (
+}: InputType) => (
   // *************** JSX *************** //
   <input
     className={className}

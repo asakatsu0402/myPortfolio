@@ -1,7 +1,7 @@
 // Modules
 import { createContext } from 'react'
-// Interfaces
-import { searchValue } from '../interfaces/molecules/blogInterfaces'
+// Types
+import type { searchValue } from '../interfaces/molecules/blogInterfaces'
 
 // export const CommonFunctions = () => {
 //   const commons = {
@@ -25,11 +25,11 @@ import { searchValue } from '../interfaces/molecules/blogInterfaces'
 export const checkValidation = (
   name: string,
   label: string,
-  regex: any,
+  regex: RegExp,
   value: any,
   errorText: string,
   setErrorMessage: any
-) => {
+): void => {
   if (value === '') {
     setErrorMessage((errorMessage: any) => ({
       ...errorMessage,
@@ -58,13 +58,13 @@ export const handleChange = (
   required: boolean,
   name: string,
   label: string,
-  regex: any,
+  regex: RegExp,
   value: any,
   errorText: string,
   setErrorMessage: any,
   check: boolean,
   setState: any
-) => {
+): void => {
   // バリデーション
   if (required && value === '') {
     setErrorMessage((errorMessage: any) => ({

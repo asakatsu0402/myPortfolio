@@ -1,5 +1,5 @@
 // Modules
-import { VFC, ChangeEvent, useState } from 'react'
+import { useState } from 'react'
 // Components
 import { Label } from '../../atoms/label'
 import { Select } from '../../atoms/select'
@@ -11,7 +11,8 @@ import { handleChange } from '../../../functions/commonFunctions'
 // Config
 import { formList } from '../../../config/contactConfig'
 // Interfaces
-import { FormListType } from '../../../interfaces/molecules/contactInterfaces'
+import type { VFC, ChangeEvent } from 'react'
+import type { FormListType } from '../../../interfaces/molecules/contactInterfaces'
 
 export const FormList: VFC<FormListType> = ({
   error,

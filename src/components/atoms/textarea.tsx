@@ -1,7 +1,8 @@
 // Interfaces
-import { TextareaType } from '../../interfaces/atomInterfaces'
+import type { VFC } from 'react'
+import type { TextareaType } from '../../interfaces/atomInterfaces'
 
-export const Textarea: React.VFC<TextareaType> = ({
+export const Textarea: VFC<TextareaType> = ({
   className,
   name,
   placeholder,

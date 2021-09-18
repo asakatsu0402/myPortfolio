@@ -1,14 +1,13 @@
-// Modules
-import React from 'react'
-// Interfaces
-import { label } from '../../interfaces/atomInterfaces'
+// Types
+import type { VFC } from 'react'
+import type { LabelType } from '../../interfaces/atomInterfaces'
 
-export const Label: React.VFC<label> = ({
+export const Label: VFC<LabelType> = ({
   className,
   htmlFor,
   children,
   text
-}: label) => (
+}: LabelType) => (
   // *************** JSX *************** //
   <label className={className} htmlFor={htmlFor}>
     {children ? children : text}

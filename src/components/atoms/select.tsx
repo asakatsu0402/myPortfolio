@@ -1,7 +1,8 @@
 // Interfaces
-import { select } from '../../interfaces/atomInterfaces'
+import type { VFC } from 'react'
+import type { SelectType } from '../../interfaces/atomInterfaces'
 
-export const Select: React.VFC<select> = ({
+export const Select: VFC<SelectType> = ({
   className,
   name,
   placeholder,
@@ -12,7 +13,7 @@ export const Select: React.VFC<select> = ({
   options,
   optionValue,
   optionLabel
-}: select) => (
+}: SelectType) => (
   // *************** JSX *************** //
   <select
     className={className}

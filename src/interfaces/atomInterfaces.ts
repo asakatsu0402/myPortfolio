@@ -1,9 +1,9 @@
 // Modules
-import { ReactNode } from 'react'
+import type { ReactNode } from 'react'
 
-// *************** Interfaces *************** //
+// *************** Types *************** //
 // Label
-export type label = {
+export type LabelType = {
   className?: string
   htmlFor: string
   text?: any
@@ -26,7 +26,7 @@ export type ButtonType = {
 }
 
 // Link
-export type link = {
+export type LinkType = {
   className?: string
   href: string
   text?: any
@@ -44,7 +44,7 @@ export type ExternalType = {
 }
 
 // Select
-export type select = {
+export type SelectType = {
   className?: string
   name: string
   label: string
@@ -68,7 +68,7 @@ export type TextareaType = {
 }
 
 // Input
-export type input = {
+export type InputType = {
   className?: string
   name: string
   type: string
