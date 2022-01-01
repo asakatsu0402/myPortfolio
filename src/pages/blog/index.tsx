@@ -1,15 +1,15 @@
-// Modules
-import { NextPage } from 'next'
 // Components
-import { Breadcrumbs } from '../../components/molecules/blog/breadCrumbs'
-import { AllBlogs } from '../../components/molecules/blog/allBlogs'
-import { AllCategories } from '../../components/molecules/blog/allCategories'
-import { ArticleSearch } from '../../components/molecules/blog/articleSearch'
-import { AsideSection } from '../../components/molecules/blog/asideSection'
-import { PageNation } from '../../components/molecules/blog/pageNation'
-// Functions
-import { getBlogPage, getCategories } from '../../functions/api'
-import { Layout } from '../../layouts/layout'
+import { Layout } from '../../components/templates/layout'
+import { Breadcrumbs } from '../../components/organism/blog/breadCrumbs'
+import { AllBlogs } from '../../components/organism/blog/allBlogs'
+import { AllCategories } from '../../components/organism/blog/allCategories'
+import { ArticleSearch } from '../../components/organism/blog/articleSearch'
+import { AsideSection } from '../../components/organism/blog/asideSection'
+import { PageNation } from '../../components/organism/blog/pageNation'
+// Utils
+import { getBlogPage, getCategories } from '../../utils/api'
+// Types
+import type { NextPage } from 'next'
 // import { blogFunctions } from "../../functions/blogFunctions"
 
 // *************** Type *************** //

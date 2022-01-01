@@ -1,9 +1,9 @@
 // Components
-import { Layout } from '../../layouts/layout'
-import { PageHead } from '../../layouts/pageHead'
-import { Section } from '../../components/molecules/common/section'
-import { Description } from '../../components/molecules/works/discription'
-import { UseColor } from '../../components/molecules/works/useColor'
+import { Layout } from '../../components/templates/layout'
+import { PageHead } from '../../components/templates/pageHead'
+import { Section } from '../../components/molecules/section'
+import { Description } from '../../components/organism/works/discription'
+import { UseColor } from '../../components/organism/works/useColor'
 // Config
 import { SaaSis } from '../../config/worksConfig'
 

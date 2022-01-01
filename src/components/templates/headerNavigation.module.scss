@@ -1,0 +1,18 @@
+/* *************** Import *************** */
+@use "../../styles/foundations/import" as f;
+
+/* *************** Class *************** */
+.navigationList {
+  @extend %flexBetweenSet;
+}
+
+.linkText {
+  @include f.hoverText(
+    f.$silver,
+    f.$crimson
+  );
+
+  &.active {
+    color: f.$crimson;
+  }
+}

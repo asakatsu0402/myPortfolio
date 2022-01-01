@@ -1,7 +1,7 @@
 // Components
-import { Layout } from '../../layouts/layout'
-import { PageHead } from '../../layouts/pageHead'
-import { WorksList } from '../../components/molecules/works/worksList'
+import { Layout } from '../../components/templates/layout'
+import { PageHead } from '../../components/templates/pageHead'
+import { WorksList } from '../../components/organism/works/worksList'
 
 export const Index = () => {
   // *************** JSX *************** //

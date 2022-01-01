@@ -1,0 +1,20 @@
+/* *************** Import *************** */
+@use "../../styles/foundations/import" as f;
+
+/* *************** Class *************** */
+.header {
+  @extend %flexBetweenSet;
+  align-items: center;
+  padding: f.$spacing12;
+}
+
+.linkText {
+  @include f.hoverText(
+    f.$silver,
+    f.$crimson
+  );
+
+  &.active {
+    color: f.$crimson;
+  }
+}

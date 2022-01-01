@@ -1,13 +1,20 @@
 // Modules
 import { useRef, useState, useEffect } from 'react'
-import { AppProps } from 'next/app'
 import Router, { useRouter } from 'next/router'
 import { ThemeProvider } from 'next-themes'
+import { RecoilRoot } from 'recoil'
 import { QueryClient, QueryClientProvider } from 'react-query'
-import NProgress from 'nprogress'
 import { AnimatePresence } from 'framer-motion'
-// Functions
-import { SearchContext } from '../functions/commonFunctions'
+import NProgress from 'nprogress'
+import appWithI18n from 'next-translate/appWithI18n'
+// Utils
+import { SearchContext } from '../utils/commonFunctions'
+// Config
+import i18nConfig from '../../i18n'
+// Types
+import type { MutableRefObject } from 'react'
+import type { AppProps } from 'next/app'
+import type { ParsedUrlQuery } from 'querystring'
 // Styles
 import '../styles/globals.scss'
 import '../styles/classStyles.scss'
@@ -17,17 +24,17 @@ Router.events.on('routeChangeStart', () => NProgress.start())
 Router.events.on('routeChangeComplete', () => NProgress.done())
 Router.events.on('routeChangeError', () => NProgress.done())
 
-const MyApp = ({ Component, pageProps, router }: AppProps) => {
+const MyApp: React.VFC = ({ Component, pageProps, router }: AppProps) => {
   // *************** Const *************** //
   const queryClientRef: any = useRef()
   if (!queryClientRef.current) {
     queryClientRef.current = new QueryClient()
   }
-  const [search, setSearch] = useState<string>('')
+  const [search, setSearch] = useState<string | Array<string>>('')
   const use_router = useRouter()
 
   useEffect(() => {
-    const urlQuery: any = use_router.query
+    const urlQuery: ParsedUrlQuery = use_router.query
     if (urlQuery && urlQuery.keyword) {
       setSearch(urlQuery.keyword)
     } else {
@@ -38,15 +45,20 @@ const MyApp = ({ Component, pageProps, router }: AppProps) => {
   // *************** JSX *************** //
   return (
     <QueryClientProvider client={queryClientRef.current}>
-      <ThemeProvider attribute="class">
-        <SearchContext.Provider value={{ search, setSearch }}>
-          <AnimatePresence exitBeforeEnter initial={false}>
-            <Component {...pageProps} key={router.route} />
-          </AnimatePresence>
-        </SearchContext.Provider>
-      </ThemeProvider>
+      <RecoilRoot>
+        <ThemeProvider attribute="class">
+          <SearchContext.Provider value={{ search, setSearch }}>
+            <AnimatePresence exitBeforeEnter initial={false}>
+              <Component {...pageProps} key={router.route} />
+            </AnimatePresence>
+          </SearchContext.Provider>
+        </ThemeProvider>
+      </RecoilRoot>
     </QueryClientProvider>
   )
 }
 
-export default MyApp
+export default appWithI18n(MyApp, {
+  ...i18nConfig,
+  skipInitialProps: false
+})

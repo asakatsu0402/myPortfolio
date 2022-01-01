@@ -1,17 +1,18 @@
 // Modules
 import Link from 'next/link'
 // Types
-import type { VFC } from 'react'
-import type { LinkType } from '../../interfaces/atomInterfaces'
+import type { LinkType } from '../../types/atomTypes'
 
-export const PageLink: VFC<LinkType> = ({
+export const PageLink: React.VFC<LinkType> = ({
   className,
   href,
   text,
-  children
+  children,
+  asPath,
+  locale
 }: LinkType) => (
   // *************** JSX *************** //
-  <Link href={href} passHref>
+  <Link href={href} as={asPath && asPath} locale={locale} passHref>
     <a className={className}>{children ? children : text}</a>
   </Link>
 )

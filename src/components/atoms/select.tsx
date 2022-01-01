@@ -1,15 +1,13 @@
-// Interfaces
-import type { VFC } from 'react'
-import type { SelectType } from '../../interfaces/atomInterfaces'
+// Types
+import type { SelectType } from '../../types/atomTypes'
 
-export const Select: VFC<SelectType> = ({
+export const Select: React.VFC<SelectType> = ({
   className,
   name,
   placeholder,
   disabled,
   functions,
   label,
-  initialLabel,
   options,
   optionValue,
   optionLabel
@@ -24,10 +22,8 @@ export const Select: VFC<SelectType> = ({
     onChange={functions}
   >
     <optgroup label={label}>
-      <option value="" hidden>
-        {initialLabel}
-      </option>
-      {options.map((option: any, i: number) => (
+      <option value="" />
+      {options.map((option, i) => (
         <option key={i} value={option[optionValue]}>
           {option[optionLabel]}
         </option>

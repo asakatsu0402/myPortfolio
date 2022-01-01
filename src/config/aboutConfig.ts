@@ -61,6 +61,9 @@ export const tools = [
     label: 'Node.js'
   },
   {
+    label: 'Docker'
+  },
+  {
     label: 'Firebase'
   },
   {
@@ -113,7 +116,7 @@ export const careerList = [
   },
   {
     title: '株式会社WEEL',
-    link: 'https://quaerere.app/',
+    link: 'https://weel.co.jp/',
     start: '2020/08'
   }
 ]

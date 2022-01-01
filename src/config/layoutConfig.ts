@@ -10,19 +10,19 @@ import {
 // Header Navigation
 export const headerNav = [
   {
-    title: 'About',
+    title: 'about',
     link: '/about'
   },
   {
-    title: 'Blog',
+    title: 'blog',
     link: '/blog'
   },
   {
-    title: 'Works',
+    title: 'works',
     link: '/works'
   },
   {
-    title: 'Contact',
+    title: 'contact',
     link: '/contact'
   }
 ]

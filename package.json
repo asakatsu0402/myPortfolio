@@ -3,16 +3,25 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev:development": "env-cmd -f .env.development next dev",
-    "dev:production": "env-cmd -f .env.production next dev",
-    "build:development": "env-cmd -f .env.development next build",
-    "build:production": "env-cmd -f .env.production next build",
+    "dev:development": "i18nexus pull -k XYW2qy0RscPoHa7QpTl-1A && env-cmd -f .env.development next dev",
+    "dev:production": "i18nexus pull -k XYW2qy0RscPoHa7QpTl-1A && env-cmd -f .env.production next dev",
+    "build:development": "i18nexus pull -k XYW2qy0RscPoHa7QpTl-1A && env-cmd -f .env.development next build",
+    "build:production": "i18nexus pull -k XYW2qy0RscPoHa7QpTl-1A && env-cmd -f .env.production next build",
     "start": "next start",
     "fix": "prettier --write './**/*.{js,jsx,ts,tsx}'",
     "lint": "next lint",
     "lint:fix": "next lint --fix",
+    "importi18": "i18nexus pull -k srCIGFiu7s9i3DeWXmG1KQ",
     "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook"
+    "build-storybook": "build-storybook",
+    "prepare": "husky install",
+    "remove-sw": "find ./public -type f -name \"*.js\" -delete ",
+    "precommit": "yarn build:production && yarn remove-sw && lint-staged"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "precommit"
+    }
   },
   "lint-staged": {
     "*.{ts,tsx}": [
@@ -23,6 +32,7 @@
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.35",
     "@fortawesome/free-brands-svg-icons": "^5.15.3",
+    "@fortawesome/free-regular-svg-icons": "^5.15.4",
     "@fortawesome/free-solid-svg-icons": "^5.15.3",
     "@fortawesome/react-fontawesome": "^0.1.14",
     "axios": "^0.21.1",
@@ -30,12 +40,14 @@
     "microcms-richedit-processer": "^1.0.2",
     "next": "10.2.3",
     "next-themes": "^0.0.14",
+    "next-translate": "^1.2.0",
     "nprogress": "^0.2.0",
     "postcss-preset-env": "^6.7.0",
     "react": "17.0.2",
     "react-dom": "17.0.2",
     "react-query": "^3.19.1",
     "react-scroll": "^1.8.3",
+    "recoil": "^0.5.2",
     "sass": "^1.34.0",
     "typewriter-effect": "^2.18.0"
   },
@@ -61,6 +73,7 @@
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-prettier": "^3.4.0",
     "highlight.js": "^11.2.0",
+    "husky": "^7.0.4",
     "lint-staged": "^11.1.1",
     "postcss": "^8.3.6",
     "postcss-flexbugs-fixes": "^5.0.2",

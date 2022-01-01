@@ -3,7 +3,7 @@
 import { NextPage } from 'next'
 // import { useRouter } from 'next/router'
 // Components
-import { Layout } from '../../../layouts/layout'
+import { Layout } from '../../../components/templates/layout'
 import { AllBlogs } from '../../../components/molecules/blog/allBlogs'
 import { PageNation } from '../../../components/molecules/blog/pageNation'
 import { ArticleSearch } from '../../../components/molecules/blog/articleSearch'

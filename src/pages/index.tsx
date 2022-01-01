@@ -1,7 +1,7 @@
 // Components
-import { Layout } from '../layouts/layout'
-import { PageHead } from '../layouts/pageHead'
-import { Top } from '../components/molecules/common/top'
+import { Layout } from '../components/templates/layout'
+import { PageHead } from '../components/templates/pageHead'
+import { Top } from '../components/organism/top/top'
 
 export const Home: React.VFC = () => (
   // *************** JSX *************** //

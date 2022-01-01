@@ -1,0 +1,9 @@
+/* *************** Import *************** */
+@use "../../styles/foundations/import" as f;
+
+/* *************** Class *************** */
+.layout {
+  @extend %flexColumnSet;
+  justify-content: space-between;
+  height: 100vh;
+}

@@ -17,11 +17,6 @@
 }
 
 /* *************** Flex *************** */
-/* justify-between */
-.flexBetween {
-  @extend %flexBetweenSet;
-}
-
 /* flex Reverse */
 .flexReverse {
   @extend %flexBetweenSet;
@@ -89,7 +84,7 @@
 /* *************** Button *************** */
 /* Black */
 .blackButton {
-  @include f.buttonSet(
+  @include f.hoverButton(
     f.$black,
     f.$white,
     f.$crimson,
@@ -99,7 +94,7 @@
 
 /* Crimson */
 .crimsonButton {
-  @include f.buttonSet(
+  @include f.hoverButton(
     f.$crimson,
     f.$white,
     f.$black,
@@ -109,42 +104,9 @@
 
 /* White */
 .whiteButton {
-  @include f.buttonSet(
+  @include f.hoverButton(
     f.$white,
     f.$black,
-    f.$crimson,
-    f.$white
-  );
-}
-
-/* Twitter */
-.twitterButton {
-  @include f.shareButtonSet(
-    f.$twitter,
-    f.$crimson,
-    f.$white
-  );
-}
-/* Facebook */
-.facebookButton {
-  @include f.shareButtonSet(
-    f.$facebook,
-    f.$crimson,
-    f.$white
-  );
-}
-/* Hatena */
-.hatenaButton {
-  @include f.shareButtonSet(
-    f.$hatena,
-    f.$crimson,
-    f.$white
-  );
-}
-/* LINE */
-.lineButton {
-  @include f.shareButtonSet(
-    f.$line,
     f.$crimson,
     f.$white
   );

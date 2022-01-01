@@ -1,6 +1,6 @@
 // Components
-import { Layout } from '../../layouts/layout'
-import { AllSections } from '../../components/molecules/about/allSections'
+import { Layout } from '../../components/templates/layout'
+import { AllSections } from '../../components/organism/about/allSections'
 
 export const About = () => {
   // *************** JSX *************** //

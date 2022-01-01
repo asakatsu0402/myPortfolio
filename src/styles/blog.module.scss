@@ -2,7 +2,6 @@
 @use "foundations/import" as f;
 
 /* *************** Class *************** */
-
 .blogContent {
 
   // 大見出し
@@ -65,4 +64,37 @@
       list-style: circle;
     }
   }
+}
+
+/* Twitter */
+.twitterButton {
+  @include f.sharehoverButton(
+    f.$twitter,
+    f.$crimson,
+    f.$white
+  );
+}
+/* Facebook */
+.facebookButton {
+  @include f.sharehoverButton(
+    f.$facebook,
+    f.$crimson,
+    f.$white
+  );
+}
+/* Hatena */
+.hatenaButton {
+  @include f.sharehoverButton(
+    f.$hatena,
+    f.$crimson,
+    f.$white
+  );
+}
+/* LINE */
+.lineButton {
+  @include f.sharehoverButton(
+    f.$line,
+    f.$crimson,
+    f.$white
+  );
 }

@@ -28,20 +28,32 @@
   justify-content: $justify;
 }
 
-/* Button */
-@mixin buttonSet(
+/* Hover Button */
+@mixin hoverButton (
   $background,
   $color,
   $hoverBackground,
-  $hoverColor
+  $hoverColor,
 ) {
   background-color: $background;
   color: $color;
   transition: .3s;
-  cursor: pointer;
 
   &:hover {
     background: $hoverBackground;
+    color: $hoverColor;
+  }
+}
+
+/* Hover Text */
+@mixin hoverText (
+  $color,
+  $hoverColor,
+) {
+  color: $color;
+  transition: .3s;
+
+  &:hover {
     color: $hoverColor;
   }
 }

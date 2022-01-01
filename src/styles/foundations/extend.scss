@@ -1,6 +1,8 @@
-/* *************** Import *************** */
-// @use "foundations/import" as f;
+/* *************** import *************** */
+@use './variable.scss' as f;
 
+
+/* *************** display: flex *************** */
 /* Flex and align-items */
 %flexAlignSet {
   display: flex;
@@ -17,4 +19,92 @@
 %flexAroundSet {
   display: flex;
   justify-content: space-around;
+}
+
+/* Flex Column */
+%flexColumnSet {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Flex and between-around */
+%flexCenterSet {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+/* *************** Shadow *************** */
+// Shadow 20
+%shadow10 {
+  box-shadow: 0  0 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+%shadow20 {
+  box-shadow: 0  0 4px 2px rgba(0, 0, 0, 0.2);
+}
+
+// shadow 40
+%shadow40 {
+  box-shadow: 0 0 8px 4px rgba(0, 0, 0, 0.4);
+}
+
+// Shadow 10
+%shadowBottom10 {
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.2);
+}
+
+// Shadow 20
+%shadowBottom20 {
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.2);
+}
+
+/* *************** font-size *************** */
+%fontH1 {
+  font-size: f.$font-xx-large;
+  line-height: 1;
+}
+
+%fontH2 {
+  font-size: f.$font-x-large;
+  line-height: 1;
+}
+
+%fontH3 {
+  font-size: f.$font-large;
+  line-height: 1;
+}
+
+%fontSubtitle {
+  font-size: f.$font-medium;
+  line-height: 1;
+}
+
+%fontBody {
+  font-size: f.$font-small;
+  line-height: 1;
+}
+
+%fontSmall {
+  font-size: f.$font-x-small;
+  line-height: 1;
+}
+
+%fontSmallXX {
+  font-size: f.$font-xx-small;
+  line-height: 1;
+}
+%fontSmallXXX {
+  font-size: f.$font-xxx-small;
+  line-height: 1;
+}
+
+/* *************** Scroll Cancel *************** */
+%scrollCancel {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+
+  &::-webkit-scrollbar {
+    display:none;
+  }
 }

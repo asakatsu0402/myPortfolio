@@ -1,10 +1,12 @@
 // Components
-import { Layout } from '../../layouts/layout'
-import { FormWrap } from '../../components/molecules/contact/formWrap'
-import { Section } from '../../components/molecules/common/section'
-import { ContactWay } from '../../components/molecules/contact/contactWay'
+import { Layout } from '../../components/templates/layout'
+import { FormWrap } from '../../components/organism/contact/formWrap'
+import { Section } from '../../components/molecules/section'
+import { ContactWay } from '../../components/organism/contact/contactWay'
+// Types
+import type { NextPage } from 'next'
 
-export const Contact = () => {
+export const Contact: NextPage = () => {
   // *************** JSX *************** //
   return (
     <Layout title="Contact">

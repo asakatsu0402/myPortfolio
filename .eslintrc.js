@@ -58,6 +58,7 @@ module.exports = {
       'error',
       { prefer: 'type-imports' }
     ], // typeをimportするときは、import typeを使う
+    '@typescript-eslint/no-explicit-any': 'error', // anyの禁止
     '@typescript-eslint/explicit-module-boundary-types': ['error'], // 関数の返り値の型と、関数内のreturnの型を一致させる
     '@typescript-eslint/method-signature-style': ['error', 'property'], // functionの型をアロー関数で書く: func(arg: boolean): void -> func: (arg: boolean) => void
     '@typescript-eslint/no-unused-vars-experimental': 'warn', // 未使用の変数の削除
@@ -88,6 +89,6 @@ module.exports = {
         message: "Don't use `enum` as a type."
       }
     ], // enum禁止
-    'default-case': 'error', // switch文では必ずdefaultケースを作成すること
+    'default-case': 'error' // switch文では必ずdefaultケースを作成すること
   }
 }

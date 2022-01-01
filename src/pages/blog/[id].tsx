@@ -1,17 +1,16 @@
 // Modules
 import type { GetStaticProps, NextPage } from 'next'
-import React from 'react'
 // Components
-import { Layout } from '../../layouts/layout'
+import { Layout } from '../../components/templates/layout'
 import { AllCategories } from '../../components/molecules/blog/allCategories'
 import { ArticleSearch } from '../../components/molecules/blog/articleSearch'
 import { AsideSection } from '../../components/molecules/blog/asideSection'
 import { BlogDetail } from '../../components/molecules/blog/blogDetail'
-// Functions
-import { getBlogBy, getBlogs, getCategories } from '../../functions/api'
-import { processingDom } from '../../functions/blogFunctions'
-// Interfaces
-import { blogDataType } from '../../interfaces/initInterfaces'
+// Utils
+import { getBlogBy, getBlogs, getCategories } from '../../utils/api'
+import { processingDom } from '../../utils/blogFunctions'
+// Types
+import type { blogDataType } from '../../types/initInterfaces'
 
 // *************** Get API *************** //
 export const getStaticPaths = async () => {

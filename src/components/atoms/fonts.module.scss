@@ -1,0 +1,43 @@
+/* *************** Import *************** */
+@use '../../styles/foundations/import.scss' as f;
+
+.h1,
+.h2,
+.h3,
+.subtitle,
+.body,
+.small {
+  // font-family: 'Helvetica Neue', Arial, 'Hiragino Kaku Gothic ProN',
+  //   'Hiragino Sans', Meiryo, sans-serif;
+  // font-style: normal;
+  // color: f.$EerieBlack;
+  // letter-spacing: 0.1em;
+
+  &.bold {
+    font-weight: bold
+  }
+}
+
+.h1 {
+  @extend %fontH1;
+}
+
+.h2 {
+  @extend %fontH2;
+}
+
+.h3 {
+  @extend %fontH3;
+}
+
+.subtitle {
+  @extend %fontSubtitle;
+}
+
+.body {
+  @extend %fontBody;
+}
+
+.small {
+  @extend %fontSmall;
+}

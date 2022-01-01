@@ -11,3 +11,6 @@ tailwind.config.js
 postcss.config.js
 
 src/api/$api.ts
+
+# i18n
+i18n
