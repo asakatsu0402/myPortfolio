@@ -18,6 +18,10 @@ export const headerNav = [
     link: '/blog'
   },
   {
+    title: 'gallery',
+    link: '/gallery'
+  },
+  {
     title: 'works',
     link: '/works'
   },

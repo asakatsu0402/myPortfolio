@@ -4,10 +4,10 @@ import { AllSections } from '../../components/organism/about/allSections'
 // Types
 import type { NextPage } from 'next'
 
-export const About: NextPage = () => {
+export const Gallery: NextPage = () => {
   // *************** JSX *************** //
   return (
-    <Layout title="About">
+    <Layout title="Gallery">
       <main>
         <AllSections />
       </main>
@@ -15,4 +15,4 @@ export const About: NextPage = () => {
   )
 }
 
-export default About
+export default Gallery

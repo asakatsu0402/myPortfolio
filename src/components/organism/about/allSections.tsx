@@ -6,7 +6,7 @@ import { Iam } from './iam'
 import { Career } from './career'
 import { Recruit } from './recruit'
 
-export const AllSections = () => {
+export const AllSections: React.VFC = () => {
   // *************** Const *************** //
   const sections = [
     {
@@ -39,7 +39,7 @@ export const AllSections = () => {
   // *************** JSX *************** //
   return (
     <div>
-      {sections.map((section: any, i: number) => (
+      {sections.map((section, i) => (
         <Section className={section.className} key={i} title={section.title}>
           {section.component}
         </Section>
