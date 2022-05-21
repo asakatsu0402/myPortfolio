@@ -1,5 +1,5 @@
 // Components
-import { ExternalLink } from '../../atoms/externalLink'
+import { ExternalLink } from '../../atoms/ExternalLink.atom'
 // Config
 import { recruitMessage } from '../../../config/aboutConfig'
 

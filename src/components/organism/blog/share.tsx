@@ -1,15 +1,11 @@
 // Modules
 import React from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import {
-  faFacebook,
-  faLine,
-  faTwitter
-} from '@fortawesome/free-brands-svg-icons'
+import { faFacebook, faLine, faTwitter } from '@fortawesome/free-brands-svg-icons'
 // Components
-import { ExternalLink } from '../../atoms/externalLink'
-// Interfaces
-import { ShareType } from '../../../interfaces/molecules/blogInterfaces'
+import { ExternalLink } from '../../atoms/ExternalLink.atom'
+// Types
+import type { ShareType } from '../../../types/organism/blogInterfaces'
 
 export const Share: React.VFC<ShareType> = ({ id, title }: ShareType) => {
   // *************** JSX *************** //
@@ -38,7 +34,7 @@ export const Share: React.VFC<ShareType> = ({ id, title }: ShareType) => {
 
   return (
     <ul className="sticky top-5 h-full">
-      {shareList.map((list: any, i: number) => (
+      {shareList.map((list, i) => (
         <li key={i}>
           <ExternalLink
             className={`inline-block px-2 py-1 ${list.className}`}

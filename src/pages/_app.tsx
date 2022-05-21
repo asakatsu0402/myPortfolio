@@ -1,9 +1,8 @@
 // Modules
-import { useRef, useState, useEffect } from 'react'
+import { useState, useEffect } from 'react'
 import Router, { useRouter } from 'next/router'
+import { Provider } from 'react-redux'
 import { ThemeProvider } from 'next-themes'
-import { RecoilRoot } from 'recoil'
-import { QueryClient, QueryClientProvider } from 'react-query'
 import { AnimatePresence } from 'framer-motion'
 import NProgress from 'nprogress'
 import appWithI18n from 'next-translate/appWithI18n'
@@ -11,8 +10,8 @@ import appWithI18n from 'next-translate/appWithI18n'
 import { SearchContext } from '../utils/commonFunctions'
 // Config
 import i18nConfig from '../../i18n'
+import { store } from '../redux'
 // Types
-import type { MutableRefObject } from 'react'
 import type { AppProps } from 'next/app'
 import type { ParsedUrlQuery } from 'querystring'
 // Styles
@@ -26,10 +25,6 @@ Router.events.on('routeChangeError', () => NProgress.done())
 
 const MyApp: React.VFC = ({ Component, pageProps, router }: AppProps) => {
   // *************** Const *************** //
-  const queryClientRef: any = useRef()
-  if (!queryClientRef.current) {
-    queryClientRef.current = new QueryClient()
-  }
   const [search, setSearch] = useState<string | Array<string>>('')
   const use_router = useRouter()
 
@@ -44,17 +39,15 @@ const MyApp: React.VFC = ({ Component, pageProps, router }: AppProps) => {
 
   // *************** JSX *************** //
   return (
-    <QueryClientProvider client={queryClientRef.current}>
-      <RecoilRoot>
-        <ThemeProvider attribute="class">
-          <SearchContext.Provider value={{ search, setSearch }}>
-            <AnimatePresence exitBeforeEnter initial={false}>
-              <Component {...pageProps} key={router.route} />
-            </AnimatePresence>
-          </SearchContext.Provider>
-        </ThemeProvider>
-      </RecoilRoot>
-    </QueryClientProvider>
+    <Provider store={store}>
+      <ThemeProvider attribute="class">
+        <SearchContext.Provider value={{ search: String(search), setSearch }}>
+          <AnimatePresence exitBeforeEnter initial={false}>
+            <Component {...pageProps} key={router.route} />
+          </AnimatePresence>
+        </SearchContext.Provider>
+      </ThemeProvider>
+    </Provider>
   )
 }
 

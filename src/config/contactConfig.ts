@@ -24,8 +24,7 @@ export const formList = [
     tag: 'input',
     type: 'email',
     required: true,
-    regex:
-      /^[A-Za-z0-9]{1}[A-Za-z0-9_.-]*@{1}[A-Za-z0-9_.-]{1,}\.[A-Za-z0-9]{1,}$/,
+    regex: '^[A-Za-z0-9]{1}[A-Za-z0-9_.-]*@{1}[A-Za-z0-9_.-]{1,}.[A-Za-z0-9]{1,}$',
     errorText: '半角英数字@ ~ . ~ の形で入力してください。'
   },
   {

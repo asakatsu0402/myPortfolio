@@ -1,6 +1,6 @@
 // Types
 import type { VFC } from 'react'
-import type { ButtonType } from '../../interfaces/atomInterfaces'
+import type { ButtonType } from '../../types/atomTypes'
 
 export const Button: VFC<ButtonType> = ({
   className,
@@ -11,12 +11,7 @@ export const Button: VFC<ButtonType> = ({
   type
 }: ButtonType) => (
   // *************** JSX *************** //
-  <button
-    className={className}
-    disabled={!!disabled}
-    type={type}
-    onClick={functions}
-  >
+  <button className={className} disabled={!!disabled} type={type} onClick={functions}>
     {children ? children : text}
   </button>
 )

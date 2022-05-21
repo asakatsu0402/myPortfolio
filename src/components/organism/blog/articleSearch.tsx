@@ -2,10 +2,10 @@
 import { useCallback, useContext } from 'react'
 import { useRouter } from 'next/router'
 // Components
-import { Label } from '../../atoms/label'
-import { Input } from '../../atoms/input'
-import { Underline } from '../../atoms/underLine'
-import { Button } from '../../atoms/button'
+import { Label } from '../../atoms/Label.atom'
+import { Input } from '../../atoms/Input.atom'
+import { Underline } from '../../atoms/UnderLine.atom'
+import { Button } from '../../atoms/Button.atom'
 // Utils
 import { SearchContext } from '../../../utils/commonFunctions'
 
@@ -49,11 +49,7 @@ export const ArticleSearch: React.VFC = () => {
         />
         <Underline />
       </div>
-      <Button
-        className="blackButton p-1"
-        text="Search"
-        functions={searchStart}
-      />
+      <Button className="blackButton p-1" type="submit" text="Search" functions={searchStart} />
     </div>
   )
 }

@@ -6,9 +6,9 @@ import { faHistory } from '@fortawesome/free-solid-svg-icons'
 // Components
 import { Toc } from './toc'
 import { Share } from './share'
-import { Breadcrumbs } from '../../../components/molecules/blog/breadCrumbs'
-// Interfaces
-import { BlogDetailType } from '../../../interfaces/molecules/blogInterfaces'
+import { Breadcrumbs } from './breadCrumbs'
+// Types
+import type { BlogDetailType } from '../../../types/organism/blogInterfaces'
 // Styles
 import styles from '../../../styles/blog.module.scss'
 
@@ -42,7 +42,7 @@ export const BlogDetail: React.VFC<BlogDetailType> = ({
           <h2 className="font-bold text-4xl">{title}</h2>
           <p>{categories.name}</p>
           <ul>
-            {tag.map((t: any, i: number) => (
+            {tag.map((t, i) => (
               <li key={i}>
                 <p>{t}</p>
               </li>
@@ -51,17 +51,14 @@ export const BlogDetail: React.VFC<BlogDetailType> = ({
           <time className="flexSet">
             <FontAwesomeIcon icon={faHistory} />
             <p className="flexSet ml-1">
-              {new Date(updatedAt).getFullYear()}/
-              {new Date(updatedAt).getMonth()}/{new Date(updatedAt).getDate()}
+              {new Date(updatedAt).getFullYear()}/{new Date(updatedAt).getMonth()}/
+              {new Date(updatedAt).getDate()}
             </p>
           </time>
 
           {toc_visible && <Toc toc={toc} />}
 
-          <div
-            className={styles.blogContent}
-            dangerouslySetInnerHTML={{ __html: `${body}` }}
-          />
+          <div className={styles.blogContent} dangerouslySetInnerHTML={{ __html: `${body}` }} />
         </div>
       </div>
     </article>

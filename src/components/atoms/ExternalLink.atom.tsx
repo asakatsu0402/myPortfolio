@@ -1,6 +1,6 @@
 // Types
 import type { VFC } from 'react'
-import type { ExternalType } from '../../interfaces/atomInterfaces'
+import type { ExternalType } from '../../types/atomTypes'
 
 export const ExternalLink: VFC<ExternalType> = ({
   className,

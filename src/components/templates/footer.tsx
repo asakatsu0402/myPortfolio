@@ -2,7 +2,7 @@
 import React from 'react'
 // Components
 import { ShareList } from './shareList'
-import { DarkModeButton } from '../molecules/darkModeButton'
+import { DarkModeButton } from '../molecules/DarkModeButton.molecule'
 
 export const Footer: React.VFC = () => {
   // *************** JSX *************** //

@@ -1,11 +1,11 @@
 // Modules
 import { useState } from 'react'
 // Components
-import { Label } from '../../atoms/label'
-import { Select } from '../../atoms/select'
-import { Textarea } from '../../atoms/textarea'
-import { Input } from '../../atoms/input'
-import { Underline } from '../../atoms/underLine'
+import { Label } from '../../atoms/Label.atom'
+import { Select } from '../../atoms/Select.atom'
+import { Textarea } from '../../atoms/Textarea.atom'
+import { Input } from '../../atoms/Input.atom'
+import { Underline } from '../../atoms/UnderLine.atom'
 // Utils
 import { handleChange } from '../../../utils/commonFunctions'
 // Config
@@ -14,10 +14,7 @@ import { formList } from '../../../config/contactConfig'
 import type { ChangeEvent } from 'react'
 import type { FormListType } from '../../../types/organism/contactInterfaces'
 
-export const FormList: React.VFC<FormListType> = ({
-  error,
-  setError
-}: FormListType) => {
+export const FormList: React.VFC<FormListType> = ({ error, setError }: FormListType) => {
   // *************** Const *************** //
   const [value, setValue] = useState({})
 
@@ -27,11 +24,7 @@ export const FormList: React.VFC<FormListType> = ({
     <ul className="p-2">
       {formList.map((form, i) => (
         <li className="lineInputGroup first:m-0 mt-5" key={i}>
-          <Label
-            className="cursor-pointer"
-            htmlFor={form.name}
-            text={form.label}
-          />
+          <Label className="cursor-pointer" htmlFor={form.name} text={form.label} />
           {form.tag === 'select' ? (
             <Select
               className="lineInput"
@@ -83,9 +76,7 @@ export const FormList: React.VFC<FormListType> = ({
             />
           )}
           <Underline />
-          {error[form.name] && (
-            <p className="text-crimson font-bold text-sm">{error[form.name]}</p>
-          )}
+          {error[form.name] && <p className="text-crimson font-bold text-sm">{error[form.name]}</p>}
         </li>
       ))}
     </ul>

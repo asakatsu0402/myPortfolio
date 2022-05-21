@@ -1,23 +1,27 @@
 // Interfaces
 import type { VFC } from 'react'
-import type { TextareaType } from '../../interfaces/atomInterfaces'
+import type { InputType } from '../../types/atomTypes'
 
-export const Textarea: VFC<TextareaType> = ({
+export const Input: VFC<InputType> = ({
   className,
   name,
+  type,
   placeholder,
   value,
   disabled,
-  functions
-}: TextareaType) => (
+  functions,
+  onKeyDown
+}: InputType) => (
   // *************** JSX *************** //
-  <textarea
+  <input
     className={className}
     id={name}
     name={name}
-    value={value}
+    type={type}
     placeholder={placeholder}
+    value={value}
     disabled={!!disabled}
     onChange={functions}
+    onKeyDown={onKeyDown && onKeyDown}
   />
 )

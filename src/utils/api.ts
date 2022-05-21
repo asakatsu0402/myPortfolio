@@ -2,24 +2,16 @@
 import axios from 'axios'
 // Config
 import { globalAxios } from '../config/commonConfig'
-import {
-  initBlog,
-  initBlogData,
-  initCategoriesData,
-  initPageBlog
-} from '../config/initialState'
-// Interfaces
-import {
-  blogDataType,
-  categoryDataType,
-  pageBlogType
-} from '../interfaces/initInterfaces'
+import { initBlog, initBlogData, initCategoriesData, initPageBlog } from '../config/initialState'
+// Types
+import type { AxiosResponse } from 'axios'
+import type { blogDataType, categoryDataType, pageBlogType } from '../types/initInterfaces'
 
 // *************** Functions *************** //
 /**
  * GET ALL Blog
  */
-export const getBlogs = async () => {
+export const getBlogs = async (): Promise<blogDataType> => {
   const blogsData: blogDataType = initBlogData
   try {
     const res = await globalAxios.get(process.env.All_Blog_Url)
@@ -33,7 +25,7 @@ export const getBlogs = async () => {
 /**
  * GET ALL Blog
  */
-export const getBlogPage = async (nowPage: number) => {
+export const getBlogPage = async (nowPage: number): Promise<pageBlogType> => {
   const blogsData: pageBlogType = initPageBlog
   try {
     const res = await globalAxios.get(
@@ -50,7 +42,7 @@ export const getBlogPage = async (nowPage: number) => {
 /**
  * GET ALL Categories
  */
-export const getCategories = async () => {
+export const getCategories = async (): Promise<categoryDataType> => {
   const categoriesData: categoryDataType = initCategoriesData
   try {
     const res = await globalAxios.get(process.env.All_Categories_Url)
@@ -66,7 +58,7 @@ export const getCategories = async () => {
  * GET Blog Detail
  * @param id
  */
-export const getBlogBy = async (id: any) => {
+export const getBlogBy = async (id: string): Promise<blogDataType> => {
   const blogData: any = initBlog
   try {
     const res = await globalAxios.get(`${process.env.All_Blog_Url}/${id}`)
@@ -86,8 +78,11 @@ export const isBlogsQuery = (item: unknown): item is { keyword: string } => {
   return 'keyword' in target && typeof target.keyword === 'string'
 }
 
-export const getPreview = async (slug, draftKey) => {
-  await axios.get(
+export const getPreview = async (
+  slug: string,
+  draftKey: string
+): Promise<AxiosResponse<{ id: string }>> => {
+  const data: AxiosResponse<{ id: string }> = await axios.get(
     `${process.env.All_Blog_Url}/${slug}?fields=id&draftKey=${draftKey}`,
     {
       headers: {
@@ -95,4 +90,5 @@ export const getPreview = async (slug, draftKey) => {
       }
     }
   )
+  return data
 }

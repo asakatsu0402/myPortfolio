@@ -2,7 +2,7 @@
 import { useState } from 'react'
 // Components
 import { FormList } from './formList'
-import { Button } from '../../atoms/button'
+import { Button } from '../../atoms/Button.atom'
 
 export const FormWrap: React.VFC = () => {
   // *************** Const *************** //

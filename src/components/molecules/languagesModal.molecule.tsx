@@ -1,27 +1,33 @@
 // Modules
 import { useEffect } from 'react'
 import { useRouter } from 'next/router'
-import { useRecoilState } from 'recoil'
+import { useDispatch } from 'react-redux'
 // Components
-import { Button } from '../atoms/button'
-import { FontAwesome } from '../atoms/fontAwesome'
-import { H2 } from '../atoms/h2.atom'
-import { Text } from '../atoms/text'
-import { PageLink } from '../atoms/pageLink'
-import { Body } from '../atoms/body.atom'
+import { Button } from '../atoms/Button.atom'
+import { FontAwesome } from '../atoms/FontAwesome.atom'
+import { H2 } from '../fonts/H2.font'
+import { Text } from '../atoms/Text.atom'
+import { PageLink } from '../atoms/PageLink.atom'
+import { Body } from '../fonts/Body.font'
+// Stores
+import { languageSlice } from '../../redux/stores/language'
+import { customSelector } from '../../redux'
+import { languageSelector } from '../../redux/selectors/language.selector'
 // Config
 import { languages } from '../../config/commonConfig'
-import { languageState } from '../../recoil/atoms/languageModal.atom'
 // Style
 import styles from './languagesModal.module.scss'
 
 export const LanguagesModal: React.VFC = () => {
   // *************** Const *************** //
   const { pathname, asPath, locale } = useRouter()
-  const [languageOn, setLanguageOn] = useRecoilState(languageState)
+  const dispatch = useDispatch()
+  const languageOn = customSelector(languageSelector)
 
   // *************** useEffect *************** //
-  useEffect(() => setLanguageOn(false), [locale])
+  useEffect(() => {
+    dispatch(languageSlice.actions.setLanguage(false))
+  }, [locale])
 
   // *************** JSX *************** //
   return (
@@ -29,7 +35,9 @@ export const LanguagesModal: React.VFC = () => {
       <Button
         className={styles.closeButton}
         type="button"
-        functions={(): void => setLanguageOn(false)}
+        functions={(): void => {
+          dispatch(languageSlice.actions.setLanguage(false))
+        }}
       >
         <FontAwesome icon={['fas', 'times']} />
       </Button>

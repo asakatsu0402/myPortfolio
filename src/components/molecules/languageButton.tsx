@@ -1,26 +1,28 @@
 // Modules
 import { useRouter } from 'next/router'
-import { useRecoilState } from 'recoil'
+import { useDispatch } from 'react-redux'
 // Components
-import { Button } from '../atoms/button'
-import { FontAwesome } from '../atoms/fontAwesome'
-import { Body } from '../atoms/body.atom'
-// Config
-import { languageState } from '../../recoil/atoms/languageModal.atom'
+import { Button } from '../atoms/Button.atom'
+import { FontAwesome } from '../atoms/FontAwesome.atom'
+import { Body } from '../fonts/Body.font'
+// Stores
+import { languageSlice } from '../../redux/stores/language'
 // Style
 import styles from './languageButton.module.scss'
 
 export const LanguageButton: React.VFC = () => {
   // *************** Const *************** //
   const { locale } = useRouter()
-  const [languageOn, setLanguageOn] = useRecoilState(languageState)
+  const dispatch = useDispatch()
 
   // *************** JSX *************** //
   return (
     <Button
       className={styles.languageButton}
       type="button"
-      functions={(): void => setLanguageOn(!languageOn)}
+      functions={(): void => {
+        dispatch(languageSlice.actions.setLanguage(true))
+      }}
     >
       <div className={styles.countryFlag}>
         <FontAwesome icon={['fas', 'map-marker-alt']} />

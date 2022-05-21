@@ -8,3 +8,10 @@ export type SectionType = {
   title?: string | undefined
   children?: ReactNode
 }
+
+// Form
+export type FormType = {
+  className?: string
+  children: ReactNode
+  onSubmit: React.FormEventHandler<HTMLFormElement>
+}

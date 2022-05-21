@@ -1,7 +1,7 @@
 // Modules
 import React from 'react'
 // Components
-import { PageLink } from '../../atoms/pageLink'
+import { PageLink } from '../../atoms/PageLink.atom'
 // import { ExternalLink } from '../../atoms/externalLink'
 // Config
 import { worksList } from '../../../config/worksConfig'

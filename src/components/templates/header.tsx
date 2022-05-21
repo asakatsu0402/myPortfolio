@@ -2,8 +2,8 @@
 import React from 'react'
 import { useRouter } from 'next/router'
 // Components
-import { PageLink } from '../atoms/pageLink'
-import { Text } from '../atoms/text'
+import { PageLink } from '../atoms/PageLink.atom'
+import { Text } from '../atoms/Text.atom'
 import { HeaderNavigation } from './headerNavigation'
 import { LanguageButton } from '../molecules/languageButton'
 // Style

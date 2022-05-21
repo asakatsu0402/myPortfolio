@@ -1,11 +1,9 @@
 // Modules
 import React from 'react'
-// Interfaces
-import { DescriptionType } from '../../../interfaces/molecules/worksInterfaces'
+// Types
+import type { DescriptionType } from '../../../types/organism/worksInterfaces'
 
-export const Description: React.VFC<DescriptionType> = ({
-  description
-}: DescriptionType) => {
+export const Description: React.VFC<DescriptionType> = ({ description }: DescriptionType) => {
   // *************** JSX *************** //
   return (
     <div className="flexAroundSet w-full">

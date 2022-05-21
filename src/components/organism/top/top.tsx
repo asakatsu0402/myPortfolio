@@ -3,7 +3,7 @@ import Image from 'next/image'
 import useTranslation from 'next-translate/useTranslation'
 import Typewriter from 'typewriter-effect'
 // Components
-import { H1 } from '../../atoms/h1.atom'
+import { H1 } from '../../fonts/H1.font'
 
 export const Top: React.VFC = () => {
   // *************** Const *************** //

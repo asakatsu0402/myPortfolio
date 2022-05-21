@@ -1,7 +1,7 @@
 // Modules
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 // Components
-import { ExternalLink } from '../atoms/externalLink'
+import { ExternalLink } from '../atoms/ExternalLink.atom'
 // Config
 import { footerShare } from '../../config/layoutConfig'
 

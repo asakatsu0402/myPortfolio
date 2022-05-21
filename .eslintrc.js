@@ -45,7 +45,7 @@ module.exports = {
         tabWidth: 2,
         semi: false,
         singleQuote: true,
-        printWidth: 80,
+        printWidth: 100,
         arrowParens: 'always', // アロー関数の引数に()を必要にする
         bracketSpacing: true, // { }のインデント確保
         endOfLine: 'lf',

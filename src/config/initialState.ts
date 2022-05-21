@@ -1,19 +1,11 @@
 // Interfaces
-import {
-  blogDataType,
-  categoryDataType,
-  pageBlogType
-} from '../interfaces/initInterfaces'
-import {
-  CategoryType,
-  DetailPageType
-  // toc
-} from '../interfaces/molecules/blogInterfaces'
+import type { blogDataType, categoryDataType, pageBlogType } from '../types/initInterfaces'
+import type { CategoryType, DetailPageType } from '../types/organism/blogInterfaces'
 
 /**
  * ブログ
  */
-export const initBlogData: blogDataType = {
+export const initBlogData: blogDataType = { 
   blogList: []
 }
 

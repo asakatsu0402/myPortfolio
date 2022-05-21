@@ -7,17 +7,9 @@ type Props = {
   className?: string
   bold?: boolean
 }
-const Subtitle: NextPage<Props> = ({
-  children,
-  className = '',
-  bold = false
-}: Props) => {
+const Subtitle: NextPage<Props> = ({ children, className = '', bold = false }: Props) => {
   return (
-    <p
-      className={`${String(styles.subtitle)} ${
-        bold ? styles._bold : ''
-      } ${className}`}
-    >
+    <p className={`${String(styles.subtitle)} ${bold ? styles._bold : ''} ${className}`}>
       {children}
     </p>
   )

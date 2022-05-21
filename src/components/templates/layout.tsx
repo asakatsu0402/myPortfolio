@@ -4,7 +4,7 @@ import { motion } from 'framer-motion'
 import { PageHead } from './pageHead'
 import { Header } from './header'
 import { Footer } from './footer'
-import { LanguagesModal } from '../molecules/languagesModal.molecule'
+import { LanguagesModal } from '../molecules/LanguagesModal.molecule'
 // Types
 import type { LayoutType } from '../../types/templateTypes'
 // Style

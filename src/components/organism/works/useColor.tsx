@@ -1,9 +1,7 @@
 // Modules
 import React from 'react'
-// Components
-
-// Interfaces
-import { ColorsType } from '../../../interfaces/molecules/worksInterfaces'
+// Types
+import type { ColorsType } from '../../../types/organism/worksInterfaces'
 
 export const UseColor: React.VFC<ColorsType> = ({ colors }: ColorsType) => {
   // *************** JSX *************** //

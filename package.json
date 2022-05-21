@@ -35,6 +35,7 @@
     "@fortawesome/free-regular-svg-icons": "^5.15.4",
     "@fortawesome/free-solid-svg-icons": "^5.15.3",
     "@fortawesome/react-fontawesome": "^0.1.14",
+    "@reduxjs/toolkit": "^1.8.1",
     "axios": "^0.21.1",
     "framer-motion": "^4.1.17",
     "microcms-richedit-processer": "^1.0.2",
@@ -46,8 +47,9 @@
     "react": "17.0.2",
     "react-dom": "17.0.2",
     "react-query": "^3.19.1",
+    "react-redux": "^8.0.1",
     "react-scroll": "^1.8.3",
-    "recoil": "^0.5.2",
+    "react-toastify": "^9.0.1",
     "sass": "^1.34.0",
     "typewriter-effect": "^2.18.0"
   },

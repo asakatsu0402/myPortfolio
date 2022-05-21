@@ -1,16 +1,12 @@
 // Modules
-import React from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCaretRight } from '@fortawesome/free-solid-svg-icons'
 // Components
-import { PageLink } from '../../atoms/pageLink'
-// Interfaces
-import { BreadcrumbsType } from '../../../interfaces/molecules/blogInterfaces'
+import { PageLink } from '../../atoms/PageLink.atom'
+// Types
+import type { BreadcrumbsType } from '../../../types/organism/blogInterfaces'
 
-export const Breadcrumbs: React.VFC<BreadcrumbsType> = ({
-  title,
-  id
-}: BreadcrumbsType) => {
+export const Breadcrumbs: React.VFC<BreadcrumbsType> = ({ title, id }: BreadcrumbsType) => {
   // *************** JSX *************** //
   return (
     <ul className="flexSet">

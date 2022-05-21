@@ -20,10 +20,10 @@ export type UnderLineType = {
 export type ButtonType = {
   className?: string
   text?: string | number
+  type: 'submit' | 'button' | 'submit' | 'reset'
   children?: ReactNode
   disabled?: boolean
   functions?: any
-  type: 'button' | 'submiy'
 }
 
 // Link
