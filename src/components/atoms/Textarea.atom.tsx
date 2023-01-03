@@ -1,16 +1,20 @@
-// Interfaces
-import type { VFC } from 'react'
-import type { TextareaType } from '../../types/atomTypes'
+type Props = {
+  className?: string
+  name: string
+  placeholder?: string
+  value?: string | number
+  disabled?: boolean
+  functions?: () => void
+}
 
-export const Textarea: VFC<TextareaType> = ({
+export const Textarea = ({
   className,
   name,
   placeholder,
   value,
   disabled,
   functions
-}: TextareaType) => (
-  // *************** JSX *************** //
+}: Props): JSX.Element => (
   <textarea
     className={className}
     id={name}

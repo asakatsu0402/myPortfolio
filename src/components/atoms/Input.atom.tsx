@@ -1,8 +1,15 @@
-// Interfaces
-import type { VFC } from 'react'
-import type { InputType } from '../../types/atomTypes'
+type Props = {
+  className?: string
+  name: string
+  type: string
+  placeholder?: string
+  value?: string | number
+  disabled?: boolean
+  functions?: () => void
+  onKeyDown?: () => void
+}
 
-export const Input: VFC<InputType> = ({
+export const Input = ({
   className,
   name,
   type,
@@ -11,8 +18,7 @@ export const Input: VFC<InputType> = ({
   disabled,
   functions,
   onKeyDown
-}: InputType) => (
-  // *************** JSX *************** //
+}: Props): JSX.Element => (
   <input
     className={className}
     id={name}

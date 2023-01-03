@@ -10,12 +10,10 @@ import { languageSlice } from '../../redux/stores/language'
 // Style
 import styles from './languageButton.module.scss'
 
-export const LanguageButton: React.VFC = () => {
-  // *************** Const *************** //
+export const LanguageButton = (): JSX.Element => {
   const { locale } = useRouter()
   const dispatch = useDispatch()
 
-  // *************** JSX *************** //
   return (
     <Button
       className={styles.languageButton}

@@ -1,8 +1,7 @@
-// Types
 import type { ReactNode } from 'react'
+
 import type { IconName, IconPrefix } from '@fortawesome/free-brands-svg-icons'
 
-// *************** Types *************** //
 // Label
 export type LabelType = {
   className?: string
@@ -26,16 +25,6 @@ export type ButtonType = {
   functions?: any
 }
 
-// Link
-export type LinkType = {
-  className?: string
-  href: string
-  text?: string | number
-  children?: ReactNode
-  asPath?: string
-  locale?: string
-}
-
 // External Link
 export type ExternalType = {
   className?: string
@@ -57,28 +46,6 @@ export type SelectType = {
   placeholder?: string
   disabled?: boolean
   functions?: any
-}
-
-// Textarea
-export type TextareaType = {
-  className?: string
-  name: string
-  placeholder?: string
-  value?: any
-  disabled?: boolean
-  functions?: any
-}
-
-// Input
-export type InputType = {
-  className?: string
-  name: string
-  type: string
-  placeholder?: string
-  value?: any
-  disabled?: boolean
-  functions?: any
-  onKeyDown?: any
 }
 
 // Font

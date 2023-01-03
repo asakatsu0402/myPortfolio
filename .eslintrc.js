@@ -89,6 +89,25 @@ module.exports = {
         message: "Don't use `enum` as a type."
       }
     ], // enum禁止
-    'default-case': 'error' // switch文では必ずdefaultケースを作成すること
+    'default-case': 'error', // switch文では必ずdefaultケースを作成すること
+    // import 順序の強制
+    'import/order': [
+      'error',
+      {
+        groups: ['builtin', 'external', 'parent', 'sibling', 'index', 'object', 'type'],
+        pathGroups: [
+          {
+            pattern: '{react,react-dom/**,react-router-dom}',
+            group: 'builtin',
+            position: 'before'
+          }
+        ],
+        pathGroupsExcludedImportTypes: ['builtin'],
+        alphabetize: {
+          order: 'asc'
+        },
+        'newlines-between': 'always'
+      }
+    ]
   }
 }

@@ -2,6 +2,7 @@
 import { useEffect } from 'react'
 import { useRouter } from 'next/router'
 import { useDispatch } from 'react-redux'
+import clsx from 'clsx'
 // Components
 import { Button } from '../atoms/Button.atom'
 import { FontAwesome } from '../atoms/FontAwesome.atom'
@@ -18,20 +19,17 @@ import { languages } from '../../config/commonConfig'
 // Style
 import styles from './languagesModal.module.scss'
 
-export const LanguagesModal: React.VFC = () => {
-  // *************** Const *************** //
+export const LanguagesModal = (): JSX.Element => {
   const { pathname, asPath, locale } = useRouter()
   const dispatch = useDispatch()
   const languageOn = customSelector(languageSelector)
 
-  // *************** useEffect *************** //
   useEffect(() => {
     dispatch(languageSlice.actions.setLanguage(false))
   }, [locale])
 
-  // *************** JSX *************** //
   return (
-    <div className={`${styles.languagesModal} ${languageOn ? styles.on : ''}`}>
+    <div className={clsx([styles.languagesModal, languageOn && styles.on])}>
       <Button
         className={styles.closeButton}
         type="button"
