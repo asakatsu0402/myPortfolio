@@ -1,7 +1,37 @@
 /* *************** Import *************** */
+@import './foundations/color.scss';
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* *************** Global Variables *************** */
+:root {
+  --white: #fff;
+  --gray: #d8d8d8;
+  --black: #000000;
+  --code: #2a2a2a;
+  --shadow: #0d2f473b;
+  --silver: #a0a0a0;
+  --platinum: #e8e8e8;
+  --red: #e23636;
+  --crimson: #dc143c;
+  --lightCrimson: #ffbcbc;
+  --orange: #e29336;
+  --green: #28bf28;
+  --blue: #4169e1;
+  --linkBlue: #331cbf;
+  --yellow: #fff50c;
+  --twitter:#1DA1F2;
+  --facebook:#4267B2;
+  --hatena:#01a5df;
+  --line:#1dcd00;
+  --selection: #79ffe1;
+}
+
+::selection {
+    color: var(--black);
+    background: var(--selection);
+}
 
 /* *************** Common *************** */
 html,
