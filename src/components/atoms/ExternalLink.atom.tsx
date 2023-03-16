@@ -1,15 +1,22 @@
-// Types
-import type { VFC } from 'react'
-import type { ExternalType } from '../../types/atomTypes'
+import type { VFC, ReactNode } from 'react'
 
-export const ExternalLink: VFC<ExternalType> = ({
+type Props = {
+  className?: string
+  link: string
+  children?: ReactNode
+  text?: string | number
+  target?: boolean
+  downLoad?: string
+}
+
+export const ExternalLink: VFC<Props> = ({
   className,
   link,
   children,
   text,
   target,
   downLoad
-}: ExternalType) => (
+}: Props) => (
   // *************** JSX *************** //
   <a
     className={className}

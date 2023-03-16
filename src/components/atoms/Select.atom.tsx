@@ -1,7 +1,15 @@
-// Types
-import type { SelectType } from '../../types/atomTypes'
-
-export const Select: React.VFC<SelectType> = ({
+type Props = {
+  className?: string
+  name: string
+  label: string
+  options: Array<string | number>
+  optionLabel: string
+  optionValue: string
+  placeholder?: string
+  disabled?: boolean
+  functions?: () => void
+}
+export const Select: React.VFC<Props> = ({
   className,
   name,
   placeholder,
@@ -11,7 +19,7 @@ export const Select: React.VFC<SelectType> = ({
   options,
   optionValue,
   optionLabel
-}: SelectType) => (
+}: Props) => (
   // *************** JSX *************** //
   <select
     className={className}

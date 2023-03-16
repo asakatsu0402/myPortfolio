@@ -1,8 +1,13 @@
-// Types
-import type { VFC } from 'react'
-import type { LabelType } from '../../types/atomTypes'
+import type { ReactNode, VFC } from 'react'
 
-export const Label: VFC<LabelType> = ({ className, htmlFor, children, text }: LabelType) => (
+type Props = {
+  className?: string
+  htmlFor: string
+  text?: string
+  children?: ReactNode
+}
+
+export const Label: VFC<Props> = ({ className, htmlFor, children, text }: Props) => (
   // *************** JSX *************** //
   <label className={className} htmlFor={htmlFor}>
     {children ? children : text}
