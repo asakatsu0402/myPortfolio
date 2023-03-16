@@ -1,8 +1,9 @@
-// Types
-import type { FontType } from '../../types/atomTypes'
-// Style
+import type { VFC } from 'react'
+
 import styles from './fonts.module.scss'
 
-export const Body: React.VFC<FontType> = ({ children, className = '', bold = false }: FontType) => {
+import type { FontType } from '../../types/atomTypes'
+
+export const Body: VFC<FontType> = ({ children, className = '', bold = false }: FontType) => {
   return <p className={`${styles.body} ${bold ? styles.bold : ''} ${className}`}>{children}</p>
 }

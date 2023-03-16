@@ -1,27 +1,30 @@
 // Modules
 import { useEffect, useState } from 'react'
+
+import clsx from 'clsx'
 import { useTheme } from 'next-themes'
-// Components
+
 import { Button } from '../atoms/Button.atom'
 import { FontAwesome } from '../atoms/FontAwesome.atom'
+
+import styles from './DarkModeButton.module.scss'
 
 export const DarkModeButton: React.VFC = () => {
   // *************** Const *************** //
   const { theme, setTheme } = useTheme()
   const [rendered, setRendered] = useState<boolean>(false)
 
-  // *************** Const *************** //
+  // *************** Functions *************** //
   useEffect(() => setRendered(true), [])
+
+  const handleToggleTheme = () => setTheme(theme === 'dark' ? 'light' : 'dark')
 
   // *************** JSX *************** //
   return (
     <Button
-      className={`
-    py-2 px-3 rounded-full
-    ${theme === 'dark' ? 'whiteButton' : 'blackButton'}
-    `}
+      className={clsx([styles.darkModeButton, theme === 'dark' ? 'whiteButton' : 'blackButton'])}
       type="button"
-      functions={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
+      functions={handleToggleTheme}
     >
       {rendered && theme === 'dark' ? (
         <FontAwesome icon={['fas', 'sun']} />

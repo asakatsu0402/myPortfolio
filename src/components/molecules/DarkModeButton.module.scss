@@ -1,0 +1,9 @@
+/* *************** Import *************** */
+@use "../../styles/foundations/import.scss" as f;
+
+/* *************** Class *************** */
+.darkModeButton {
+  width: var(--space-40px);
+  height: var(--space-40px);
+  border-radius: 50%;
+}
