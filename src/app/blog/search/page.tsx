@@ -1,17 +1,19 @@
 // Modules
 // import React, { useEffect, useState } from 'react'
-import { NextPage } from 'next'
+
 // import { useRouter } from 'next/router'
 // Components
-import { Layout } from '../../../components/templates/layout'
 import { AllBlogs } from '../../../components/molecules/blog/allBlogs'
-import { PageNation } from '../../../components/molecules/blog/pageNation'
+import { AllCategories } from '../../../components/molecules/blog/allCategories'
 import { ArticleSearch } from '../../../components/molecules/blog/articleSearch'
 import { AsideSection } from '../../../components/molecules/blog/asideSection'
-import { AllCategories } from '../../../components/molecules/blog/allCategories'
+import { PageNation } from '../../../components/molecules/blog/pageNation'
+import { Layout } from '../../../components/templates/layout'
 // Functions
-import { blogFunctions } from '../../../functions/blogFunctions'
 import { getBlogs, getBlogPage, getCategories } from '../../../functions/api'
+import { blogFunctions } from '../../../functions/blogFunctions'
+
+import type { NextPage } from 'next'
 
 // *************** Get API *************** //
 export const getStaticPath = async () => {

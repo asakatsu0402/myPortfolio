@@ -1,14 +1,14 @@
-// Components
+import { Top } from '../components/organism/top/top'
 import { Layout } from '../components/templates/layout'
 import { PageHead } from '../components/templates/pageHead'
-import { Top } from '../components/organism/top/top'
 
-export const Home: React.VFC = () => (
-  // *************** JSX *************** //
+import type { NextPage } from 'next'
+
+const Page: NextPage = () => (
   <Layout>
     <PageHead title="" />
     <Top />
   </Layout>
 )
 
-export default Home
+export default Page

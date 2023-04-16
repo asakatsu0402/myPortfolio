@@ -1,7 +1,9 @@
-// Modules
-import Image from 'next/image'
+'use client'
+
 import useTranslation from 'next-translate/useTranslation'
+import Image from 'next/image'
 import Typewriter from 'typewriter-effect'
+
 // Components
 import { H1 } from '../../fonts/H1.font'
 

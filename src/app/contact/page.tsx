@@ -1,13 +1,12 @@
 // Components
-import { Layout } from '../../components/templates/layout'
-import { FormWrap } from '../../components/organism/contact/formWrap'
 import { Section } from '../../components/molecules/section'
 import { ContactWay } from '../../components/organism/contact/contactWay'
-// Types
+import { FormWrap } from '../../components/organism/contact/formWrap'
+import { Layout } from '../../components/templates/layout'
+
 import type { NextPage } from 'next'
 
-export const Contact: NextPage = () => {
-  // *************** JSX *************** //
+const Contact: NextPage = () => {
   return (
     <Layout title="Contact">
       <main>

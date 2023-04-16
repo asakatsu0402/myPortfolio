@@ -1,12 +1,9 @@
-// Modules
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-// Components
-import { ExternalLink } from '../atoms/ExternalLink.atom'
-// Config
-import { footerShare } from '../../config/layoutConfig'
 
-export const ShareList: React.VFC = () => {
-  // *************** JSX *************** //
+import { footerShare } from '../../config/layoutConfig'
+import { ExternalLink } from '../atoms/ExternalLink.atom'
+
+export const ShareList: React.FC = () => {
   return (
     <ul className="flexBetweenSet w-36">
       {footerShare.map((share, i) => (

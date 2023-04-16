@@ -1,14 +1,15 @@
 // Components
-import { Layout } from '../../components/templates/layout'
-import { PageHead } from '../../components/templates/pageHead'
 import { Section } from '../../components/molecules/section'
 import { Description } from '../../components/organism/works/discription'
 import { UseColor } from '../../components/organism/works/useColor'
+import { Layout } from '../../components/templates/layout'
+import { PageHead } from '../../components/templates/pageHead'
 // Config
 import { SaaSis } from '../../config/worksConfig'
 
-export const Work = () => {
-  // *************** JSX *************** //
+import type { NextPage } from 'next'
+
+const Work: NextPage = () => {
   return (
     <Layout>
       <PageHead title={`Work - ${SaaSis.title}`} />

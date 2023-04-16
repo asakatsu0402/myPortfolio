@@ -19,7 +19,7 @@ export const PageLink = ({
   asPath,
   locale
 }: Props): JSX.Element => (
-  <Link href={href} as={asPath && asPath} locale={locale} passHref>
-    <a className={className}>{children ? children : text}</a>
+  <Link className={className} href={href} as={asPath && asPath} locale={locale} passHref>
+    {children ? children : text}
   </Link>
 )

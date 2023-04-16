@@ -1,29 +1,26 @@
-// Modules
+'use client'
+
 import React from 'react'
+
+import clsx from 'clsx'
 import { useRouter } from 'next/router'
-// Components
+
+import { headerNav } from '../../config/layoutConfig'
 import { PageLink } from '../atoms/PageLink.atom'
 import { Text } from '../atoms/Text.atom'
-// Config
-import { headerNav } from '../../config/layoutConfig'
-// Style
+
 import styles from './headerNavigation.module.scss'
 
-export const HeaderNavigation: React.VFC = () => {
-  // *************** Const *************** //
+export const HeaderNavigation = (): JSX.Element => {
   const { pathname } = useRouter()
 
-  // *************** JSX *************** //
   return (
     <nav>
       <ul className={styles.navigationList}>
         {headerNav.map((nav, i) => (
           <li key={i} className="exceptLeftMargin">
             <PageLink
-              className={`
-                ${styles.linkText}
-                ${pathname === nav.link ? styles.active : ''}
-              `}
+              className={clsx([styles.linkText, pathname === nav.link ? styles.active : ''])}
               href={nav.link}
             >
               <Text text={nav.title} />

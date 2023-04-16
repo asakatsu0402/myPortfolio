@@ -4,7 +4,7 @@ import { Layout } from '../../components/templates/layout'
 
 import type { NextPage } from 'next'
 
-export const About: NextPage = () => {
+const About: NextPage = () => {
   return (
     <Layout title="About">
       <main>

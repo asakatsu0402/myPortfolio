@@ -1,18 +1,15 @@
-// Components
-import { Layout } from '../../components/templates/layout'
-import { Breadcrumbs } from '../../components/organism/blog/breadCrumbs'
 import { AllBlogs } from '../../components/organism/blog/allBlogs'
 import { AllCategories } from '../../components/organism/blog/allCategories'
 import { ArticleSearch } from '../../components/organism/blog/articleSearch'
 import { AsideSection } from '../../components/organism/blog/asideSection'
+import { Breadcrumbs } from '../../components/organism/blog/breadCrumbs'
 import { PageNation } from '../../components/organism/blog/pageNation'
-// Utils
+import { Layout } from '../../components/templates/layout'
 import { getBlogPage, getCategories } from '../../utils/api'
-// Types
+
 import type { NextPage } from 'next'
 // import { blogFunctions } from "../../functions/blogFunctions"
 
-// *************** Type *************** //
 type Props = {
   contents?: Array<any>
   totalCount: number
@@ -42,8 +39,7 @@ export const getStaticProps = async (number: number) => {
   }
 }
 
-export const Blog: NextPage<Props> = (props: Props) => {
-  // *************** JSX *************** //
+const Blog: NextPage<Props> = (props: Props) => {
   return (
     <Layout title="Blog" flex={true}>
       <main className="flex-auto">

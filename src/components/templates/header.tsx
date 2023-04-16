@@ -1,28 +1,21 @@
-// Modules
-import React from 'react'
+'use client'
+
+import clsx from 'clsx'
 import { useRouter } from 'next/router'
-// Components
+
 import { PageLink } from '../atoms/PageLink.atom'
 import { Text } from '../atoms/Text.atom'
-import { HeaderNavigation } from './headerNavigation'
 import { LanguageButton } from '../molecules/languageButton'
-// Style
-import styles from './header.module.scss'
 
-export const Header: React.VFC = () => {
-  // *************** Const *************** //
+import styles from './header.module.scss'
+import { HeaderNavigation } from './headerNavigation'
+
+export const Header = (): JSX.Element => {
   const { pathname } = useRouter()
 
-  // *************** JSX *************** //
   return (
     <header className={styles.header}>
-      <PageLink
-        className={`
-          ${styles.linkText}
-          ${pathname === '/' ? styles.active : ''}
-        `}
-        href="/"
-      >
+      <PageLink className={clsx([styles.linkText, pathname === '/' ? styles.active : ''])} href="/">
         <Text text="asakatsu" />
       </PageLink>
       <HeaderNavigation />

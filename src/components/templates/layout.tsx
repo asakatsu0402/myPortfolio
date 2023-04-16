@@ -1,22 +1,17 @@
-// Modules
-import { motion } from 'framer-motion'
-// Components
-import { PageHead } from './pageHead'
-import { Header } from './header'
-import { Footer } from './footer'
-import { LanguagesModal } from '../molecules/LanguagesModal.molecule'
-// Types
-import type { LayoutType } from '../../types/templateTypes'
-// Style
-import styles from './layout.module.scss'
+'use client'
 
-export const Layout: React.VFC<LayoutType> = ({
-  children,
-  className,
-  title,
-  flex
-}: LayoutType) => (
-  // *************** JSX *************** //
+import { motion } from 'framer-motion'
+
+import { LanguagesModal } from '../molecules/LanguagesModal.molecule'
+
+import { Footer } from './footer'
+import { Header } from './header'
+import styles from './layout.module.scss'
+import { PageHead } from './pageHead'
+
+import type { LayoutType } from '../../types/templateTypes'
+
+export const Layout: React.FC<LayoutType> = ({ children, className, title, flex }: LayoutType) => (
   <div className={styles.layout}>
     <PageHead title={title} />
     <Header />
