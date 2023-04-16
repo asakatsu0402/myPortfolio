@@ -1,4 +1,4 @@
-import type { VFC, ReactNode } from 'react'
+import type { ReactNode } from 'react'
 
 type Props = {
   className?: string
@@ -9,7 +9,7 @@ type Props = {
   downLoad?: string
 }
 
-export const ExternalLink: VFC<Props> = ({
+export const ExternalLink: React.FC<Props> = ({
   className,
   link,
   children,
@@ -17,7 +17,6 @@ export const ExternalLink: VFC<Props> = ({
   target,
   downLoad
 }: Props) => (
-  // *************** JSX *************** //
   <a
     className={className}
     href={link}

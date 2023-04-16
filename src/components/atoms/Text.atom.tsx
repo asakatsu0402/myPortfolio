@@ -1,9 +1,8 @@
-// Modules
 import useTranslation from 'next-translate/useTranslation'
-// Types
+
 import type { TextType } from '../../types/atomTypes'
 
-export const Text: React.VFC<TextType> = ({
+export const Text: React.FC<TextType> = ({
   nameSpace = 'common',
   text,
   objName,
@@ -11,10 +10,8 @@ export const Text: React.VFC<TextType> = ({
   secondName,
   secondValue
 }: TextType) => {
-  // *************** Const *************** //
   const { t } = useTranslation()
 
-  // *************** JSX *************** //
   return (
     <>
       {objName && !secondName

@@ -1,8 +1,7 @@
-/* *************** Import *************** */
 @use "../../styles/foundations/import.scss" as f;
 
-/* *************** Class *************** */
 .languagesModal {
+  display: none;
   position: fixed;
   top: 0;
   right: 0;
@@ -10,11 +9,12 @@
   left: 0;
   z-index: 10;
   transform: translateY(100%);
-  padding: f.$spacing16;
-  background: f.$white;
+  padding: var(--space-16px);
+  background: var(--white);
   transition: .5s ease-in-out;
 
   &.on {
+    display: block;
     transform: translateY(0);
   }
 

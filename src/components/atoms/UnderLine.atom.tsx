@@ -1,8 +1,5 @@
-// Interfaces
-import type { VFC } from 'react'
 import type { UnderLineType } from '../../types/atomTypes'
 
-export const Underline: VFC<UnderLineType> = ({ className }: UnderLineType) => (
-  // *************** JSX *************** //
+export const Underline: React.FC<UnderLineType> = ({ className }: UnderLineType) => (
   <div className={`underline ${className}`} />
 )

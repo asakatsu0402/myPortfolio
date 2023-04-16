@@ -1,6 +1,5 @@
 'use client'
 
-import { useRouter } from 'next/router'
 import { useSetRecoilState } from 'recoil'
 
 import { languageState } from '../../recoil/atoms/languageModal'
@@ -11,7 +10,6 @@ import { Body } from '../fonts/Body.font'
 import styles from './languageButton.module.scss'
 
 export const LanguageButton = (): JSX.Element => {
-  const { locale } = useRouter()
   const setIsLanguageModal = useSetRecoilState<boolean>(languageState)
 
   const handleOnModal = (): void => setIsLanguageModal(true)
@@ -22,7 +20,8 @@ export const LanguageButton = (): JSX.Element => {
         <FontAwesome icon={['fas', 'map-marker-alt']} />
       </div>
       <Body bold className={styles.localeText}>
-        {locale}
+        en
+        {/* {locale} */}
       </Body>
     </Button>
   )

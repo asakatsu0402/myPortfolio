@@ -3,7 +3,7 @@
 import React from 'react'
 
 import clsx from 'clsx'
-import { useRouter } from 'next/router'
+import { usePathname } from 'next/navigation'
 
 import { headerNav } from '../../config/layoutConfig'
 import { PageLink } from '../atoms/PageLink.atom'
@@ -12,7 +12,7 @@ import { Text } from '../atoms/Text.atom'
 import styles from './headerNavigation.module.scss'
 
 export const HeaderNavigation = (): JSX.Element => {
-  const { pathname } = useRouter()
+  const pathname = usePathname()
 
   return (
     <nav>

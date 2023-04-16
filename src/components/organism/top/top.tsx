@@ -4,14 +4,11 @@ import useTranslation from 'next-translate/useTranslation'
 import Image from 'next/image'
 import Typewriter from 'typewriter-effect'
 
-// Components
 import { H1 } from '../../fonts/H1.font'
 
-export const Top: React.VFC = () => {
-  // *************** Const *************** //
+export const Top: React.FC = () => {
   const { t } = useTranslation()
 
-  // *************** JSX *************** //
   return (
     <div className="mx-auto">
       <div className="relative">

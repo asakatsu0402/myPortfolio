@@ -9,6 +9,5 @@ module.exports = {
     '*': ['common'],
     '/': ['top']
   },
-  loadLocaleFrom: (lang, ns) =>
-    import(`./public/locales/${lang}/${ns}.json`).then((m) => m.default)
+  loadLocaleFrom: (lang, ns) => import(`./public/locales/${lang}/${ns}.json`).then((m) => m.default)
 }

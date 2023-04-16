@@ -3,7 +3,7 @@
 import { useEffect } from 'react'
 
 import clsx from 'clsx'
-import { useRouter } from 'next/router'
+import { usePathname, useRouter } from 'next/navigation'
 import { useRecoilState } from 'recoil'
 
 import { languages } from '../../config/commonConfig'
@@ -18,17 +18,25 @@ import { H2 } from '../fonts/H2.font'
 import styles from './languagesModal.module.scss'
 
 export const LanguagesModal = (): JSX.Element => {
-  const { pathname, asPath, locale } = useRouter()
+  const pathname = usePathname()
   const [isLanguageModal, setIsLanguageModal] = useRecoilState<boolean>(languageState)
 
   const handleCloseModal = () => setIsLanguageModal(false)
 
+  // TODO localeを依存係数に入れる
   useEffect(() => {
     handleCloseModal()
-  }, [locale])
+  }, [])
 
   return (
-    <div className={clsx([styles.languagesModal, isLanguageModal && styles.on])}>
+    <div
+      className={clsx([
+        styles.languagesModal,
+        isLanguageModal && styles.on
+        // TODO 時差でアニメーション用クラスを付与する
+        // isLanguageModal && setTimeout(() => styles.show, 500)
+      ])}
+    >
       <Button className={styles.closeButton} type="button" functions={handleCloseModal}>
         <FontAwesome icon={['fas', 'times']} />
       </Button>
@@ -42,7 +50,7 @@ export const LanguagesModal = (): JSX.Element => {
               <PageLink
                 className={styles.languageButton}
                 href={pathname}
-                asPath={asPath}
+                // asPath={asPath}
                 locale={language.code}
               >
                 <div className={styles.pinIcon}>

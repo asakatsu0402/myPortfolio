@@ -1,25 +1,22 @@
 'use client'
 
-import { motion } from 'framer-motion'
+import clsx from 'clsx'
+import { m } from 'framer-motion'
 
 import { LanguagesModal } from '../molecules/LanguagesModal.molecule'
 
 import { Footer } from './footer'
 import { Header } from './header'
 import styles from './layout.module.scss'
-import { PageHead } from './pageHead'
 
 import type { LayoutType } from '../../types/templateTypes'
 
-export const Layout: React.FC<LayoutType> = ({ children, className, title, flex }: LayoutType) => (
+export const Layout: React.FC<LayoutType> = ({ children, className, flex }: LayoutType) => (
   <div className={styles.layout}>
-    <PageHead title={title} />
     <Header />
-    <motion.div
-      className={`
-        overflow-y-scroll ${className}
-        ${flex ? 'flex flex-grow' : ''}
-      `}
+
+    <m.div
+      className={clsx(['overflow-y-scroll', className, flex ? 'flex flex-grow' : ''])}
       initial="hidden"
       animate="enter"
       exit="exit"
@@ -31,8 +28,10 @@ export const Layout: React.FC<LayoutType> = ({ children, className, title, flex 
       transition={{ type: 'spring', delay: 0.2, duration: 0.8 }}
     >
       {children}
-    </motion.div>
+    </m.div>
+
     <Footer />
+
     <LanguagesModal />
   </div>
 )

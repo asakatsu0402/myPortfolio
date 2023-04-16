@@ -1,23 +1,26 @@
-// Modules
+'use client'
+
 import { useState } from 'react'
-// Components
-import { FormList } from './formList'
+
+import clsx from 'clsx'
+
 import { Button } from '../../atoms/Button.atom'
 
-export const FormWrap: React.VFC = () => {
-  // *************** Const *************** //
+import { FormList } from './formList'
+
+export const FormWrap = (): JSX.Element => {
   const [error, setError] = useState({})
 
-  // *************** JSX *************** //
   return (
     <form>
       <FormList error={error} setError={setError} />
       <Button
-        className={`blackButton py-1 px-3
-          ${
-            !!Object.values(error).filter((error) => error).length && 'disabled'
-          }
-        `}
+        className={clsx([
+          'blackButton',
+          'py-1',
+          'px-3',
+          !!Object.values(error).filter((error) => error).length && 'disabled'
+        ])}
         text="送信"
         type="submit"
         disabled={!!Object.values(error).filter((error) => error).length}

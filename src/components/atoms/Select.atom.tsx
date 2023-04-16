@@ -9,7 +9,7 @@ type Props = {
   disabled?: boolean
   functions?: () => void
 }
-export const Select: React.VFC<Props> = ({
+export const Select: React.FC<Props> = ({
   className,
   name,
   placeholder,
@@ -20,7 +20,6 @@ export const Select: React.VFC<Props> = ({
   optionValue,
   optionLabel
 }: Props) => (
-  // *************** JSX *************** //
   <select
     className={className}
     id={name}

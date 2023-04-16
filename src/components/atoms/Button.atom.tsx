@@ -1,4 +1,4 @@
-import type { VFC, ReactNode } from 'react'
+import type { ReactNode } from 'react'
 
 type Props = {
   className?: string
@@ -9,7 +9,7 @@ type Props = {
   functions?: () => void
 }
 
-export const Button: VFC<Props> = ({
+export const Button: React.FC<Props> = ({
   className,
   disabled,
   functions,

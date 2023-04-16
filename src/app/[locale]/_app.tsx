@@ -1,3 +1,5 @@
+// TODO 削除よてい
+
 import { useState, useEffect } from 'react'
 
 import { AnimatePresence } from 'framer-motion'
@@ -13,15 +15,11 @@ import { SearchContext } from '../utils/commonFunctions'
 import type { AppProps } from 'next/app'
 import type { ParsedUrlQuery } from 'querystring'
 
-import '../styles/globals.scss'
-import '../styles/classStyles.scss'
-import '@fortawesome/fontawesome-svg-core/styles.css'
-
 Router.events.on('routeChangeStart', () => NProgress.start())
 Router.events.on('routeChangeComplete', () => NProgress.done())
 Router.events.on('routeChangeError', () => NProgress.done())
 
-const MyApp: React.VFC = ({ Component, pageProps, router }: AppProps) => {
+const MyApp: React.FC = ({ Component, pageProps, router }: AppProps) => {
   const [search, setSearch] = useState<string | Array<string>>('')
   const use_router = useRouter()
 
@@ -38,7 +36,7 @@ const MyApp: React.VFC = ({ Component, pageProps, router }: AppProps) => {
     <RecoilRoot>
       <ThemeProvider attribute="class">
         <SearchContext.Provider value={{ search: String(search), setSearch }}>
-          <AnimatePresence exitBeforeEnter initial={false}>
+          <AnimatePresence initial={false}>
             <Component {...pageProps} key={router.route} />
           </AnimatePresence>
         </SearchContext.Provider>
