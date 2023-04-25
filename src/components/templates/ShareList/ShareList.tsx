@@ -1,7 +1,7 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 import { footerShare } from '../../../config/layoutConfig'
-import { ExternalLink } from '../../atoms/ExternalLink.atom'
+import { ExternalLink } from '../../atoms/ExternalLink/ExternalLink'
 
 export const ShareList = (): JSX.Element => {
   return (

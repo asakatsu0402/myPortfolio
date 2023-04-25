@@ -3,12 +3,12 @@
 import clsx from 'clsx'
 import { usePathname } from 'next/navigation'
 
-import { PageLink } from '../atoms/PageLink.atom'
-import { Text } from '../atoms/Text.atom'
-import { LanguageButton } from '../molecules/languageButton'
+import { PageLink } from '../../atoms/PageLink.atom'
+import { Text } from '../../atoms/Text.atom'
+import { LanguageButton } from '../../atoms/LanguagesButton/LanguageButton'
+import { HeaderNavigation } from '../HeaderNavigation'
 
-import styles from './header.module.scss'
-import { HeaderNavigation } from './headerNavigation'
+import styles from './Header.module.scss'
 
 export const Header = (): JSX.Element => {
   const pathname = usePathname()

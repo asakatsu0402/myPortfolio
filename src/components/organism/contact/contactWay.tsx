@@ -1,5 +1,5 @@
 import { contactList } from '../../../config/contactConfig'
-import { ExternalLink } from '../../atoms/ExternalLink.atom'
+import { ExternalLink } from '../../atoms/ExternalLink/ExternalLink'
 
 export const ContactWay = (): JSX.Element => {
   return (

@@ -1,10 +1,8 @@
-/* *************** Import *************** */
 @import './foundations/color.scss';
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-/* *************** Global Variables *************** */
 :root {
   --white: #fff;
   --gray: #d8d8d8;
@@ -28,8 +26,12 @@
   --selection: #79ffe1;
 
   --space-40px: 40px;
+  --space-20px: 32px;
   --space-20px: 20px;
   --space-16px: 16px;
+  --space-12px: 12px;
+  --space-8px: 8px;
+  --space-4px: 4px;
 }
 
 ::selection {

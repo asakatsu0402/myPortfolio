@@ -3,7 +3,7 @@ import { useCallback, useContext } from 'react'
 import { useRouter } from 'next/router'
 // Components
 import { Label } from '../../atoms/Label.atom'
-import { Input } from '../../atoms/Input.atom'
+import { Input } from '../../atoms/Input/Input'
 import { Underline } from '../../atoms/UnderLine.atom'
 import { Button } from '../../atoms/Button/Button'
 // Utils

@@ -1,5 +1,5 @@
 // Components
-import { ExternalLink } from '../../atoms/ExternalLink.atom'
+import { ExternalLink } from '../../atoms/ExternalLink/ExternalLink'
 // Config
 import { careerList } from '../../../config/aboutConfig'
 

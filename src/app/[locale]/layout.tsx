@@ -6,7 +6,7 @@ import { ThemeProvider } from 'next-themes'
 import { RecoilRoot } from 'recoil'
 
 // import i18nConfig from '../../../i18n'
-import { Layout } from '../../components/templates/layout'
+import { Layout } from '../../components/templates/Layout/Layout'
 import { PageHead } from '../../components/templates/pageHead'
 import '../../styles/globals.scss'
 import '../../styles/classStyles.scss'

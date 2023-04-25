@@ -71,6 +71,7 @@
     "autoprefixer": "^10.2.6",
     "babel-loader": "^8.2.2",
     "chromatic": "^6.17.3",
+    "css-loader": "^6.7.3",
     "env-cmd": "^10.1.0",
     "eslint": "^7.32.0",
     "eslint-config-next": "^11.0.1",
@@ -86,8 +87,11 @@
     "postcss": "^8.3.6",
     "postcss-flexbugs-fixes": "^5.0.2",
     "postcss-import": "^14.0.2",
+    "postcss-loader": "^7.2.4",
     "prettier": "^2.3.2",
+    "sass-loader": "^10.0.0",
     "storybook": "^7.0.7",
+    "style-loader": "^3.3.2",
     "tailwindcss": "^2.2.1",
     "typescript": "^5.0.4"
   }

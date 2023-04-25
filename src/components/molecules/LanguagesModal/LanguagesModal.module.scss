@@ -1,4 +1,4 @@
-@use "../../styles/foundations/import.scss" as f;
+@use "../../../styles/foundations/import.scss" as f;
 
 .languagesModal {
   display: none;
@@ -24,16 +24,16 @@
   position: absolute;
   top: 2%;
   right: 2%;
-  width: f.$spacing32;
-  padding: f.$spacing4 0;
+  width: var(--space-32px);
+  padding: var(--space-4px) 0;
   border-radius: 50%;
-  background: f.$black;
-  color: f.$white;
+  background: var(--black);
+  color: var(--white);
 }
 
 .languageWrap {
   width: 56rem;
-  margin: 40px auto 0 auto;
+  margin: var(--space-40px) auto 0 auto;
   text-align: center;
 
   @include f.max-screen(f.$mobile) {
@@ -44,11 +44,11 @@
 .languageList {
   @extend %flexBetweenSet;
   flex-wrap: wrap;
-  margin-top: f.$spacing40;
+  margin-top: var(--space-40px);
 
   > li {
     width: 25%;
-    margin: f.$spacing16;
+    margin: var(--space-16px);
 
     @include f.max-screen(f.$mobile) {
       width: 100%;
@@ -69,12 +69,12 @@
   &:hover {
 
     > svg {
-      color: f.$black;
+      color: var(--black);
     }
   }
 
   > .languageText {
     flex: 1;
-    margin-left: f.$spacing8;
+    margin-left: var(--space-8px);
   }
 }

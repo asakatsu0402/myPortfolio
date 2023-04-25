@@ -1,17 +1,24 @@
 'use client'
 
+import type { ReactNode } from 'react'
+
 import clsx from 'clsx'
 import { m } from 'framer-motion'
 
-import { LanguagesModal } from '../molecules/LanguagesModal.molecule'
+import { LanguagesModal } from '../../molecules/LanguagesModal/LanguagesModal'
+import { Footer } from '../Footer/Footer'
+import { Header } from '../Header/Header'
 
-import { Footer } from './Footer/Footer'
-import { Header } from './header'
 import styles from './layout.module.scss'
 
-import type { LayoutType } from '../../types/templateTypes'
+type Props = {
+  children?: ReactNode
+  className?: string
+  title?: string
+  flex?: boolean
+}
 
-export const Layout: React.FC<LayoutType> = ({ children, className, flex }: LayoutType) => (
+export const Layout: React.FC<Props> = ({ children, className, flex }: Props) => (
   <div className={styles.layout}>
     <Header />
 

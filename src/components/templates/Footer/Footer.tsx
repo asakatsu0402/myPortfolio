@@ -1,5 +1,5 @@
-import { DarkModeButton } from '../../molecules/DarkModeButton.molecule'
-import { ShareList } from '../shareList'
+import { DarkModeButton } from '../../atoms/DarkModeButton/DarkModeButton'
+import { ShareList } from '../ShareList'
 
 export const Footer = (): JSX.Element => {
   return (

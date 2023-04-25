@@ -2,10 +2,10 @@
 
 import { useSetRecoilState } from 'recoil'
 
-import { languageState } from '../../recoil/atoms/languageModal'
-import { Button } from '../atoms/Button/Button'
-import { FontAwesome } from '../atoms/FontAwesome.atom'
-import { Body } from '../fonts/Body.font'
+import { languageState } from '../../../recoil/atoms/languageModal'
+import { Body } from '../../fonts/Body.font'
+import { Button } from '../Button/Button'
+import { FontAwesome } from '../FontAwesome.atom'
 
 import styles from './languageButton.module.scss'
 

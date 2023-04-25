@@ -1,0 +1,16 @@
+@use "../../../styles/foundations/import.scss" as *;
+
+.navigationList {
+  @extend %flexBetweenSet;
+}
+
+.linkText {
+  @include hoverText(
+    var(--silver),
+    var(--crimson)
+  );
+
+  &.active {
+    color: var(--crimson);
+  }
+}
