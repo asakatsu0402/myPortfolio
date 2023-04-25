@@ -8,7 +8,7 @@ import { useRecoilState } from 'recoil'
 
 import { languages } from '../../config/commonConfig'
 import { languageState } from '../../recoil/atoms/languageModal'
-import { Button } from '../atoms/Button.atom'
+import { Button } from '../atoms/Button/Button'
 import { FontAwesome } from '../atoms/FontAwesome.atom'
 import { PageLink } from '../atoms/PageLink.atom'
 import { Text } from '../atoms/Text.atom'

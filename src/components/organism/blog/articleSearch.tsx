@@ -5,7 +5,7 @@ import { useRouter } from 'next/router'
 import { Label } from '../../atoms/Label.atom'
 import { Input } from '../../atoms/Input.atom'
 import { Underline } from '../../atoms/UnderLine.atom'
-import { Button } from '../../atoms/Button.atom'
+import { Button } from '../../atoms/Button/Button'
 // Utils
 import { SearchContext } from '../../../utils/commonFunctions'
 

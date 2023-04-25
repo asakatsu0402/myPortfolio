@@ -3,7 +3,7 @@
 import { useSetRecoilState } from 'recoil'
 
 import { languageState } from '../../recoil/atoms/languageModal'
-import { Button } from '../atoms/Button.atom'
+import { Button } from '../atoms/Button/Button'
 import { FontAwesome } from '../atoms/FontAwesome.atom'
 import { Body } from '../fonts/Body.font'
 

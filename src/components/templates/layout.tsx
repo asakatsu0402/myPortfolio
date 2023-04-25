@@ -5,7 +5,7 @@ import { m } from 'framer-motion'
 
 import { LanguagesModal } from '../molecules/LanguagesModal.molecule'
 
-import { Footer } from './footer'
+import { Footer } from './Footer/Footer'
 import { Header } from './header'
 import styles from './layout.module.scss'
 

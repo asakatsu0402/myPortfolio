@@ -5,7 +5,7 @@ import { useEffect, useState } from 'react'
 import clsx from 'clsx'
 import { useTheme } from 'next-themes'
 
-import { Button } from '../atoms/Button.atom'
+import { Button } from '../atoms/Button/Button'
 import { FontAwesome } from '../atoms/FontAwesome.atom'
 
 import styles from './DarkModeButton.module.scss'

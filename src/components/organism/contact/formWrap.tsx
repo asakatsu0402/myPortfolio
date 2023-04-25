@@ -4,7 +4,7 @@ import { useState } from 'react'
 
 import clsx from 'clsx'
 
-import { Button } from '../../atoms/Button.atom'
+import { Button } from '../../atoms/Button/Button'
 
 import { FormList } from './formList'
 
