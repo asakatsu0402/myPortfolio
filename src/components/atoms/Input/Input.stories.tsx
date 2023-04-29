@@ -10,8 +10,8 @@ export default {
 export const StandardInput = {
   args: {
     disabled: false,
-    type: 'text',
+    functions: () => alert('Input clicked'),
     placeholder: 'Placeholder',
-    functions: () => alert('Input clicked')
+    type: 'text'
   }
 } as Meta<typeof Input>

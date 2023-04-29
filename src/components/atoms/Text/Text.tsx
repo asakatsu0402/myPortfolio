@@ -1,15 +1,22 @@
 import useTranslation from 'next-translate/useTranslation'
 
-import type { TextType } from '../../types/atomTypes'
+type Props = {
+  nameSpace?: 'common' | 'top' | 'about' | 'contact' | 'works'
+  objName?: string
+  objValue?: string
+  secondName?: string
+  secondValue?: string
+  text: string | Array<string>
+}
 
-export const Text: React.FC<TextType> = ({
+export const Text: React.FC<Props> = ({
   nameSpace = 'common',
   text,
   objName,
   objValue,
   secondName,
   secondValue
-}: TextType) => {
+}: Props) => {
   const { t } = useTranslation()
 
   return (

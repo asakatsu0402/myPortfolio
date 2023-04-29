@@ -1,0 +1,12 @@
+@use "../../../styles/foundations/import" as *;
+
+.footerShareList {
+  display: flex;
+}
+
+.shareBlock {
+
+  &:not(:first-child) {
+    margin-left: var(--space-8px);
+  }
+}

@@ -12,7 +12,7 @@ export const StandardLayout = {
   args: {
     children: 'Button',
     disabled: false,
-    type: 'button',
-    functions: () => alert('Button clicked')
+    functions: () => alert('Button clicked'),
+    type: 'button'
   }
 } as Meta<typeof Layout>

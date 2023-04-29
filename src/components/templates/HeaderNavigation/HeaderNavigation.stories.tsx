@@ -1,3 +1,5 @@
+/* eslint-disable react/display-name */
+
 import { HeaderNavigation } from '.'
 
 import type { Meta } from '@storybook/react'

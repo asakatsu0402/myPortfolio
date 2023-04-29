@@ -4,8 +4,8 @@ import clsx from 'clsx'
 import { usePathname } from 'next/navigation'
 
 import { headerNav } from '../../../config/layoutConfig'
-import { PageLink } from '../../atoms/PageLink.atom'
-import { Text } from '../../atoms/Text.atom'
+import { PageLink } from '../../atoms/PageLink/PageLink'
+import { Text } from '../../atoms/Text/Text'
 
 import styles from './HeaderNavigation.module.scss'
 

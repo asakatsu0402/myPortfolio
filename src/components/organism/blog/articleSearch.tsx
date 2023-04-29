@@ -7,8 +7,8 @@ import { useRouter } from 'next/navigation'
 import { SearchContext } from '../../../utils/commonFunctions'
 import { Button } from '../../atoms/Button/Button'
 import { Input } from '../../atoms/Input/Input'
-import { Label } from '../../atoms/Label.atom'
-import { Underline } from '../../atoms/UnderLine.atom'
+import { Label } from '../../atoms/Label/Label'
+import { Underline } from '../../atoms/UnderLine/UnderLine.atom'
 
 export const ArticleSearch: React.VFC = () => {
   const { search, setSearch } = useContext(SearchContext)

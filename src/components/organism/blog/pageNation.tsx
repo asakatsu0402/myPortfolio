@@ -1,4 +1,4 @@
-import { PageLink } from '../../atoms/PageLink.atom'
+import { PageLink } from '../../atoms/PageLink/PageLink'
 
 type Props = {
   data?: any

@@ -1,11 +1,11 @@
 import { faCaretRight } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
-import { PageLink } from '../../../atoms/PageLink.atom'
+import { PageLink } from '../../../atoms/PageLink/PageLink'
 
 type Props = {
-  title?: string | undefined
   id?: string | undefined
+  title?: string | undefined
 }
 
 export const Breadcrumbs: React.FC<Props> = ({ title, id }: Props) => {

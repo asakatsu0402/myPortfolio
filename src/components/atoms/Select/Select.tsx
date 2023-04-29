@@ -1,14 +1,15 @@
 type Props = {
   className?: string
-  name: string
-  label: string
-  options: Array<string | number>
-  optionLabel: string
-  optionValue: string
-  placeholder?: string
   disabled?: boolean
   functions?: () => void
+  label: string
+  name: string
+  optionLabel: string
+  optionValue: string
+  options: Array<string | number>
+  placeholder?: string
 }
+
 export const Select: React.FC<Props> = ({
   className,
   name,

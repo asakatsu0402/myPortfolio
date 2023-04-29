@@ -3,12 +3,12 @@ import type { ReactNode } from 'react'
 import Link from 'next/link'
 
 type Props = {
+  asPath?: string
+  children?: ReactNode
   className?: string
   href: string
-  text?: string | number
-  children?: ReactNode
-  asPath?: string
   locale?: string
+  text?: string | number
 }
 
 export const PageLink = ({

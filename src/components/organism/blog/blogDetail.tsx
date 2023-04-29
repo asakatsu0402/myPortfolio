@@ -1,16 +1,21 @@
 // Modules
 import React from 'react'
-import Image from 'next/image'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+
 import { faHistory } from '@fortawesome/free-solid-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import Image from 'next/image'
+
 // Components
-import { Toc } from './toc'
-import { Share } from './share'
+import styles from '../../../styles/blog.module.scss'
+
 import { Breadcrumbs } from './BreadCrumbs/BreadCrumbs'
+import { Share } from './share'
+import { Toc } from './toc'
+
 // Types
 import type { BlogDetailType } from '../../../types/organism/blogInterfaces'
+
 // Styles
-import styles from '../../../styles/blog.module.scss'
 
 export const BlogDetail: React.VFC<BlogDetailType> = ({
   id,

@@ -4,7 +4,14 @@ module.exports = {
     es6: true,
     node: true
   },
-  extends: ['eslint:recommended', 'plugin:@typescript-eslint/recommended', 'next', 'next/core-web-vitals', 'plugin:prettier/recommended', 'plugin:storybook/recommended'],
+  extends: [
+    'eslint:recommended',
+    'plugin:@typescript-eslint/recommended',
+    'next',
+    'next/core-web-vitals',
+    'plugin:prettier/recommended',
+    'plugin:storybook/recommended'
+  ],
   globals: {
     Atomics: 'readonly',
     SharedArrayBuffer: 'readonly'
@@ -28,7 +35,13 @@ module.exports = {
       }
     }
   },
-  plugins: [],
+  plugins: [
+    '@typescript-eslint/eslint-plugin',
+    '@typescript-eslint',
+    'unused-imports',
+    'typescript-sort-keys',
+    'sort-keys-fix'
+  ],
   rules: {
     // prettier の設定
     'prettier/prettier': ['error', {
@@ -55,8 +68,6 @@ module.exports = {
     '@typescript-eslint/explicit-module-boundary-types': ['error'],
     // 関数の返り値の型と、関数内のreturnの型を一致させる
     '@typescript-eslint/method-signature-style': ['error', 'property'],
-    // functionの型をアロー関数で書く: func(arg: boolean): void -> func: (arg: boolean) => void
-    '@typescript-eslint/no-unused-vars-experimental': 'warn',
     // 未使用の変数の削除
     '@typescript-eslint/no-unused-vars': 'error',
     // 未使用の変数がある場合エラーにする（デフォルトは warning）
@@ -103,7 +114,9 @@ module.exports = {
     }],
     // enum禁止
     'default-case': 'error',
-    // switch文では必ずdefaultケースを作成すること
+    'typescript-sort-keys/interface': 'error', // Sort interfaces
+    'typescript-sort-keys/string-enum': 'error', // Sort string enum keys
+    'sort-keys-fix/sort-keys-fix': 'error', // Sort object keys
     // import 順序の強制
     'import/order': ['error', {
       groups: ['builtin', 'external', 'parent', 'sibling', 'index', 'object', 'type'],
@@ -117,6 +130,8 @@ module.exports = {
         order: 'asc'
       },
       'newlines-between': 'always'
-    }]
+    }],
+    'unused-imports/no-unused-imports': 'warn', // 未使用のimport
+    'unused-imports/no-unused-vars': ['warn'], // 未使用の変数
   }
 };

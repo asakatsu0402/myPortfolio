@@ -9,8 +9,8 @@ export default {
 
 export const StandardTextarea = {
   args: {
-    name: 'standard',
     disabled: false,
+    name: 'standard',
     placeholder: 'Initial Text',
     value: ''
     // functions: () => alert('Textarea clicked')

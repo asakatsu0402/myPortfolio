@@ -3,9 +3,9 @@
 import { useSetRecoilState } from 'recoil'
 
 import { languageState } from '../../../recoil/atoms/languageModal'
-import { Body } from '../../fonts/Body.font'
+import { Body } from '../../fonts/Body'
 import { Button } from '../Button/Button'
-import { FontAwesome } from '../FontAwesome.atom'
+import { FontAwesome } from '../FontAwesome/FontAwesome'
 
 import styles from './LanguageButton.module.scss'
 

@@ -25,8 +25,12 @@
   --line:#1dcd00;
   --selection: #79ffe1;
 
+  --space-80px: 80px;
+  --space-60px: 60px;
+  --space-48px: 48px;
   --space-40px: 40px;
-  --space-20px: 32px;
+  --space-36px: 36px;
+  --space-32px: 32px;
   --space-20px: 20px;
   --space-16px: 16px;
   --space-12px: 12px;
@@ -35,8 +39,8 @@
 }
 
 ::selection {
-    color: var(--black);
-    background: var(--selection);
+  color: var(--black);
+  background: var(--selection);
 }
 
 /* *************** Common *************** */

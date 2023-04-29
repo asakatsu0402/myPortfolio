@@ -6,7 +6,7 @@ import clsx from 'clsx'
 import { useTheme } from 'next-themes'
 
 import { Button } from '../Button/Button'
-import { FontAwesome } from '../FontAwesome.atom'
+import { FontAwesome } from '../FontAwesome/FontAwesome'
 
 import styles from './DarkModeButton.module.scss'
 
