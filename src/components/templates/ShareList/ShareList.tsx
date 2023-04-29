@@ -10,7 +10,7 @@ export const ShareList = (): JSX.Element => {
     <ul className={styles.footerShareList}>
       {footerShare.map((share, i) => (
         <li key={i} className={styles.shareBlock}>
-          <ExternalLink className="crimsonText" link={share.link} target>
+          <ExternalLink className={styles.shareIcon} link={share.link} target>
             <FontAwesomeIcon icon={share.icon} />
           </ExternalLink>
         </li>

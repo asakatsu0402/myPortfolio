@@ -5,7 +5,7 @@ import { Label } from '../../atoms/Label/Label'
 import { Select } from '../../atoms/Select/Select'
 import { Textarea } from '../../atoms/Textarea/Textarea'
 import { Input } from '../../atoms/Input/Input'
-import { Underline } from '../../atoms/UnderLine/UnderLine.atom'
+import { Underline } from '../../atoms/UnderLine/UnderLine'
 // Utils
 import { handleChange } from '../../../utils/commonFunctions'
 // Config

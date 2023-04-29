@@ -7,6 +7,14 @@
 .shareBlock {
 
   &:not(:first-child) {
-    margin-left: var(--space-8px);
+    margin-left: var(--space-16px);
+  }
+}
+
+.shareIcon {
+  transition-duration: .3s;
+
+  &:hover {
+    color: var(--crimson);
   }
 }

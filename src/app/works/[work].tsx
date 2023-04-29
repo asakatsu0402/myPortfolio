@@ -1,4 +1,4 @@
-import { Section } from '../../components/molecules/section'
+import { Section } from '../../components/molecules/Section/Section'
 import { Description } from '../../components/organism/works/discription'
 import { UseColor } from '../../components/organism/works/useColor'
 import { SaaSis } from '../../config/worksConfig'

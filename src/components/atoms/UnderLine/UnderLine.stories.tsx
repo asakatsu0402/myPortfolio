@@ -1,14 +1,14 @@
-import { UnderLine } from '.'
+import { Underline } from '.'
 
 import type { Meta } from '@storybook/react'
 
 export default {
-  component: UnderLine,
-  title: 'Components/UnderLine'
-} as Meta<typeof UnderLine>
+  component: Underline,
+  title: 'Components/Underline'
+} as Meta<typeof Underline>
 
-export const StandardUnderLine = {
+export const StandardUnderline = {
   args: {
     className: ''
   }
-} as Meta<typeof UnderLine>
+} as Meta<typeof Underline>

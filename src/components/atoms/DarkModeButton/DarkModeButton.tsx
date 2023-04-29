@@ -20,7 +20,7 @@ export const DarkModeButton = (): JSX.Element => {
 
   return (
     <Button
-      className={clsx([styles.darkModeButton, theme === 'dark' ? 'whiteButton' : 'blackButton'])}
+      className={clsx([styles.darkModeButton, theme === 'dark' ? styles.dark : ''])}
       type="button"
       functions={handleToggleTheme}
     >

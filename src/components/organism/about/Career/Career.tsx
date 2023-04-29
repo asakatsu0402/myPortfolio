@@ -1,10 +1,7 @@
-// Components
-import { ExternalLink } from '../../atoms/ExternalLink/ExternalLink'
-// Config
-import { careerList } from '../../../config/aboutConfig'
+import { careerList } from '../../../../config/aboutConfig'
+import { ExternalLink } from '../../../atoms/ExternalLink/ExternalLink'
 
-export const Career: React.VFC = () => {
-  // *************** JSX *************** //
+export const Career = (): JSX.Element => {
   return (
     <ul>
       {careerList.map((list, i) => (
@@ -16,7 +13,7 @@ export const Career: React.VFC = () => {
             className="text-crimson font-bold"
             link={list.link}
             text={list.title}
-            target={true}
+            target
           />
         </li>
       ))}

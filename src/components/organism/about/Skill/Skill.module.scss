@@ -1,0 +1,44 @@
+@use "../../../../styles/foundations/import.scss" as *;
+
+.skillWrap {
+  @extend %flexAroundSet;
+}
+
+.skillList {
+
+  &:not(:first-child) {
+    margin-top: var(--space-16px);
+  }
+}
+
+.skillTag {
+  padding: var(--space-4px);
+
+  &.technology {
+    @include skillTagSet(
+      var(--orange),
+      var(--white)
+    );
+  }
+
+  &.framework {
+    @include skillTagSet(
+      var(--green),
+      var(--white)
+    );
+  }
+
+  &.library {
+    @include skillTagSet(
+      var(--blue),
+      var(--white)
+    );
+  }
+
+  &.tool {
+    @include skillTagSet(
+      var(--silver),
+      var(--white)
+    );
+  }
+}

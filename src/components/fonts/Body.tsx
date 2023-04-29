@@ -1,6 +1,6 @@
 import clsx from 'clsx'
 
-import styles from './fonts.module.scss'
+import styles from './Fonts.module.scss'
 
 import type { FontType } from './type'
 

@@ -92,67 +92,7 @@
   );
 }
 
-/* Crimson */
-.crimsonButton {
-  @include f.hoverButton(
-    var(--crimson),
-    var(--white),
-    var(--black),
-    var(--white)
-  );
-}
-
-/* White */
-.whiteButton {
-  @include f.hoverButton(
-    var(--white),
-    var(--black),
-    var(--crimson),
-    var(--white)
-  );
-}
-
-/* Language */
-.technologyTag {
-  @include f.skillTagSet(
-    var(--orange),
-    var(--white)
-  );
-}
-
-/* Framework */
-.frameworkTag {
-  @include f.skillTagSet(
-    var(--green),
-    var(--white)
-  );
-}
-
-/* Library */
-.libraryTag {
-  @include f.skillTagSet(
-    var(--blue),
-    var(--white)
-  );
-}
-
-/* Tools */
-.toolTag {
-  @include f.skillTagSet(
-    var(--silver),
-    var(--white)
-  );
-}
-
 /* *************** Text *************** */
-.crimsonText {
-  transition-duration: .3s;
-
-  &:hover {
-    color: var(--crimson);
-  }
-}
-
 .linkText {
   color: var(--linkBlue);
 }
@@ -162,15 +102,6 @@
 }
 
 /* *************** Not First-child *************** */
-/* Top */
-.exceptTopMargin:not(:first-child) {
-  margin-top: 1rem;
-}
-
-.exceptTopSection:not(:first-child) {
-  margin-top: 15rem;
-}
-
 .exceptTopBlog:not(:first-child) {
   margin-top: 2rem;
 }

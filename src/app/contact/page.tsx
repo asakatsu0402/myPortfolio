@@ -2,7 +2,7 @@ export const metadata = {
   title: 'お問い合わせ | asakatsu'
 }
 
-import { Section } from '../../components/molecules/section'
+import { Section } from '../../components/molecules/Section/Section'
 import { ContactWay } from '../../components/organism/contact/contactWay'
 import { FormWrap } from '../../components/organism/contact/formWrap'
 
