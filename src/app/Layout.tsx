@@ -6,10 +6,10 @@ import { ThemeProvider } from 'next-themes'
 import { RecoilRoot } from 'recoil'
 
 // import i18nConfig from '../../../i18n'
-import { Layout } from '../../components/templates/Layout/Layout'
-import { PageHead } from '../../components/templates/pageHead'
-import '../../styles/globals.scss'
-import '../../styles/classStyles.scss'
+import { Layout } from '../components/templates/Layout/Layout'
+import { PageHead } from '../components/templates/pageHead'
+import '../styles/globals.scss'
+import '../styles/classStyles.scss'
 import '@fortawesome/fontawesome-svg-core/styles.css'
 
 // TODO 後々改善

@@ -2,7 +2,7 @@ export const metadata = {
   title: 'asakatsu'
 }
 
-import { Top } from '../../components/organism/top/top'
+import { Top } from '../components/organism/top/top'
 
 import type { NextPage } from 'next'
 

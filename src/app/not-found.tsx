@@ -2,7 +2,7 @@
 
 import type { NextPage } from 'next'
 
-const Error: NextPage = () => {
+export const Error: NextPage = () => {
   return (
     <div>
       <dl>

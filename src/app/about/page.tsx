@@ -2,7 +2,7 @@ export const metadata = {
   title: '朝活について | asakatsu'
 }
 
-import { AllSections } from '../../../components/organism/about/allSections'
+import { AllSections } from '../../components/organism/about/allSections'
 
 import type { NextPage } from 'next'
 
