@@ -8,6 +8,6 @@ export default {
   title: 'Layouts/Header'
 } as Meta<typeof HeaderNavigation>
 
-export const StandardHeader = {
+export const StandardHeaderNavigation = {
   render: () => <HeaderNavigation />
 } as Meta<typeof HeaderNavigation>

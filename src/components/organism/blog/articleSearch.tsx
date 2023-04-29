@@ -1,16 +1,16 @@
-// Modules
+'use client'
+
 import { useCallback, useContext } from 'react'
-import { useRouter } from 'next/router'
-// Components
-import { Label } from '../../atoms/Label.atom'
-import { Input } from '../../atoms/Input/Input'
-import { Underline } from '../../atoms/UnderLine.atom'
-import { Button } from '../../atoms/Button/Button'
-// Utils
+
+import { useRouter } from 'next/navigation'
+
 import { SearchContext } from '../../../utils/commonFunctions'
+import { Button } from '../../atoms/Button/Button'
+import { Input } from '../../atoms/Input/Input'
+import { Label } from '../../atoms/Label.atom'
+import { Underline } from '../../atoms/UnderLine.atom'
 
 export const ArticleSearch: React.VFC = () => {
-  // *************** Const *************** //
   const { search, setSearch } = useContext(SearchContext)
   const router = useRouter()
 

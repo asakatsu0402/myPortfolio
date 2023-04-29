@@ -1,13 +1,18 @@
 'use client'
 
+import type { ReactNode } from 'react'
+
 import { LazyMotion, domAnimation } from 'framer-motion'
 import { ThemeProvider } from 'next-themes'
 // import appWithI18n from 'next-translate/appWithI18n'
+// import Router from 'next/router'
+// import NProgress from 'nprogress'
 import { RecoilRoot } from 'recoil'
 
 // import i18nConfig from '../../../i18n'
 import { Layout } from '../components/templates/Layout/Layout'
 import { PageHead } from '../components/templates/pageHead'
+
 import '../styles/globals.scss'
 import '../styles/classStyles.scss'
 import '@fortawesome/fontawesome-svg-core/styles.css'
@@ -18,7 +23,7 @@ import '@fortawesome/fontawesome-svg-core/styles.css'
 // Router.events.on('routeChangeError', () => NProgress.done())
 
 type Props = {
-  children: React.ReactNode
+  children: ReactNode
 }
 
 const RootLayout = ({ children }: Props): JSX.Element => {

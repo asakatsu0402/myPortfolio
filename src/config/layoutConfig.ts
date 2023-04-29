@@ -14,10 +14,6 @@ export const headerNav = [
     link: '/about'
   },
   {
-    title: 'blog',
-    link: '/blog'
-  },
-  {
     title: 'gallery',
     link: '/gallery'
   },
@@ -31,7 +27,6 @@ export const headerNav = [
   }
 ]
 
-// Footer Navigation
 export const footerShare = [
   {
     icon: faGithub,

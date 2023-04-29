@@ -1,7 +1,6 @@
-// Modules
-import type { NextApiRequest, NextApiResponse } from 'next'
-// Utils
 import { isBlogsQuery } from '../../../utils/api'
+
+import type { NextApiRequest, NextApiResponse } from 'next'
 
 export const getSearchBlogs = async (req: NextApiRequest, res: NextApiResponse): Promise<void> => {
   // クエリのチェック

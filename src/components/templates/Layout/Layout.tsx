@@ -9,7 +9,7 @@ import { LanguagesModal } from '../../molecules/LanguagesModal/LanguagesModal'
 import { Footer } from '../Footer/Footer'
 import { Header } from '../Header/Header'
 
-import styles from './layout.module.scss'
+import styles from './Layout.module.scss'
 
 type Props = {
   children?: ReactNode

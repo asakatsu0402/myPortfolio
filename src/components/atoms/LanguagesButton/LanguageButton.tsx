@@ -7,7 +7,7 @@ import { Body } from '../../fonts/Body.font'
 import { Button } from '../Button/Button'
 import { FontAwesome } from '../FontAwesome.atom'
 
-import styles from './languageButton.module.scss'
+import styles from './LanguageButton.module.scss'
 
 export const LanguageButton = (): JSX.Element => {
   const setIsLanguageModal = useSetRecoilState<boolean>(languageState)

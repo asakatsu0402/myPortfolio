@@ -1,7 +1,6 @@
-// Modules
-import type { NextApiResponse, NextApiRequest } from 'next'
-// Libs
 import { getPreview } from '../../utils/api'
+
+import type { NextApiResponse, NextApiRequest } from 'next'
 
 export default async (req: NextApiRequest, res: NextApiResponse): Promise<void> => {
   // requestのクエリがなければエラー

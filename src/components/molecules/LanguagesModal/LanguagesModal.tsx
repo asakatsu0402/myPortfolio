@@ -15,7 +15,7 @@ import { Text } from '../../atoms/Text.atom'
 import { Body } from '../../fonts/Body.font'
 import { H2 } from '../../fonts/H2.font'
 
-import styles from './languagesModal.module.scss'
+import styles from './LanguagesModal.module.scss'
 
 export const LanguagesModal = (): JSX.Element => {
   const pathname = usePathname()

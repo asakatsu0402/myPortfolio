@@ -8,7 +8,7 @@ import { AsideSection } from '../../components/molecules/blog/asideSection'
 import { BlogDetail } from '../../components/molecules/blog/blogDetail'
 // Utils
 import { getBlogBy, getBlogs, getCategories } from '../../utils/api'
-import { processingDom } from '../../utils/blogFunctions'
+import { processingDom } from '../../utils/gallery'
 // Types
 import type { blogDataType } from '../../types/initInterfaces'
 
