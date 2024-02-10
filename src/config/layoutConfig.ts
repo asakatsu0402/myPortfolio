@@ -20,7 +20,7 @@ export const headerNav = [
   }
 ]
 
-export const footerShare = [
+export const SNS_SHARE = [
   {
     icon: faGithub,
     link: 'https://github.com/asakatsu0402'
@@ -31,7 +31,7 @@ export const footerShare = [
   },
   {
     icon: faInstagram,
-    link: 'https://www.instagram.com/asakatsu__camera/'
+    link: 'https://www.instagram.com/asakatsu0402/'
   },
   {
     icon: faPinterest,

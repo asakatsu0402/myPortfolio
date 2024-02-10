@@ -10,8 +10,8 @@ export const Top: React.FC = () => {
   const { t } = useTranslation()
 
   return (
-    <div className="mx-auto">
-      <div className="relative">
+    <div>
+      <div>
         <Image
           className="object-contain"
           src="/topImage.png"
@@ -20,6 +20,7 @@ export const Top: React.FC = () => {
           height="1000"
         />
       </div>
+
       <H1 bold className="text-crimson absoluteCenter text-6xl">
         <Typewriter
           options={{

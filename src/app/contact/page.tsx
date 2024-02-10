@@ -14,6 +14,7 @@ const Contact: NextPage = () => {
       <Section title="Form">
         <FormWrap />
       </Section>
+
       <Section title="Contact">
         <ContactWay />
       </Section>

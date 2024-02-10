@@ -1,0 +1,31 @@
+@use "../../../../styles/foundations/import.scss" as *;
+
+.imageBlock {
+  width: 100%;
+  height: 100%;
+}
+
+// TODO スタイルの修正
+.next,
+.prev {
+  top: calc(50% - 20px);
+  position: absolute;
+  z-index: 2;
+  width: var(--space-40);
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  user-select: none;
+  cursor: pointer;
+}
+
+.next {
+  right: 10px;
+}
+
+.prev {
+  left: 10px;
+  transform: scale(-1);
+}
