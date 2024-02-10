@@ -19,15 +19,14 @@
   --blue: #4169e1;
   --linkBlue: #331cbf;
   --yellow: #fff50c;
-  --twitter:#1DA1F2;
-  --facebook:#4267B2;
-  --hatena:#01a5df;
-  --line:#1dcd00;
+  --twitter: #1da1f2;
+  --facebook: #4267b2;
+  --hatena: #01a5df;
+  --line: #1dcd00;
   --selection: #79ffe1;
 
   --space-80px: 80px;
   --space-60px: 60px;
-  --space-48px: 48px;
   --space-40px: 40px;
   --space-36px: 36px;
   --space-32px: 32px;
@@ -36,6 +35,13 @@
   --space-12px: 12px;
   --space-8px: 8px;
   --space-4px: 4px;
+
+  --space-48: 3rem;
+  --space-40: 2.5rem;
+  --space-16: 1rem;
+  --space-12: 0.75rem;
+  --space-8: 0.5rem;
+  --space-4: 0.25rem;
 }
 
 ::selection {
@@ -48,22 +54,20 @@ html,
 body,
 #__next {
   height: 100%;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell,
+    Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
 
 body {
-  //display: flex;
-  //flex-direction: column;
-  overflow: hidden;
+  min-height: 100%;
 }
 
 * {
   box-sizing: border-box;
 }
 
-a	{
-	color: inherit;
+a {
+  color: inherit;
   text-decoration: none;
 }
 
@@ -80,6 +84,8 @@ button {
 }
 
 /* Input */
-input, select, textarea {
-  outline: none
+input,
+select,
+textarea {
+  outline: none;
 }

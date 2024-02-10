@@ -23,7 +23,7 @@ export const Layout: React.FC<Props> = ({ children, className, flex }: Props) =>
     <Header />
 
     <m.div
-      className={clsx(['overflow-y-scroll', className, flex ? 'flex flex-grow' : ''])}
+      className={clsx([styles.mainWrap, className])}
       initial="hidden"
       animate="enter"
       exit="exit"
