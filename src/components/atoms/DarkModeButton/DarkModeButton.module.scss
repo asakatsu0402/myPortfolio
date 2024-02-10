@@ -1,0 +1,24 @@
+@use "../../../styles/foundations/import.scss" as *;
+
+.darkModeButton {
+  @include hoverButton(
+    var(--black),
+    var(--white),
+    var(--crimson),
+    var(--white)
+  );
+
+  width: var(--space-40px);
+  height: var(--space-40px);
+  border-radius: 50%;
+
+  &.dark {
+    @include hoverButton(
+      var(--crimson),
+      var(--white),
+      var(--black),
+      var(--white)
+    );
+  }
+}
+

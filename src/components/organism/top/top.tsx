@@ -1,15 +1,14 @@
-// Modules
-import Image from 'next/image'
-import useTranslation from 'next-translate/useTranslation'
-import Typewriter from 'typewriter-effect'
-// Components
-import { H1 } from '../../fonts/H1.font'
+'use client'
 
-export const Top: React.VFC = () => {
-  // *************** Const *************** //
+import useTranslation from 'next-translate/useTranslation'
+import Image from 'next/image'
+import Typewriter from 'typewriter-effect'
+
+import { H1 } from '../../fonts/H1'
+
+export const Top: React.FC = () => {
   const { t } = useTranslation()
 
-  // *************** JSX *************** //
   return (
     <div className="mx-auto">
       <div className="relative">

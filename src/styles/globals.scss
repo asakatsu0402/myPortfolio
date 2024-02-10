@@ -1,7 +1,47 @@
-/* *************** Import *************** */
+@import './foundations/color.scss';
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+:root {
+  --white: #fff;
+  --gray: #d8d8d8;
+  --black: #000000;
+  --code: #2a2a2a;
+  --shadow: #0d2f473b;
+  --silver: #a0a0a0;
+  --platinum: #e8e8e8;
+  --red: #e23636;
+  --crimson: #dc143c;
+  --lightCrimson: #ffbcbc;
+  --orange: #e29336;
+  --green: #28bf28;
+  --blue: #4169e1;
+  --linkBlue: #331cbf;
+  --yellow: #fff50c;
+  --twitter:#1DA1F2;
+  --facebook:#4267B2;
+  --hatena:#01a5df;
+  --line:#1dcd00;
+  --selection: #79ffe1;
+
+  --space-80px: 80px;
+  --space-60px: 60px;
+  --space-48px: 48px;
+  --space-40px: 40px;
+  --space-36px: 36px;
+  --space-32px: 32px;
+  --space-20px: 20px;
+  --space-16px: 16px;
+  --space-12px: 12px;
+  --space-8px: 8px;
+  --space-4px: 4px;
+}
+
+::selection {
+  color: var(--black);
+  background: var(--selection);
+}
 
 /* *************** Common *************** */
 html,
@@ -34,9 +74,9 @@ li {
 
 /* button */
 button {
-   &:focus {
-     outline: none;
-   }
+  &:focus {
+    outline: none;
+  }
 }
 
 /* Input */

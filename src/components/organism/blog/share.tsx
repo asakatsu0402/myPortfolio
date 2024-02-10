@@ -3,7 +3,7 @@ import React from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faFacebook, faLine, faTwitter } from '@fortawesome/free-brands-svg-icons'
 // Components
-import { ExternalLink } from '../../atoms/ExternalLink.atom'
+import { ExternalLink } from '../../atoms/ExternalLink/ExternalLink'
 // Types
 import type { ShareType } from '../../../types/organism/blogInterfaces'
 

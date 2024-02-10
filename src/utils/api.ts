@@ -1,11 +1,11 @@
 // Modules
 import axios from 'axios'
-// Config
+
 import { globalAxios } from '../config/commonConfig'
 import { initBlog, initBlogData, initCategoriesData, initPageBlog } from '../config/initialState'
-// Types
-import type { AxiosResponse } from 'axios'
+
 import type { blogDataType, categoryDataType, pageBlogType } from '../types/initInterfaces'
+import type { AxiosResponse } from 'axios'
 
 // *************** Functions *************** //
 /**

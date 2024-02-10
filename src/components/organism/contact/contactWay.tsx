@@ -1,10 +1,7 @@
-// Components
-import { ExternalLink } from '../../atoms/ExternalLink.atom'
-// Config
 import { contactList } from '../../../config/contactConfig'
+import { ExternalLink } from '../../atoms/ExternalLink/ExternalLink'
 
-export const ContactWay = () => {
-  // *************** JSX *************** //
+export const ContactWay = (): JSX.Element => {
   return (
     <ul>
       {contactList.map((contact: any, i: number) => (

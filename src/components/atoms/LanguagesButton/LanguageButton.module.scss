@@ -1,0 +1,16 @@
+@use "../../../styles/foundations/import.scss" as *;
+
+.languageButton {
+  @extend %flexCenterSet;
+  @extend %shadow20;
+
+  display: inline-flex;
+  justify-content: center;
+  padding: var(--space-4px) var(--space-8px);
+  border-radius: var(--space-4px);
+  background: var(--white);
+}
+
+.localeText {
+  margin-left: var(--space-12px);
+}

@@ -1,0 +1,9 @@
+@use "../../../styles/foundations/import" as *;
+
+.footer {
+  @extend %flexBetweenSet;
+
+  align-items: center;
+  height: var(--space-48px);
+  padding: var(--space-4px);
+}

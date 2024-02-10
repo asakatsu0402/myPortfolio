@@ -1,0 +1,19 @@
+@use "../../../styles/foundations/import" as *;
+
+.header {
+  @extend %flexBetweenSet;
+
+  align-items: center;
+  padding: var(--space-12px);
+}
+
+.linkText {
+  @include hoverText(
+    var(--silver),
+    var(--crimson)
+  );
+
+  &.active {
+    color: var(--crimson);
+  }
+}

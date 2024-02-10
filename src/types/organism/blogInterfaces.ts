@@ -28,12 +28,6 @@ export type toc = {
   }[]
 }
 
-// パンくずリスト
-export type BreadcrumbsType = {
-  title?: string | undefined
-  id?: string | undefined
-}
-
 // ブログ詳細ページ
 export type detailStatic = {
   params: ParsedUrlQuery

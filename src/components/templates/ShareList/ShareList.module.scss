@@ -1,0 +1,20 @@
+@use "../../../styles/foundations/import" as *;
+
+.footerShareList {
+  display: flex;
+}
+
+.shareBlock {
+
+  &:not(:first-child) {
+    margin-left: var(--space-16px);
+  }
+}
+
+.shareIcon {
+  transition-duration: .3s;
+
+  &:hover {
+    color: var(--crimson);
+  }
+}

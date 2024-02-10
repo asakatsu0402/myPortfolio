@@ -1,11 +1,11 @@
 // Modules
 import { useState } from 'react'
 // Components
-import { Label } from '../../atoms/Label.atom'
-import { Select } from '../../atoms/Select.atom'
-import { Textarea } from '../../atoms/Textarea.atom'
-import { Input } from '../../atoms/Input.atom'
-import { Underline } from '../../atoms/UnderLine.atom'
+import { Label } from '../../atoms/Label/Label'
+import { Select } from '../../atoms/Select/Select'
+import { Textarea } from '../../atoms/Textarea/Textarea'
+import { Input } from '../../atoms/Input/Input'
+import { Underline } from '../../atoms/UnderLine/UnderLine'
 // Utils
 import { handleChange } from '../../../utils/commonFunctions'
 // Config

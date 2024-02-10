@@ -1,0 +1,80 @@
+@use "../../../styles/foundations/import.scss" as f;
+
+.languagesModal {
+  display: none;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 10;
+  transform: translateY(100%);
+  padding: var(--space-16px);
+  background: var(--white);
+  transition: .5s ease-in-out;
+
+  &.on {
+    display: block;
+    transform: translateY(0);
+  }
+
+}
+
+.closeButton {
+  position: absolute;
+  top: 2%;
+  right: 2%;
+  width: var(--space-32px);
+  padding: var(--space-4px) 0;
+  border-radius: 50%;
+  background: var(--black);
+  color: var(--white);
+}
+
+.languageWrap {
+  width: 56rem;
+  margin: var(--space-40px) auto 0 auto;
+  text-align: center;
+
+  @include f.max-screen(f.$mobile) {
+    width: 100%;
+  }
+}
+
+.languageList {
+  @extend %flexBetweenSet;
+  flex-wrap: wrap;
+  margin-top: var(--space-40px);
+
+  > li {
+    width: 25%;
+    margin: var(--space-16px);
+
+    @include f.max-screen(f.$mobile) {
+      width: 100%;
+    }
+  }
+}
+
+.languageButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  text-align: center;
+
+  > svg {
+    transition: .4s;
+  }
+
+  &:hover {
+
+    > svg {
+      color: var(--black);
+    }
+  }
+
+  > .languageText {
+    flex: 1;
+    margin-left: var(--space-8px);
+  }
+}

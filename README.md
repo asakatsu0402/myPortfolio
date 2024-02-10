@@ -4,33 +4,38 @@ My Portfolio Site
 
 ## ファイル構成
 
-```text
-app/
- ├─ backend
- │   └─ ...
- ├─ frontend
- │   └─ ...
-     ├─ src/          /***** コーディング *****/
-     │   ├─ images/          /***** 画像 *****/
-     │   │    └─ ...
-     │   ├─ layouts/          /***** レイアウトコンポーネント (Header, Footer, Mainなど) *****/
-     │   │    └─ ...
-     │   ├─ components/          /***** ページ別コンポーネント (Header, Footer, Mainなど) *****/
-     │   │    ├─ atoms          /***** 単一コンポーネント（タグなど） *****/
-     │   │    │   └─ ...  
-     │   │    └─ morecules/          /***** まとまりコンポーネント（セクション, フォームなど、ページ別で管理） *****/
-     │   │        └─ ...
-     │   ├─ config/          /***** 配列や設定など （ハードコーディング系） *****/
-     │   │    ├─ firebaseConfig.ts
-     │   │    └─ ...
-     │   ├─ functions/          /***** 関数 （APIなど） *****/
-     │   │    └─ ...
-     │   ├─ pages/          /***** ページ （申請書, マスター管理, ステータス） *****/
-     │   │    └─ ...
-     │   ├─ stylesheets/          /***** スタイル （申請書, マスター管理, ステータス） *****/
-     │   │    └─ ...
-     │   └─ ...
-     └─ ...
+```
+./src/
+├── components
+│   ├── atoms
+│   ├── fonts
+│   ├── molecules
+│   ├── organism
+│   │   ├── about
+│   │   ├── blog
+│   │   ├── contact
+│   │   ├── top
+│   │   └── works
+│   ├── stories
+│   │   └── assets
+│   └── templates
+├── config
+├── pages
+│   ├── about
+│   ├── api
+│   │   └── blog
+│   ├── blog
+│   │   └── search
+│   ├── contact
+│   ├── gallery
+│   └── works
+├── recoil
+│   └── atoms
+├── styles
+│   └── foundations
+├── types
+│   └── organism
+└── utils
 ```
 
 ## 始め方

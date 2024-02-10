@@ -3,16 +3,16 @@
 
 /* *************** Async *************** */
 .success {
-  background-color: f.$green;
+  background-color: var(--green);
 }
 
 .error {
-  background-color: f.$red;
+  background-color: var(--red);
   cursor: not-allowed;
 }
 
 .disabled {
-  background-color: f.$silver;
+  background-color: var(--silver);
   cursor: not-allowed;
 }
 
@@ -57,7 +57,7 @@
 
   > .underline {
     position: relative;
-    border-top: 1px solid f.$platinum;
+    border-top: 1px solid var(--platinum);
 
     &:before,
     &:after {
@@ -65,7 +65,7 @@
       bottom: 0;
       width: 0;
       height: 1px;
-      background-color: f.$crimson;
+      background-color: var(--crimson);
       transition: all 0.5s;
       -webkit-transition: all 0.5s;
       content: '';
@@ -85,92 +85,23 @@
 /* Black */
 .blackButton {
   @include f.hoverButton(
-    f.$black,
-    f.$white,
-    f.$crimson,
-    f.$white
-  );
-}
-
-/* Crimson */
-.crimsonButton {
-  @include f.hoverButton(
-    f.$crimson,
-    f.$white,
-    f.$black,
-    f.$white
-  );
-}
-
-/* White */
-.whiteButton {
-  @include f.hoverButton(
-    f.$white,
-    f.$black,
-    f.$crimson,
-    f.$white
-  );
-}
-
-/* Language */
-.technologyTag {
-  @include f.skillTagSet(
-    f.$orange,
-    f.$white
-  );
-}
-
-/* Framework */
-.frameworkTag {
-  @include f.skillTagSet(
-    f.$green,
-    f.$white
-  );
-}
-
-/* Library */
-.libraryTag {
-  @include f.skillTagSet(
-    f.$blue,
-    f.$white
-  );
-}
-
-/* Tools */
-.toolTag {
-  @include f.skillTagSet(
-    f.$silver,
-    f.$white
+    var(--black),
+    var(--white),
+    var(--crimson),
+    var(--white)
   );
 }
 
 /* *************** Text *************** */
-.crimsonText {
-  transition-duration: .3s;
-
-  &:hover {
-    color: f.$crimson;
-  }
-}
-
 .linkText {
-  color: f.$linkBlue;
+  color: var(--linkBlue);
 }
 
 .nonActiveText {
-  color: f.$silver;
+  color: var(--silver);
 }
 
 /* *************** Not First-child *************** */
-/* Top */
-.exceptTopMargin:not(:first-child) {
-  margin-top: 1rem;
-}
-
-.exceptTopSection:not(:first-child) {
-  margin-top: 15rem;
-}
-
 .exceptTopBlog:not(:first-child) {
   margin-top: 2rem;
 }
@@ -191,7 +122,7 @@
     left: 0;
     width: 100%;
     height: 2px;
-    background: f.$crimson;
+    background: var(--crimson);
   }
   /* Fancy blur effect */
   .peg {
@@ -200,7 +131,7 @@
     right: 0px;
     width: 100px;
     height: 100%;
-    box-shadow: 0 0 10px f.$crimson, 0 0 5px f.$crimson;
+    box-shadow: 0 0 10px var(--crimson), 0 0 5px var(--crimson);
     opacity: 1.0;
 
     -webkit-transform: rotate(3deg) translate(0px, -4px);
@@ -223,8 +154,8 @@
     box-sizing: border-box;
 
     border: solid 2px transparent;
-    border-top-color: f.$crimson;
-    border-left-color: f.$crimson;
+    border-top-color: var(--crimson);
+    border-left-color: var(--crimson);
     border-radius: 50%;
 
     -webkit-animation: nprogress-spinner 400ms linear infinite;
