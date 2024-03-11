@@ -1,0 +1,17 @@
+@use "../../../styles/foundations/import" as *;
+
+.main {
+  padding: var(--space-40) 0;
+
+  &.noSpace {
+    padding: 0;
+  }
+}
+
+.contents {
+  &:not(.noSpace) {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 0 var(--space-40);
+  }
+}

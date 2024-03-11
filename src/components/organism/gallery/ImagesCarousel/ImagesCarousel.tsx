@@ -1,17 +1,20 @@
 'use client'
 
 import { AnimatePresence, m } from 'framer-motion'
-import { useState } from 'react'
+import { useCallback, useState } from 'react'
 import { wrap } from 'popmotion'
 
 import styles from './ImagesCarousel.module.scss'
 import { FontAwesome } from '@/components/atoms/FontAwesome'
+import { Button } from '@/components/atoms/Button'
+import { Body } from '@/components/fonts/Body'
 
 type ImageListType = Array<{
   id: number
   title: string
   description: string
   src: string
+  information?: string
 }>
 
 // TODO ファイル分割する？
@@ -25,7 +28,8 @@ const dammyList: ImageListType = [
     id: 0,
     title: 'test',
     description: 'test',
-    src: '/dammy1.jpg'
+    src: '/dammy1.jpg',
+    information: 'Mt.Fuji'
   },
   {
     id: 1,
@@ -57,6 +61,7 @@ const variants = {
 export const ImagesCarousel = () => {
   const [images, setImages] = useState<ImageListType>(dammyList)
   const [[page, direction], setPage] = useState<Array<number>>([0, 0])
+  const [isShowInfo, setIsShowInfo] = useState<boolean>(false)
 
   const imageIndex = wrap(0, images.length, page)
 
@@ -74,9 +79,31 @@ export const ImagesCarousel = () => {
     }
   }
 
+  const handleToggleInfo = useCallback(() => {
+    setIsShowInfo(!isShowInfo)
+  }, [isShowInfo])
+
   // TODO アニメーションのふわっと感を出す
   return (
-    <div>
+    <div className={styles.imageCarouselWrap}>
+      {images[imageIndex].information && (
+        <div className={styles.informationBlock}>
+          <Button className={styles.infoButton} functions={handleToggleInfo}>
+            {isShowInfo ? (
+              <FontAwesome icon={['fas', 'circle-xmark']} size="lg" />
+            ) : (
+              <FontAwesome icon={['fas', 'circle-info']} size="lg" />
+            )}
+          </Button>
+
+          {isShowInfo && (
+            <Body bold className={styles.imageInformation}>
+              {images[imageIndex].information}
+            </Body>
+          )}
+        </div>
+      )}
+
       <AnimatePresence initial={false} custom={direction}>
         <m.img
           key={page}

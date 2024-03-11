@@ -1,16 +1,17 @@
 export const metadata = {
-  title: '朝活について | asakatsu'
+  title: 'about | asakatsu'
 }
 
+import { Main } from '@/components/templates/Main'
 import { AllSections } from '../../components/organism/about/AllSections/AllSections'
 
 import type { NextPage } from 'next'
 
 const About: NextPage = () => {
   return (
-    <main>
+    <Main>
       <AllSections />
-    </main>
+    </Main>
   )
 }
 

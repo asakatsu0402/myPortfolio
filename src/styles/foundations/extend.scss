@@ -34,6 +34,12 @@
   justify-content: space-around;
 }
 
+%flexItemsCenterSet {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
 /* *************** Shadow *************** */
 // Shadow 20
 %shadow10 {

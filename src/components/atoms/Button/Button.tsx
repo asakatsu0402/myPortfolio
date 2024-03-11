@@ -3,7 +3,7 @@ import type { ReactNode } from 'react'
 type Props = {
   className?: string
   text?: string | number
-  type: 'submit' | 'button' | 'submit' | 'reset'
+  type?: 'submit' | 'button' | 'submit' | 'reset'
   children?: ReactNode
   disabled?: boolean
   functions?: () => void
@@ -15,7 +15,7 @@ export const Button: React.FC<Props> = ({
   functions,
   children,
   text,
-  type
+  type = 'button'
 }: Props) => (
   <button className={className} disabled={!!disabled} type={type} onClick={functions}>
     {children ? children : text}
