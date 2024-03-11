@@ -1,0 +1,14 @@
+@use "../../../../styles/foundations/import.scss" as *;
+
+.contactWayList {
+  @extend %flexItemsCenterSet;
+}
+
+.contactWayLink {
+  margin-left: var(--space-8);
+
+  @include hoverText(
+    var(--black),
+    var(--crimson)
+  );
+}

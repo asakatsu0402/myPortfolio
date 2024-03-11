@@ -3,7 +3,7 @@
 import clsx from 'clsx'
 import { usePathname } from 'next/navigation'
 
-import { headerNav } from '../../../config/layoutConfig'
+import { HEADER_NAV } from '../../../config/layoutConfig'
 import { PageLink } from '../../atoms/PageLink/PageLink'
 import { Text } from '../../atoms/Text/Text'
 
@@ -15,7 +15,7 @@ export const HeaderNavigation = (): JSX.Element => {
   return (
     <nav>
       <ul className={styles.navigationList}>
-        {headerNav.map((nav, i) => (
+        {HEADER_NAV.map((nav, i) => (
           <li key={i} className="exceptLeftMargin">
             <PageLink
               className={clsx([styles.linkText, pathname === nav.link ? styles.active : ''])}

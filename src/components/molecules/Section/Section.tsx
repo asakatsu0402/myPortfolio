@@ -3,6 +3,7 @@ import type { ReactNode } from 'react'
 import clsx from 'clsx'
 
 import styles from './Section.module.scss'
+import { H2 } from '@/components/fonts/H2'
 
 type Props = {
   children?: ReactNode
@@ -13,7 +14,8 @@ type Props = {
 
 export const Section: React.FC<Props> = ({ className, title, children }: Props) => (
   <section className={clsx([styles.section, className])}>
-    <h2 className="text-3xl">{title}</h2>
+    <H2>{title}</H2>
+
     {children}
   </section>
 )

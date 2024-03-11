@@ -19,16 +19,17 @@ export const DarkModeButton = (): JSX.Element => {
   const handleToggleTheme = () => setTheme(theme === 'dark' ? 'light' : 'dark')
 
   return (
-    <Button
-      className={clsx([styles.darkModeButton, theme === 'dark' ? styles.dark : ''])}
-      type="button"
-      functions={handleToggleTheme}
-    >
-      {rendered && theme === 'dark' ? (
-        <FontAwesome icon={['fas', 'sun']} />
-      ) : (
-        <FontAwesome icon={['fas', 'moon']} />
-      )}
-    </Button>
+    <div className={clsx([styles.darkModeButton, theme === 'dark' ? styles.dark : ''])}>
+      <Button
+        type="button"
+        functions={handleToggleTheme}
+      >
+        {rendered && theme === 'dark' ? (
+          <FontAwesome icon={['fas', 'sun']} />
+        ) : (
+          <FontAwesome icon={['fas', 'moon']} />
+        )}
+      </Button>
+    </div>
   )
 }

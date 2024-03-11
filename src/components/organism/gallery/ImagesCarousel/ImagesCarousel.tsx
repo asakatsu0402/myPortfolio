@@ -29,7 +29,7 @@ const dammyList: ImageListType = [
     title: 'test',
     description: 'test',
     src: '/dammy1.jpg',
-    information: 'Mt.Fuji'
+    information: 'Mt.Fuji, 2023'
   },
   {
     id: 1,

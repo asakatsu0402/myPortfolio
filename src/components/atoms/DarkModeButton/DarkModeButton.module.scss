@@ -1,16 +1,18 @@
 @use "../../../styles/foundations/import.scss" as *;
 
 .darkModeButton {
+  width: var(--space-40);
+  height: var(--space-40);
+  border-radius: 50%;
+
+  @extend %flexCenterSet;
+
   @include hoverButton(
     var(--black),
     var(--white),
     var(--crimson),
     var(--white)
   );
-
-  width: var(--space-40px);
-  height: var(--space-40px);
-  border-radius: 50%;
 
   &.dark {
     @include hoverButton(

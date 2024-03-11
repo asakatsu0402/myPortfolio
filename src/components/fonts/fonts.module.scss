@@ -39,5 +39,9 @@
 }
 
 .small {
-  @extend %fontSmall;
+  font-size: var(--font-small);
+}
+
+.x-small {
+  font-size: var(--font-x-small);
 }

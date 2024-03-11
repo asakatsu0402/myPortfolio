@@ -37,7 +37,6 @@
 %flexItemsCenterSet {
   display: flex;
   align-items: center;
-  justify-content: space-around;
 }
 
 /* *************** Shadow *************** */
@@ -88,20 +87,6 @@
 
 %fontBody {
   font-size: f.$font-small;
-  line-height: 1;
-}
-
-%fontSmall {
-  font-size: f.$font-x-small;
-  line-height: 1;
-}
-
-%fontSmallXX {
-  font-size: f.$font-xx-small;
-  line-height: 1;
-}
-%fontSmallXXX {
-  font-size: f.$font-xxx-small;
   line-height: 1;
 }
 

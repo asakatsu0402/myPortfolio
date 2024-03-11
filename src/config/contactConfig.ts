@@ -66,15 +66,20 @@ export const formList = [
 ]
 
 // Usage
-export const contactList = [
+export const CONTACT_LIST = [
   {
     label: 'E-mail',
     text: '04asaka02@gmail.com',
-    link: 'mailto:04asaka02@gmail.com'
+    link: 'mailto:04asaka02@gmail.com?Subject=【お問い合わせ】&Body=【お問い合わせ内容】'
   },
   {
-    label: 'Twitter',
-    text: '@asakatsuyolo',
-    link: 'https://twitter.com/asakatsuyolo'
+    label: 'instagram',
+    text: 'asakatsu0402',
+    link: 'https://www.instagram.com/asakatsu0402'
   }
+  // {
+  //   label: 'Twitter',
+  //   text: '@asakatsuyolo',
+  //   link: 'https://twitter.com/asakatsuyolo'
+  // }
 ]

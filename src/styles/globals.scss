@@ -25,12 +25,8 @@
   --line: #1dcd00;
   --selection: #79ffe1;
 
-  --space-80px: 80px;
-  --space-60px: 60px;
   --space-40px: 40px;
-  --space-36px: 36px;
   --space-32px: 32px;
-  --space-20px: 20px;
   --space-16px: 16px;
   --space-12px: 12px;
   --space-8px: 8px;
@@ -43,6 +39,14 @@
   --space-12: 0.75rem;
   --space-8: 0.5rem;
   --space-4: 0.25rem;
+
+  // Font-Size
+  --font-xx-large: 3.583rem;
+  --font-x-large: 1.75rem;
+  --font-large: 1.25rem;
+  --font-medium: 1rem;
+  --font-small: 0.875rem;
+  --font-x-small: 12px;
 }
 
 ::selection {

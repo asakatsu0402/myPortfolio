@@ -1,7 +1,6 @@
-import { faGithub, faInstagram, faPinterest, faTwitter } from '@fortawesome/free-brands-svg-icons'
-import { faNoteSticky } from '@fortawesome/free-regular-svg-icons'
+import type { IconName, IconPrefix } from "@fortawesome/fontawesome-svg-core"
 
-export const headerNav = [
+export const HEADER_NAV = [
   {
     link: '/about',
     title: 'about'
@@ -20,25 +19,33 @@ export const headerNav = [
   }
 ]
 
-export const SNS_SHARE = [
+export const SNS_SHARE: Array<{
+  prefix: IconPrefix
+  icon: IconName
+  link: string
+}> = [
   {
-    icon: faGithub,
+    prefix: 'fab',
+    icon: 'github',
     link: 'https://github.com/asakatsu0402'
   },
   {
-    icon: faTwitter,
+    prefix: 'fab',
+    icon: 'x-twitter',
     link: 'https://twitter.com/asakatsuyolo'
   },
   {
-    icon: faInstagram,
+    prefix: 'fab',
+    icon: 'instagram',
     link: 'https://www.instagram.com/asakatsu0402/'
   },
+  // {
+  //   icon: faPinterest,
+  //   link: 'https://www.pinterest.jp/04asaka020502/_created/'
+  // },
   {
-    icon: faPinterest,
-    link: 'https://www.pinterest.jp/04asaka020502/_created/'
-  },
-  {
-    icon: faNoteSticky,
+    prefix: 'far',
+    icon: 'note-sticky',
     link: 'https://note.com/asakatsu_0402'
   }
 ]
